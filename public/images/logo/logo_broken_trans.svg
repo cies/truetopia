@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) and manually edited by Cies Breijs -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="30"
+   height="30"
+   id="svg2"
+   version="1.0"
+   sodipodi:version="0.32"
+   inkscape:version="0.45.1"
+   sodipodi:docname="logo_broken_trans.svg"
+   sodipodi:docbase="/home/cies/truetopia/public/images/logo"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/home/cies/truetopia/public/images/logo/logo_broken_trans_200.png"
+   inkscape:export-xdpi="600"
+   inkscape:export-ydpi="600">
+  <defs
+     id="defs7" />
+  <sodipodi:namedview
+     inkscape:window-height="731"
+     inkscape:window-width="1030"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="13.364318"
+     inkscape:cx="7.8835979"
+     inkscape:cy="11.748534"
+     inkscape:window-x="274"
+     inkscape:window-y="137"
+     inkscape:current-layer="svg2"
+     width="29.33px"
+     height="29.331837px" />
+  <metadata
+     id="metadata">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Cies Breijs</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Notice" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Attribution" />
+        <cc:prohibits
+           rdf:resource="http://web.resource.org/cc/CommercialUse" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer"
+     transform="translate(3.1426966,5.6055651)">
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+       d="M 0,0 C 4.4408921e-16,9.1180452 0,16.822641 0,20 C 10.840993,19.700696 14.734946,20.423541 18.952434,21.476217 C 20.285043,16.502854 20.09924,13.159215 24.21164,3.8518519 C 21.325253,1.9470899 20.988261,1.5767196 20.988261,1.5767196 L 17.51422,5.182209 C 20.717334,12.544677 15.87503,17.31549 10.63492,17.15873 C 5.4477216,17.00197 3,13.865993 3,10 C 3,6.1340068 5.9752766,2.7354497 9.8412698,2.7354497 C 11.116179,2.7354497 12.470446,2.9187074 13.5,3.5142196 L 12.71875,-0.42328042 C 12.71875,-0.42328042 2.8633273,0 0,0 z "
+       id="black_rectange_with+a_hole_in_it"
+       sodipodi:nodetypes="cccccczssccc" />
+  </g>
+  <path
+     style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:11.90499973;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+     d="M 17.259386,3.3054986 L 19.518133,3.1570652 L 18.638331,8.4010084 L 17.977562,8.0408747 L 17.259386,3.3054986 z "
+     id="rect2165"
+     sodipodi:nodetypes="ccccc" />
+  <path
+     style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:11.90499973;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+     d="M 22.977656,3.4008474 L 23.945534,4.8000309 L 20.232908,9.3059616 L 19.712939,8.6507115 L 20.861356,5.3261868 L 22.977656,3.4008474 z "
+     id="path2168"
+     sodipodi:nodetypes="cccccc" />
+  <path
+     style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:11.90499973;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+     d="M 20.897733,1.6541199 L 22.22485,2.4416476 L 20.795843,4.2877754 L 20.897733,1.6541199 z "
+     id="path2170"
+     sodipodi:nodetypes="cccc" />
+</svg>

@@ -1,0 +1,12 @@
+- throw_content :title, "gebruiker: #{@user.login}"
+= partial 'users/user_header', :user => @user, :current => :show
+.subcolumns.right_bg
+  .c75r
+    .subcr
+      = format_notification(:nothing => 'yet')
+      .content
+        = partial 'user_sidebar', :user => @user
+      .footer
+  .c25l
+    .subcl.sidebar
+      = partial 'user_sidebar', :user => @user

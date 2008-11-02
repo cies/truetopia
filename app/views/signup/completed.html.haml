@@ -1,0 +1,25 @@
+- throw_content :title, 'account maken, stap 1'
+
+.subcolumns
+  .c25l
+    .subcl
+      &nbsp;
+  .c50l
+    .subcl
+      %br/
+      %h1
+        = "Welkom #{current_user.login}!"
+      %p
+        Je ben nu aangemeld en ingelogd op Truetopia, je kunt nu dus zomaar allemaal spannende dingen doen zoals:
+        %ol
+          %li
+            je een beetje overal tegen aan bemoeien
+          %li
+            samen met anderen het bewuszijn van je land vertegenwoordigen
+        success!
+      %h3
+        Documenten
+      %p
+        tot zover is deze applicatie niet zo functioneel, kun kunt wel even bij de
+        = link_to 'documenten', url(:documents)
+        kijken.

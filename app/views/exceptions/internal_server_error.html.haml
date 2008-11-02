@@ -1,0 +1,33 @@
+- throw_content :title, 'Fout opgetreden'
+
+.subcolumns
+  .c25l
+    .subcl
+      &nbsp;
+  .c50l
+    .subcl
+      #header.center
+        %span.title
+          Truetopia
+        %br/
+        %span.subtitle
+          \...doe gewoon lekker mee!
+        %br/
+        %img{ :src => '/images/logo/logo_broken_trans_150.png' }/
+      .notification
+        fout op getreden bij het afhandelen van:
+        %pre
+          %strong= request.uri
+      %br/
+      %h1
+        Fout opgetreden...
+      %p.big
+        Er is een fout opgetreden waardoor deze website niet naar behoren werkt.
+      %br/
+      %h3
+        \...dit is een bug!
+      %p
+        Fouten zoals deze mogen niet optreden bij normaal gebruik van de website. Ofwel dit is waarschijnlijk een 'bug', een fout in Truetopia website. De beheerders en makers van deze site willen graag weten hoe je op deze bug gestuit bent.
+  .c25r
+    .subcr
+      &nbsp;

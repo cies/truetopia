@@ -1,0 +1,21 @@
+.subcolumns.bottom_line
+  .c75r
+    .subcr
+      .float_left
+        %h1.content
+          = user.login
+      #nav_main
+        %ul
+          %li{ :id => (current == :show ? 'current' : '') }
+            =link_to 'bekijk', url(:user, :login => @user.login), :title => "over zichts pagina van #{@user.login}"
+          %li{ :id => (current == :documents ? 'current' : '') }
+            =link_to 'documenten', url(:user_documents, :login => @user.login), :title => "de documenten van #{@user.login}"
+          %li{ :id => (current == :edit ? 'current' : '') }
+            =link_to 'projecten', url(:users), :title => "de projecten gestart door #{@user.login}"
+          %li{ :id => (current == :history ? 'current' : '') }
+            =link_to 'historie', url(:user, :login => @user.login), :title => 'alle gebeurtenissen aangaande deze gebruiker'
+  .c25l
+    .subcl
+      %h1.content{ :align => 'right' }
+        %span.pre_title
+          gebruiker

@@ -1,0 +1,29 @@
+.subpage
+  .subpage_header
+    .links.float_right
+      = link_to '&nbsp;bewerken&nbsp;', url(:edit_document, :id => document.id)
+      = link_to '&nbsp;historie&nbsp;', url(:document_history, :id => document.id)
+      = link_to '&nbsp;discussie&nbsp;', url(:document_discussion, :document_id => document.id)
+    %span.title
+      - title_html= capture_haml do
+        %span.number= '#' + document.id.to_s
+        = document.title
+      = link_to title_html, url(:document, :id => document.id)
+    %br/
+    %span.meta
+      = render_relative_date document.created_at
+      gestart door
+      = link_to document.user.login, url(:user, :login => document.user.login)
+      %br/
+      huidige versie
+      = document.version_count
+      verscheen
+      = render_relative_date document.version_created_at
+      door
+      = link_to document.version_author, url(:user, :login => document.version_author)
+      
+  %br.clear/
+  .subpage_content
+    = document.content
+  .subpage_footer
+    %span.version

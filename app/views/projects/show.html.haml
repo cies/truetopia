@@ -1,0 +1,12 @@
+- throw_content :title, "project ##{@project.id} #{@project.project_document.current_version.title}"
+= partial 'projects/project_header', :project => @project, :current => :show
+.subcolumns.right_bg
+  .c75r
+    .subcr
+      = format_notification(:nothing => 'yet')
+      .content
+        = @project.project_document.current_version.content_html
+      .footer
+  .c25l
+    .subcl.sidebar
+      = partial 'project_sidebar', :project => @project

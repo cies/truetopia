@@ -1,0 +1,31 @@
+/* from layout */
+body {
+  background: <%= color -%> url("/images/bg.png") repeat-x top left fixed; }
+
+/* from content */
+a {
+  color: <%= color -%>; }
+  a:hover, a:focus, a:active {
+    background-color: <%= color -%>; }
+
+.logo_color:focus, .logo_color:hover, .logo_color:active {
+  background-color: <%= color -%>; }
+
+#footer a:focus, #footer a:hover, #footer a:active {
+  color: <%= color -%>; }
+
+.subpage:hover, .subpage:focus, .subpage:active {
+  border-top: 2px solid <%= color -%>;
+  border-left: 2px solid <%= color -%>; }
+.subpage .subpage_header span.title a:hover, .document .subpage_header span.title a:focus, .document .subpage_header span.title a:active {
+  border-top: 2px solid <%= color -%>;
+  border-bottom: 2px solid <%= color -%>; }
+.subpage .subpage_header .links a:hover, .document .subpage_header .links a:focus, .document .subpage_header .links a:active {
+  border-top: 2px solid <%= color -%>;
+  background: <%= color -%>;
+  border-bottom: 2px solid <%= color -%>; }
+
+#nav_main ul li a:hover, #nav_main ul a:focus, #nav_main ul a:active {
+  color: <%= color -%>; }
+
+

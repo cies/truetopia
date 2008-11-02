@@ -1,0 +1,47 @@
+@charset "UTF-8"
+
+/* a patch to isolate all the color giving style settings
+
+
+@media all
+  /* from layout
+  body
+    :background #4d87c7 url("/images/bg.png") repeat-x top left fixed
+
+  /* from content
+
+  a
+    :color #4D87C7
+    &:hover, &:focus, &:active
+      :background-color #4D87C7
+
+  .logo_color
+    &:focus, &:hover, &:active
+      :background-color #4D87C7
+
+  
+  #footer a
+    &:focus, &:hover, &:active
+      :color #4D87C7
+
+  .document
+    &:hover, &:focus, &:active
+      :border-top 2px solid #4D87C7
+      :border-left 2px solid #4D87C7
+    .entry_header
+      span.title a
+        &:hover, &:focus, &:active
+          :border-top 2px solid #4D87C7
+          :border-bottom 2px solid #4D87C7
+      .links
+        a
+          &:hover, &:focus, &:active
+            :border-top 2px solid #4D87C7
+            :border-bottom 2px solid #4D87C7
+
+  #nav_main
+    ul
+      li
+        a
+          &:hover, &:focus, &:active
+            :color #4D87C7

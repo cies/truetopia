@@ -1,0 +1,68 @@
+!!! Strict
+%html{html_attrs('nl')}
+  %head
+    %title
+      = 'Truetopia' + (catch_content(:title) ? ": #{catch_content(:title)}" : '')
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type" }/
+    = css_include_tag :application
+
+    / this is a dirty hack to implement very basic colorpicking
+    %style{ :type => 'text/css', :media => 'all' }
+      = partial 'layout/colorpatch', :color => cookies['color']
+
+    // selectively load internet explorer patch
+    /
+      [if lte IE 7]>
+      <link href="/stylesheets/patches/patch_grids.css" rel="stylesheet" type="text/css" />
+      <![endif]
+
+  %body
+    #page_margins
+      #page
+        #header
+          #top_right.float_right
+            - if logged_in?
+              je bent ingelogd als
+              %b
+                = current_user.login
+              = surround '(', ')<br/>' do
+                = link_to 'uitloggen', url(:logout)
+            - else
+              = link_to 'login', url(:login)
+              of
+              = link_to 'maak een account<br/>', url(:signup)
+            %form.search
+              %input/
+              %button{ :type => "submit" }
+                = surround '&nbsp;' do
+                  zoek
+
+          / size needs to be the same the image
+          .logo_color.float_left{ :style => 'width: 50px; height: 50px;' }
+            %a.logo{ :href => url(:root) }
+              %div
+                %img.logo{ :src => "/images/logo/logo_trans_50.png" }/
+          %span.title
+            Truetopia
+          %span.subtitle
+            \...doe gewoon lekker mee!
+
+        #breadcrums
+          // breadcrums, generated from the request.uri, cannot use haml's pretty whitespacing
+          / sorry no indentation, that would add whitespace to the url
+          - html = ""
+          - link_url = ""
+          - separator_html = capture_haml do
+            %span.crum_separator= '/'
+          - request.uri.split('?').first.split('#').first.split('/')[1..-1].each do |part|
+            - crum_html = capture_haml(part) do |part|
+              %span.crum= ('<a href="' + (link_url << '/' + part) + '">' + part + '</a>')
+            - html << separator_html.strip + crum_html.strip
+          - puts html
+
+        #main
+          = format_notification({})
+          = catch_content :for_layout
+
+        #footer
+          = partial 'layout/footer'

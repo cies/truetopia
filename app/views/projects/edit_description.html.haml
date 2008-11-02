@@ -1,0 +1,54 @@
+- throw_content :title, "project ##{params[:project_id]} -- bewerken"
+= partial 'projects/project_header', :project => @project, :current => :edit
+.subcolumns.right_bg
+  .c75r
+    .subcr
+      %h1 Document bewerken
+      %p
+        = "Via onderstaand fomulier kun je de beschrijving van project ##{params[:project_id]} #{@document_version.title} bewerken. Onder aan deze pagina kun je de huidige beschrijving nogmaals nalezen."
+      - if @document_version.errors and not @document_version.errors.empty?
+        = partial 'shared/error_dialog', :object => @document_version, :title => 'Bewerking opslaan mislukt!'
+      .narrow
+        = form_for :document_version, :action => url(:edit_project_description, :project_id => params[:project_id]) do
+          %p
+            = form_label @document_version, :title, 'titel', 'kies iets dat het document goed beschrijft, maar pieker er niet te lang over want de titel is altijd te wijzigen in een nieuwe versie van het document. in het document zelf kun je ook nog een hoofdstuk structuur aanbrengen met titels.', 'dit veld moet ingevuld worden'
+            = text_field :title, :size=> 60
+          %p
+            = form_label @document_version, :content, 'beschrijving', "de content van het document, deze content mag met #{link_to('wiki codes', '#wiki_formatting')} opgemaakt worden"
+            = text_area :content, :rows => 20, :cols => 80
+          %p
+            = form_label @document_version, :comment, 'commentaar', "een beschrijving van de gemaakte wijzigingen"
+            = text_area :comment, :rows => 5, :cols => 80
+          .narrow
+            %p
+              = form_label @document_version, :submit, 'oplaan', 'alles goed nagelezen?'
+              %br/
+              = submit '&nbsp;wijzigingen opslaan&nbsp;', :name => 'submit'
+      %br/
+      %br/
+      %br/
+      %br/
+      .subpage
+        .subpage_header
+          %span.title
+            - title_html= capture_haml do
+              %span.number= '#' + @document.id.to_s
+              = @document.current_version.title
+            %h1= title_html
+          .meta
+            = render_relative_date @document.created_at
+            gestart door
+            = link_to @document.user.login, url(:user, :login => @document.user.login)
+            %br/
+            huidige versie
+            = @document.version_count
+            verscheen
+            = render_relative_date @document.current_version.created_at
+            door
+            = link_to @document.current_version.user.login, url(:user, :login => @document.current_version.user.login)
+          .content
+            = @document.current_version.content
+  .c25l
+    .subcl.sidebar
+      = partial 'project_sidebar', :project => @project
+

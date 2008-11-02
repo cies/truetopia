@@ -1,0 +1,57 @@
+- throw_content(:title, 'Mijn Start')
+
+.subcolumns
+  .c25l
+    .subcl
+      %h4
+        Mijn...
+      .column_menu
+        = link_to "&nbsp;&nbsp;mijn start&nbsp;", url(:my_start)
+        %br/
+        = link_to "&nbsp;&nbsp;mijn mods&nbsp;", url(:my_mods)
+        %br/
+        = link_to "&nbsp;&nbsp;mijn oogjes&nbsp;", url(:my_subscriptions)
+        %br/
+        = link_to "&nbsp;&nbsp;mijn stemmen&nbsp;", url(:my_votes)
+        %br/
+        = link_to "&nbsp;&nbsp;mijn projecten&nbsp;", url(:my_projects)
+        %br/
+        = link_to "&nbsp;&nbsp;mijn documenten&nbsp;", url(:my_documents)
+        %br/
+        = link_to "&nbsp;&nbsp;mijn discussie reacties&nbsp;", url(:my_posts)
+        %br/
+        = link_to "&nbsp;&nbsp;mijn zoekopdrachten&nbsp;", url(:my_searches)
+        %br/
+        = link_to "&nbsp;&nbsp;mijn profiel&nbsp;", url(:my_profile)
+        %br/
+      %br/
+  .c75r
+    .subcr
+      %h1
+        Mijn Oogjes
+      Hier zie je een overzicht van je persoonlijke informatie.
+      %p
+        %table.full
+          %thead
+            %tr
+              %th
+                soort
+              %th
+                naam
+              %th
+                sinds
+              %td/
+          %tbody
+            - @subscriptions.each do |subscription|
+              %tr
+                %td.sub
+                  = translate_type subscription.subscribable_type
+                %td
+                  = render_object_title_html subscription.subscribable_obj
+                %td.sub
+                  = version.user.login
+                %td
+                  = link_to version.comment, url(:document_version, :id => @document.id, :version => version.number)
+                %td.sub
+                  = link_to 'bekijken', url(:document_version, :id => @document.id, :version => version.number)
+                  = link_to 'terug zetten'

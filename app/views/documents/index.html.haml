@@ -1,0 +1,58 @@
+- throw_content(:title, 'documenten, Overzicht')
+
+.subcolumns
+  .c25l
+    .subcl
+      %h4
+        Acties
+      .column_menu
+        // = link_to "&nbsp;&nbsp;Maak een nieuw document&nbsp;", url(:new_document)
+        // %br/
+        = link_to "&nbsp;&nbsp;Zoek een document&nbsp;", url(:search)
+        %br/
+        = link_to "&nbsp;&nbsp;Recente wijzigingen&nbsp;", '/recent'
+        %br/
+      %br/
+      %h4
+        Documenten
+      %p
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam malesuada   suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin sed.
+  .c75r
+    .subcr
+      %h1
+        Overzicht van documenten
+      - if @documents.any?
+        %h3
+          Recent gewijzigde documenten
+        = @documents.each do |document|
+          .subpage
+            .subpage_header
+              %span.title
+                - title_html= capture_haml do
+                  %span.number= '#' + document.id.to_s
+                  = document.current_version.title
+                = link_to title_html, url(:document, :id => document.id)
+              .meta
+                = render_relative_date document.created_at
+                gestart door
+                = link_to document.user.login, url(:user, :login => document.user.login)
+                %br/
+                huidige versie
+                = document.version_count
+                verscheen
+                = render_relative_date document.current_version.created_at
+                door
+                = link_to document.current_version.user.login, url(:user, :login => document.current_version.user.login)
+            .subpage_content
+              = (html_escape document.current_version.content).gsub("\n", '<br/>')[1..200].strip + '...'
+            .subpage_footer
+              %strong
+                = link_to 'lees verder...', url(:document, :id => document.id)
+
+        #pagination
+          //= merb_paginate @documents   - no pagination for now.. needs to become translatable and is design sensitive
+          //= page_entries_info @documents
+      - else
+        Eerst ff
+        = link_to 'eentje',  url(:new_document)
+        maken goofie..

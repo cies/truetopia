@@ -1,0 +1,326 @@
+@charset "UTF-8"
+
+!separator_color= #ddd
+
+// mixin for headings and titles
+=heading_base
+  :font-family 'times new roman', times, serif
+  :font-weight bold
+  :color #666
+  :margin 0 0 0.25em 0  
+
+
+@media all
+
+  /* reset font size for all elements to standard (16px)
+  html *
+    :font-size 100.01% 
+  
+  /* reset monospaced elements to font size 16px in Gecko browsers
+  textarea,  pre,  tt,  code
+    :font-family 'Courier New', Courier, monospace
+
+  
+  /* base layout gets standard font size 12px
+  body
+    :font-family 'Trebuchet MS', Verdana, Helvetica, Arial, sans-serif
+    :font-size 75.00%
+    :color #444
+  
+  h1
+    +heading_base
+    :color #000
+    :font-size 200%
+  h2
+    +heading_base
+    :font-size 200%
+    :color #182E7A
+  h3
+    +heading_base
+    :font-size 150%
+  h4
+    +heading_base
+    :font-size 133.33%
+  h5
+    +heading_base
+    :font-size 116.67%  
+  h6
+    +heading_base
+    :font-size 116.67%
+    :font-style italic 
+
+  #header
+    span
+      +heading_base
+      &.title
+        :font-size 3em
+        :letter-spacing -2px
+        :line-height 80%
+        :color #000
+      &.subtitle
+        :padding-left 10px
+
+  .float_left
+    :background #f00
+
+  /* patch for the #nav_main of yaml's nav_slidingdoor.css
+  #nav_main
+    :float right
+    / as small as possible, no good way to keep the float at the bottom
+    :margin-top 1.5em
+    :width auto
+    :background none
+    :border 0
+    ul
+      :padding-left 1em
+      :border 0
+      li
+        :margin 0
+        :padding 0
+        :padding-left .5em
+        :border 0
+        :background none
+        :background-color transparent
+        &:hover, &:focus, &:active
+          :background-color transparent
+          :background none
+      a
+        :font-weight bold
+        :padding-left 12px
+        :padding-top 3px
+        :padding-bottom 1px
+        :background #888 url('/images/corner.png') top left no-repeat
+        :color #fff
+        &:hover, &:focus, &:active
+          :color #4D87C7
+          :background none
+          :background-color #eee
+      li#current
+        :background none
+        a
+          :padding-top 3px
+          :padding-bottom 2px
+          :background url('/images/corner.png') top left no-repeat
+          :border-color= !separator_color
+          :background-color= !separator_color
+          &:hover, &:focus, &:active
+            :background none
+            :background-color= !separator_color
+
+
+  .column_menu a
+    :font-size 110%
+    :font-weight bold
+
+  span.number
+    :color #555
+    :letter-spacing -1px
+    :font-size 70%
+    :font-family 'Trebuchet MS', Verdana, Helvetica, Arial, sans-serif
+
+  .right_bg
+    :background #fff url("/images/right_bg.png") no-repeat top right
+    :border-top 2px solid
+    :border-color= !separator_color
+
+  .subpage
+    :background #fff url("/images/doc_bg.png") no-repeat top left
+    :margin-left -7px
+    :padding-left 5px
+    :border-top 2px solid #eee
+    :border-left 2px solid #eee
+    :margin-bottom 1em
+    &:hover, &:focus, &:active
+      :border-top 2px solid #4D87C7
+      :border-left 2px solid #4D87C7
+      :background #fff
+    .subpage_header
+      span.title a
+        :font-weight bold
+        :font-family 'times new roman', times, serif
+        :font-size 180%
+        &:hover, &:focus, &:active
+          :border-top 2px solid #4D87C7
+          :border-bottom 2px solid #4D87C7
+          :text-decoration none
+      .links
+        a
+          &:hover, &:focus, &:active
+            :border-top 2px solid #4D87C7
+            :border-bottom 2px solid #4D87C7
+      .meta
+        :padding-left 1em
+    .subpage_content
+      :padding-top .2em
+      :padding-bottom .2em
+      :font-family 'times new roman', times, serif
+      :font-size 125%
+    .subpage_children
+      :padding-left 1em
+      :padding-top 1em
+      :padding-bottom .1em
+    .subpage_footer
+      :padding-left 1em
+
+  
+  .crum_separator,  .crum
+    :font-weight bold
+    :font-size 133.33%
+    :padding-right 0.3em
+  
+  
+  p
+    :line-height 1.5em
+    :margin 0 0 1em 0
+    &.big
+      :font-size 125%
+    &.bigger
+      :font-size 150%
+  
+  ul,  ol,  dl
+    :line-height 1.5em
+    :margin 0 0 1em 1em 
+  
+  
+  li
+    :margin-left 1.5em
+    :line-height 1.5em 
+  
+  
+  dt
+    :font-weight bold 
+  
+  
+  dd
+    :margin 0 0 1em 2em 
+  
+  label
+    :color #777
+    span.title
+      :color #555
+      :font-weight bold
+      :margin-right 1em
+
+  input.error
+    :background-color #fcc
+
+  cite,  blockquote
+    :font-style italic 
+  blockquote
+    :margin 0 0 1em 1.5em 
+  
+  
+  strong, b
+    :font-weight bold 
+  
+  
+  em, i
+    :font-style italic 
+  
+  
+  code,  pre
+    :font-family monospace
+    :font-size 1.1em
+  
+  
+  acronym,  abbr
+    :letter-spacing .07em
+    :border-bottom .1em dashed #c00
+    :cursor help
+  
+  
+  .notification
+    :background-color #dfd
+    :border-top solid 2px #cdc
+    :margin 0em 3em 1em 3em
+    :padding .5em 2em .5em 2em
+    :text-align center
+  
+  
+  .float_left
+    :float left
+    :display inline
+    :margin-right 1em
+    :margin-bottom 0.15em
+  
+  
+  .float_right
+    :float right
+    :display inline
+    :margin-left 1em
+    :margin-bottom 0.15em
+  
+  .narrow
+    :margin-left 3em
+    :margin-right 3em
+  
+  .center
+    :text-align center
+    :margin 0.5em auto 
+  
+  
+  a
+    :color #4D87C7
+    :text-decoration none
+    &:hover, &:focus, &:active
+      :background-color #4D87C7
+      :color #fff
+      :text-decoration none
+
+  .logo_color
+    :background-color transparent
+    &:focus, &:hover, &:active
+      :background-color #4D87C7
+
+  
+  #footer a
+    :color #999
+    :background transparent
+    :font-weight bold
+    &:focus, &:hover, &:active
+      :color #4D87C7
+      :background-color transparent
+      :text-decoration underline
+
+
+  table
+    :width auto
+    :border-collapse collapse
+    :margin-bottom 0.5em
+    :border-bottom 1px solid
+    :border-color= !separator_color
+    &.full
+      :width 100%
+    &.fixed
+      :table-layout fixed
+  
+  th, td
+    :padding .2em .5em .2em .5em
+
+  thead th
+    :background #444
+    :color #fff
+    :border-right 2px solid #fff
+    
+  tbody td
+    :border-top 1px solid
+    :border-color= !separator_color
+    :background #fcfcfc
+    :color #333
+    &.sub
+      :background #fefefe
+      :color #333
+  
+  #debug
+    :text-align left
+    :text-size 120%
+  
+  hr
+    :color #fff
+    :background transparent
+    :margin 0 0 0.5em 0
+    :padding 0 0 0.5em 0
+    :border 0
+    :border-bottom 1px #eee solid
+  
+  

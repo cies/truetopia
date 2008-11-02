@@ -1,0 +1,33 @@
+- throw_content :title, 'Pagina niet gevonden'
+
+.subcolumns
+  .c25l
+    .subcl
+      &nbsp;
+  .c50l
+    .subcl
+      #header.center
+        %span.title
+          Truetopia
+        %br/
+        %span.subtitle
+          \...doe gewoon lekker mee!
+        %br/
+        %img{ :src => '/images/logo/logo_broken_trans_150.png' }/
+      .notification
+        geen pagina voor:
+        %pre
+          %strong= request.uri
+      %br/
+      %h1
+        Pagina niet gevonden...
+      %p.big
+        Je hebt een adres opgevraagd waarvoor geen pagina bestaat. Misschien heb je een fout gemaakt bij het intoetsen van het adres...
+      %br/
+      %h3
+        \...misschien is het een bug!
+      %p
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam malesuada   suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit
+  .c25r
+    .subcr
+      &nbsp;

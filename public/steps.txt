@@ -1,0 +1,157 @@
+bee!
+
+cies here.. just finished reading the script. you might have yr doubt about the sharing session on this topic -- i have no doubt about this script. it gave me goose pimples at least 6 times. i loved reading it, it's a highly valuable piece of info for any serious memeber of our group. i understand how it got so high on your bizibizi priority list, and i'm very thankful to you for translating it.
+
+i'm on a bus now -- hectic day in thai transport. i freaked out a little here and there today as i got ripped off, set up, and what not, a few times too much ;)  but now my butt is steady in a bus that will go straight back to bkk. parents arriving 26, and a special girl waiting for me, i cannot wish for more.
+
+my bro is to myanmar for a visum now. so since today im finally on my own again. being so close with my bro for 2 weeks was quite enlightening: it really shows how easily i let myself be influenced.
+
+the next five weeks will be crazy: family assembling in thailand (first bkk, then going north then fly south then back bkk), i do (and dj on) a party in bkk that i organize together with 'ichi' a germany guy who's a lot into qigong/dao/buddhism (an other laotze fan) and has a very nice taste of music. ooh, and then there is ploy, the girl i mentioned earlier, very interesting personality incarnated in a goregeous vessel ;)  vegetarian, buddhist by upbringing and a student of religious traditional asian art and history. i have someone in mind to guide my parents around bkk... sound good? well problems right ahead as i'll most likely fall helplessly in love the coming weeks. (ofcourse im going for it knowing that i'll hurt myself when i leave)
+
+just spoke with my bro on the phone, he told me he got some of his stuff stolen by a 'friend'. right now he calling this friend probably threatening to mutelate him beyond repair in order to get his stuff back. o, o, o, my bro ;)   i didnt even try to calm him.
+
+i miss you guys, i miss ft, especially when i read the script i felt the absense of structure in my path.
+
+so when are you and joost coming over? for malaysia i found the following nice: the perenthian island, the jungle, and malaka. many people tell me penang is actually the best place in malaysia, i drop by that place next time.
+
+maybe i can see you in your trip (i forgot when you where going)
+ciao!
+
+
+p.s.: i was thinking of you saying that i have to be careful with the thai as they know magic.. we where on the infamous full moon party of ko pha ngan, a hooker was going mental on a dude an picked up a piece of glass to wave at him. me and my bro stepped in holding her arm and peeling the glass from her fist. she must have cut herself at some point as she was pointing a bleeding finger to my brother cursing and threatening him in half thai half english --- it was indeed quite a sight. then i was thinking of you, and black magic, so i quickly stepped in between my bro and her to keep her from cursing him, not that i know how to do that exactly, i was mainly pretending to ;)  looking back it was actually quite funny.
+
+
+
+
+077214763, 0836426392, 0844431951, 077212644, 0896472854, 
+
+
+ = Motivatie
+
+Hier probeer ik (Cies Breijs) wacht uitleg te geven bij een aantal belangrijke ontwerpbeslissingen die ik heb genomen bij het maken van Truetopia. Wil je meer uitleg dan kun je me daarom vragen in een mailtje.
+
+Om te beginnen wil ik motiveren waarom ik dit project niet, in een andere vorm, als onderdeel van een studie heb gedaan. Het zou goed moelijk zijn om een scriptie te schrijven over Truetopia, of een onderdeel van Truetopia. Maar in mijn ogen beperkt het wetenschappelijk onderzoeksmodel dat gehanteerd word in universiteiten mij om oplossingsgericht bezig te zijn en een degelijk product te bouwen. Op universiteiten moet je onderzoek doen volgens bepaalde modellen, hierdoor zou ik heel veel tijd verliezen aan het onderzoek voor iedere ontwerpbeslissing. Ik zou iedere overweging tot in de puntjes moeten kunnen verdedigen met wetenschappelijk onderbouwde feiten. Zonde tijd als je het mij vraagt.
+
+Daarom deze motivatie, omdat ik toch wil laten weten hoe ik tot sommige beslissingen ben gekomen, maar niet gelijk een heel onderzoek wil doen.
+
+Daarnaast is er nog de basis motivatie om aan Truetopia te werken. Die motivatie komt van wat ik om me heen zie. Ik geloof in mensen en in deze wereld -- in deze context snap ik niet hoe er zoveel haat, leugens, oorlog, vervuiling, etc. vandaan?
+
+[...] MEER!
+
+ == De Project stappen
+
+Het voornaamste wat is zocht was een systeem dat de input van een groep mensen kan bundelen in een heel simpel website gebazeerd process.
+
+Om te beginnen heb ik 'probleem oplossen' centraal gezet. Ik zocht naar generieke probleem oplos modellen op wikipedia en ben bij XYZ blijven steken: gewoon omdat het in mijn ogen goed past bij wat ik wil neer zetten. Het hoeft niet perfect te zijn want Truetopia kan gemakkelijk [[zich zelf aanpassen]], ik hoef het ook niet wetenschappelijk te onderbouwen waarom ik dit model heb gekozen: het voelde gewoon goed. Dat model heb ik terug gebracht te het 3 stappen model dat we nu hanteren. 3 omdat dat me een goed getal leek, niet te veel niet te weinig.
+
+ == Het stem algoritme
+
+Het stem algoritme zag ik voor het eerst op de website van AD. Ik heb andere stem algotimen bekeken maar nooit sprak het me zo aan als dit algoritme. Bij reguliere verkiezingen moet iedereen stemmen op de verkiezingsdag, diezelfde avond worden de stemmen geteld. Iedere stem telt voor '1'.
+
+In het geval van nederlandse verkiezingen is het pediode dat gestemd kan worden een dag. Op het internet zijn stemmingen meestal langer open, hierdoor hoeft niet iedereen op dezelfde dag uit te komen.
+
+Voor Truetopia zocht ik een manier om voorstellen goed of af te keuren. Dit is een ander soort stemming dan bijvoorbeeld nederlandse 2de kamer verkiezingen waar je kan kiezen uit meerdere opties. Gezien het doel van de stemmingen (goed-, of afkeuren) leek het me logisch om ook stemmen in 2 richting toe te staan: voor-, en tegen stemmen.
+
+Stel de stemmingen voor het goed-, of afkeuren van een voorstel duren een maand. Na een maand word er gekeken: meer stemmen voor -- voorstel gaar door, meer stemmen tegen -- voorstel wordt verworpen. In dit geval zou het goed kunnen dat voorstellen met een kleine marge door mogen of worden verworpen. Bijvoorbeeld: na een maan heeft een voorstel 1000 voor stemmen en 1010 tegen stemmen, dit voorstel zou verworpen worden met een hele kleine marge.
+
+Een vaste looptijd van stemmingen staat representative stemmingen in de weg. Maar als er geen vaste looptijd is, hoe bepalen we dan dat een stemming is afgelopen? Een voor de hand liggende manier is een overschrijdingsgrens te trekken. Bijvoorbeeld: als het aantal voor-, of tegenstemmen, per saldo, boven de 1000 uit komt dan wordt de stemming beeindigd. Een saldo van 1000 stemmen voor en het voorstel mag door, 1000 stemmen tegen en het voorstel wordt verworpen. In het vorige voorbeeld was er slechts sprake van een saldo van 10 stemmen tegen.
+
+Een overschrijdingsgrens van 1000 is moeilijk te behalen met een groep van 2000 potentiele stemmers, maar veel makkelijker te bereiken met een groep van 1 miljoen. Ofwel: met een vaste overschrijdingsgrens lopen de stemmingen sneller af naarmate de groep potentiele stemmers groter wordt. Daarom is het goed de overschrijdingsgrens af te laten hangen van het aantal potentiele stemmers.
+
+Stel we zetten de overschrijdingsgrens op 1/10 van het aantal potentiele stemmers. Dit levert een interessant stem algoritme op. Dit algoritme heeft alleen een aantal problemen:
+ - stemmingen kunnen erg lang duren als er weinig animo is
+ - stemmingen kunnen erg snel aflopen als er veel animo is
+
+Om dit op te lossen kunnen we, i.p.v. naar het stem saldo te kijken, naar het stem oppervlak kijken.
+<<plaatje>>
+Het stemoppervlak is het gebied onder de grafiek van het stem saldo. Door dit oppervlak te gebruiken als maatstaf is het.....................
+
+
+
+
+deezel.com 
+
+
+
+de 3 stappen van projecten
+
+Projecten in Truetopia hebben 3 stappen. Namelijk:
+
+Een nieuw project begint in stap 1. De 3 stappen draaien rond de volgende vragen:
+
+   1. Wat is het probleem? En hoe ziet een toekomst er uit waarin het probleem is opgelost?
+   2. Welke veranderingen vormen de oplossing?
+   3. Hoe moet de verandering tot stand komen?
+
+In iedere stap van het project worden documenten gepubliceert, deze beschrijven antwoorden voor de vragen van de desbetreffende stap. Deze vragen kunnen beantwoord worden volgens een aantal checkpoints, maar er is geen officliele richtlijn. 
+
+
+change proposal (problem -> solution)
+- 5 "steps":
+   1. whats the problem
+   2. vision for a future with the problem solved
+   3. what has to be changed
+   4. how to change it -> plan
+   5. SWOT analysis of the the plan
+   6. align resources
+- 3 "stages":
+   1. whats the problem + vision for a future with the problem solved
+   2. what has to be changed
+   3. how to change it -> plan + SWOT analysis of the the plan + resource allocation
+
+
+
+
+
+Step 1: "What's Going On?"
+
+Establishes a context for the problems or opportunities being addressed, exploring different ways of stating the so-called "itch", exploring what factors, circumstances, and entities are involved, and what a solution might look like.
+
+There are actually five sub-steps to this phase:
+
+    * "What's the Itch?", generating a long list of perceived problems or opportunities, often re-stating similar ones in several different ways, and then looking for patterns and clusters with the mass in order to select one key "problem" to address
+
+    * "What's the Impact?", digging deeper into the issue and identifying how it affects the world
+
+    * "What's the Information?", describing various aspects of the problem in detail
+
+    * "Who's Involved?", identifying other stakeholders in the issue
+
+    * "What's the Vision?", identifying what would be different if the issue were resolved, in the form of a "wish" statement (e.g., "If only my dog didn't run away when I let him outside.")
+
+Step 2: "What's Success?"
+
+The second step establishes a vision for a future with the problem solved or the opportunity exploited. In this stage often active imagination is used to imagine, explore, and describe how things would be if the issue were resolved. This vision then informs a process of creating a clearly articulated view of the future, using a tool called "DRIVE", short for:
+
+    * Do - what do you want the solution to do?
+    * Restrictions - what must the solution NOT do?
+    * Investment - what resources can be invested?
+    * Values - what values must you live by? (e.g. environmentally friendly, etc.)
+    * Essential outcomes - what are the essential outcomes?
+
+[edit] Step 3: "What's the Question?"
+
+The third step frames the challenge by turning it into a question. This is accomplished through brainstorm-like techniques eliciting as many questions as possible, and then clustering, combining, and choosing the question or questions that seem most stimulating.
+
+[edit] Step 4: "Generate Answers"
+
+Through the use of brainstorming and other idea-generating techniques, the fourth step is designed to create a long list of possible solutions problem question. One of those solutions (or several, combined) is selected for further development.
+
+[edit] Step 5: "Forge the Solution"
+
+Uses a specific tool called "POWER" to develop the selected solution into something more robust. POWER is short for:
+
+    * Positives - what's good about the idea?
+    * Objections - what's bad about it?
+    * What else? - what does it remind you of?
+    * Enhancements - how can what's good about it be made better?
+    * Remedies - how can the things that are bad about it be corrected?
+
+[edit] Step 6: "Align Resources"
+
+The final step translates the selected, developed solution into an action plan that may include, among other things:
+
+    * to do lists
+    * timelines and milestones
+    * lists of people who need to get involved
+    * lists of issues that need further work

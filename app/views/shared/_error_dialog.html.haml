@@ -1,0 +1,11 @@
+
+#error_dialog
+  %h2= title || "Mislukt!"
+  %p
+    = "Het formulier dat je hebt ingestuurd kon om de volgende reden#{object.errors.size > 1 ? 'en' : ''} niet worden verwerkt;"
+    %ul
+      - object.errors.each do |error|
+        - error = [error] unless error.class == Array
+        - error.each do |e|
+          %li= translate_notification_message object, e
+    Even nakijken en nog een keer proberen...

@@ -1,0 +1,30 @@
+%p
+  Deze site draait
+  %a{ :href => "/" }
+    Truetopia
+  %b
+    %i
+      BETA
+  versie 0.1, de broncode vrij beschikbaar onder de
+  %a{ :href => "http://gnu.org" }
+    GNU GPL
+  licentie.
+  %br/
+  = "Voor het ontwikkellen van Truetopia is dankbaar gebruik gemaakt van #{link_to 'Ruby', 'http://ruby-lang.org'}, #{link_to 'merb', 'http://merbivore.org'}, #{link_to 'DataMapper', 'http://www.datamapper.org/'}, #{link_to 'haml', 'http://google.com/?q=haml'} en #{link_to 'YaML', 'http://www.yaml.de/'}."
+
+- if Merb::Config[:environment] == 'development'
+  %p
+    %a{:onclick => "document.getElementsByClassName('debug_info')[0].style.display = '';", :href => '#debug_info'}
+      debug info
+    .debug_info{:style => 'display: none'}
+      #debug
+        %code
+          - debug_info.each do |i|
+            %p
+              %a{:onclick => "document.getElementsByClassName('debug_#{i[:name]}')[0].style.display = '';", :href => "#debug_#{i[:name]}"}
+                = i[:code]
+              %br/
+              %span{:class => "debug_#{i[:name]}", :style => 'display: none'}
+                = escape_once '=> ' + i[:string]
+              %a{ :name => "debug_#{i[:name]}" }/
+      %a{ :name => "debug_info" }/

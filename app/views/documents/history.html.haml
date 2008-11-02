@@ -1,0 +1,38 @@
+- throw_content :title, "document ##{@document.id} -- historie"
+= partial 'documents/document_header', :document => @document, :current => :history
+.subcolumns.right_bg
+  .c75r
+    .subcr
+      Gestart door:
+      = link_to @document.user.login, url(:user, :id => @document.user.login)
+      = @document.created_at.strftime("on %b %d, %y")
+      %p
+        %table.full
+          %thead
+            %tr
+              %th
+                nr
+              %th
+                datum
+              %th
+                auteur
+              %th
+                comment
+              %td/
+          %tbody
+            - @document_versions.each do |version|
+              %tr
+                %td.sub
+                  = version.number
+                %td
+                  = version.created_at.strftime("on %b %d, %y")
+                %td.sub
+                  = version.user.login
+                %td
+                  = link_to version.comment, url(:document_version, :id => @document.id, :version => version.number)
+                %td.sub
+                  = link_to 'bekijken', url(:document_version, :id => @document.id, :version => version.number)
+                  = link_to 'terug zetten'
+  .c25l
+    .subcl.sidebar
+      = partial 'document_sidebar', :document => @document

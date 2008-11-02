@@ -1,0 +1,1139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) and manually edited by Cies Breijs -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448"
+   height="1052.3622"
+   id="svg2"
+   version="1.0"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="initiator_cards_front.svg"
+   sodipodi:docbase="/home/cies/truetopia/public/images/logo"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs6127">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 10 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="20 : 10 : 1"
+       inkscape:persp3d-origin="10 : 6.6666667 : 1"
+       id="perspective10" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-height="728"
+     inkscape:window-width="1270"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="0.83526989"
+     inkscape:cx="279.63769"
+     inkscape:cy="851.95373"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:current-layer="svg2"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     units="cm">
+    <sodipodi:guide
+       orientation="1,0"
+       position="40.705406,966.15479"
+       id="guide3202" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="422.61789,1015.2407"
+       id="guide3204" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="707.55574,842.84135"
+       id="guide3206" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="365.15144,40.705406"
+       id="guide3208" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Cies Breijs</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Notice" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Attribution" />
+        <cc:prohibits
+           rdf:resource="http://web.resource.org/cc/CommercialUse" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.01251614px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 374.72918,1011.6694 L 374.72918,37.134077"
+     id="path3744" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 27.53601,72.643564 L 720.72513,72.643564"
+     id="path3746" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 26.367696,251.20382 L 719.55682,251.20382"
+     id="path3748" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 26.353241,430.49492 L 719.54237,430.49492"
+     id="path3898" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 26.360473,608.20947 L 719.54963,608.20947"
+     id="path3974" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 26.346013,787.50057 L 719.53513,787.50057"
+     id="path4050" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 27.563838,966.36941 L 720.75296,966.36941"
+     id="path4128" />
+  <rect
+     style="fill:#ffffff;stroke:none;stroke-opacity:1"
+     id="rect4130"
+     width="684.37244"
+     height="943.40765"
+     x="30.705406"
+     y="51.488079" />
+  <g
+     id="g3246"
+     transform="translate(0.2678297,35.916535)">
+    <g
+       transform="matrix(0.5587513,0,0,0.5587513,12.290636,-14.688424)"
+       id="g3192">
+      <g
+         id="g6123"
+         transform="matrix(1.7509316,0,0,1.7509316,92.793898,126.76314)">
+        <path
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+           d="M 0,0 L 0,20 L 20,20 L 20,0 L 0,0 z M 10,3 C 13.865993,3 17,6.1340068 17,10 C 17,13.865993 13.865993,17 10,17 C 6.1340068,17 3,13.865993 3,10 C 3,6.1340068 6.1340068,3 10,3 z"
+           id="black_rectange_with_a_hole_in_it" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:53.34646225px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="134.47711"
+         y="161.81445"
+         id="text2392"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan2394"
+           x="134.47711"
+           y="161.81445"
+           style="font-size:48.01182175px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold">Truetopia</tspan></text>
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text2396"
+       y="106.89187"
+       x="110.96938"
+       style="font-size:24.46780205px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:22.0210228px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="106.89187"
+         x="110.96938"
+         id="tspan2398"
+         sodipodi:role="line">Cies Breijs</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text2400"
+       y="123.43411"
+       x="112.39674"
+       style="font-size:13.56993008px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12.2129364px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Italic"
+         y="123.43411"
+         x="112.39674"
+         id="tspan2402"
+         sodipodi:role="line">Initiator and main developer</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3176"
+       y="141.82623"
+       x="111.90514"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="141.82623"
+         x="111.90514"
+         id="tspan3178"
+         sodipodi:role="line">initiator@truetopiaproject.org</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3180"
+       y="154.02394"
+       x="111.7385"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="154.02394"
+         x="111.7385"
+         id="tspan3182"
+         sodipodi:role="line">skype: cies010</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3184"
+       y="166.91461"
+       x="111.32394"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="166.91461"
+         x="111.32394"
+         id="tspan3186"
+         sodipodi:role="line">+91.97.8050.3352</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3198"
+       y="186.87805"
+       x="111.32394"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="186.87805"
+         x="111.32394"
+         id="tspan3200"
+         sodipodi:role="line">http://truetopiaproject.org</tspan></text>
+  </g>
+  <g
+     id="g3265"
+     transform="translate(0.2678297,35.916535)">
+    <g
+       transform="matrix(0.5587513,0,0,0.5587513,346.18047,-14.554499)"
+       id="g3210">
+      <g
+         id="g3212"
+         transform="matrix(1.7509316,0,0,1.7509316,92.793898,126.76314)">
+        <path
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+           d="M 0,0 L 0,20 L 20,20 L 20,0 L 0,0 z M 10,3 C 13.865993,3 17,6.1340068 17,10 C 17,13.865993 13.865993,17 10,17 C 6.1340068,17 3,13.865993 3,10 C 3,6.1340068 6.1340068,3 10,3 z"
+           id="path3214" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:53.34646225px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="134.47711"
+         y="161.81445"
+         id="text3216"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3218"
+           x="134.47711"
+           y="161.81445"
+           style="font-size:48.01182175px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold">Truetopia</tspan></text>
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3220"
+       y="107.02579"
+       x="444.85919"
+       style="font-size:24.46780205px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:22.0210228px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="107.02579"
+         x="444.85919"
+         id="tspan3222"
+         sodipodi:role="line">Cies Breijs</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3224"
+       y="123.56803"
+       x="446.28656"
+       style="font-size:13.56993008px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12.2129364px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Italic"
+         y="123.56803"
+         x="446.28656"
+         id="tspan3226"
+         sodipodi:role="line">Initiator and main developer</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3230"
+       y="141.96014"
+       x="445.79495"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="141.96014"
+         x="445.79495"
+         id="tspan3232"
+         sodipodi:role="line">initiator@truetopiaproject.org</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3234"
+       y="154.15787"
+       x="445.62833"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="154.15787"
+         x="445.62833"
+         id="tspan3236"
+         sodipodi:role="line">skype: cies010</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3238"
+       y="167.04852"
+       x="445.21375"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="167.04852"
+         x="445.21375"
+         id="tspan3240"
+         sodipodi:role="line">+91.97.8050.3352</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3242"
+       y="187.01196"
+       x="445.21375"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="187.01196"
+         x="445.21375"
+         id="tspan3244"
+         sodipodi:role="line">http://truetopiaproject.org</tspan></text>
+  </g>
+  <g
+     id="g3824"
+     transform="translate(0.2533812,215.20764)">
+    <g
+       transform="matrix(0.5587513,0,0,0.5587513,12.290636,-14.688424)"
+       id="g3826">
+      <g
+         id="g3828"
+         transform="matrix(1.7509316,0,0,1.7509316,92.793898,126.76314)">
+        <path
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+           d="M 0,0 L 0,20 L 20,20 L 20,0 L 0,0 z M 10,3 C 13.865993,3 17,6.1340068 17,10 C 17,13.865993 13.865993,17 10,17 C 6.1340068,17 3,13.865993 3,10 C 3,6.1340068 6.1340068,3 10,3 z"
+           id="path3830" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:53.34646225px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="134.47711"
+         y="161.81445"
+         id="text3832"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3834"
+           x="134.47711"
+           y="161.81445"
+           style="font-size:48.01182175px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold">Truetopia</tspan></text>
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3836"
+       y="106.89187"
+       x="110.96938"
+       style="font-size:24.46780205px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:22.0210228px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="106.89187"
+         x="110.96938"
+         id="tspan3838"
+         sodipodi:role="line">Cies Breijs</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3840"
+       y="123.43411"
+       x="112.39674"
+       style="font-size:13.56993008px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12.2129364px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Italic"
+         y="123.43411"
+         x="112.39674"
+         id="tspan3842"
+         sodipodi:role="line">Initiator and main developer</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3844"
+       y="141.82623"
+       x="111.90514"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="141.82623"
+         x="111.90514"
+         id="tspan3846"
+         sodipodi:role="line">initiator@truetopiaproject.org</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3848"
+       y="154.02394"
+       x="111.7385"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="154.02394"
+         x="111.7385"
+         id="tspan3850"
+         sodipodi:role="line">skype: cies010</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3852"
+       y="166.91461"
+       x="111.32394"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="166.91461"
+         x="111.32394"
+         id="tspan3854"
+         sodipodi:role="line">+91.97.8050.3352</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3856"
+       y="186.87805"
+       x="111.32394"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="186.87805"
+         x="111.32394"
+         id="tspan3858"
+         sodipodi:role="line">http://truetopiaproject.org</tspan></text>
+  </g>
+  <g
+     id="g3860"
+     transform="translate(0.2533812,215.20764)">
+    <g
+       transform="matrix(0.5587513,0,0,0.5587513,346.18047,-14.554499)"
+       id="g3862">
+      <g
+         id="g3864"
+         transform="matrix(1.7509316,0,0,1.7509316,92.793898,126.76314)">
+        <path
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+           d="M 0,0 L 0,20 L 20,20 L 20,0 L 0,0 z M 10,3 C 13.865993,3 17,6.1340068 17,10 C 17,13.865993 13.865993,17 10,17 C 6.1340068,17 3,13.865993 3,10 C 3,6.1340068 6.1340068,3 10,3 z"
+           id="path3866" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:53.34646225px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="134.47711"
+         y="161.81445"
+         id="text3868"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3870"
+           x="134.47711"
+           y="161.81445"
+           style="font-size:48.01182175px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold">Truetopia</tspan></text>
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3872"
+       y="107.02579"
+       x="444.85919"
+       style="font-size:24.46780205px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:22.0210228px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="107.02579"
+         x="444.85919"
+         id="tspan3874"
+         sodipodi:role="line">Cies Breijs</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3876"
+       y="123.56803"
+       x="446.28656"
+       style="font-size:13.56993008px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12.2129364px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Italic"
+         y="123.56803"
+         x="446.28656"
+         id="tspan3878"
+         sodipodi:role="line">Initiator and main developer</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3880"
+       y="141.96014"
+       x="445.79495"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="141.96014"
+         x="445.79495"
+         id="tspan3882"
+         sodipodi:role="line">initiator@truetopiaproject.org</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3884"
+       y="154.15787"
+       x="445.62833"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="154.15787"
+         x="445.62833"
+         id="tspan3886"
+         sodipodi:role="line">skype: cies010</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3888"
+       y="167.04852"
+       x="445.21375"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="167.04852"
+         x="445.21375"
+         id="tspan3890"
+         sodipodi:role="line">+91.97.8050.3352</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3892"
+       y="187.01196"
+       x="445.21375"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="187.01196"
+         x="445.21375"
+         id="tspan3894"
+         sodipodi:role="line">http://truetopiaproject.org</tspan></text>
+  </g>
+  <g
+     id="g3900"
+     transform="translate(0.2606033,392.92218)">
+    <g
+       transform="matrix(0.5587513,0,0,0.5587513,12.290636,-14.688424)"
+       id="g3902">
+      <g
+         id="g3904"
+         transform="matrix(1.7509316,0,0,1.7509316,92.793898,126.76314)">
+        <path
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+           d="M 0,0 L 0,20 L 20,20 L 20,0 L 0,0 z M 10,3 C 13.865993,3 17,6.1340068 17,10 C 17,13.865993 13.865993,17 10,17 C 6.1340068,17 3,13.865993 3,10 C 3,6.1340068 6.1340068,3 10,3 z"
+           id="path3906" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:53.34646225px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="134.47711"
+         y="161.81445"
+         id="text3908"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3910"
+           x="134.47711"
+           y="161.81445"
+           style="font-size:48.01182175px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold">Truetopia</tspan></text>
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3912"
+       y="106.89187"
+       x="110.96938"
+       style="font-size:24.46780205px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:22.0210228px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="106.89187"
+         x="110.96938"
+         id="tspan3914"
+         sodipodi:role="line">Cies Breijs</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3916"
+       y="123.43411"
+       x="112.39674"
+       style="font-size:13.56993008px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12.2129364px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Italic"
+         y="123.43411"
+         x="112.39674"
+         id="tspan3918"
+         sodipodi:role="line">Initiator and main developer</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3920"
+       y="141.82623"
+       x="111.90514"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="141.82623"
+         x="111.90514"
+         id="tspan3922"
+         sodipodi:role="line">initiator@truetopiaproject.org</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3924"
+       y="154.02394"
+       x="111.7385"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="154.02394"
+         x="111.7385"
+         id="tspan3926"
+         sodipodi:role="line">skype: cies010</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3928"
+       y="166.91461"
+       x="111.32394"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="166.91461"
+         x="111.32394"
+         id="tspan3930"
+         sodipodi:role="line">+91.97.8050.3352</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3932"
+       y="186.87805"
+       x="111.32394"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="186.87805"
+         x="111.32394"
+         id="tspan3934"
+         sodipodi:role="line">http://truetopiaproject.org</tspan></text>
+  </g>
+  <g
+     id="g3936"
+     transform="translate(0.2606033,392.92218)">
+    <g
+       transform="matrix(0.5587513,0,0,0.5587513,346.18047,-14.554499)"
+       id="g3938">
+      <g
+         id="g3940"
+         transform="matrix(1.7509316,0,0,1.7509316,92.793898,126.76314)">
+        <path
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+           d="M 0,0 L 0,20 L 20,20 L 20,0 L 0,0 z M 10,3 C 13.865993,3 17,6.1340068 17,10 C 17,13.865993 13.865993,17 10,17 C 6.1340068,17 3,13.865993 3,10 C 3,6.1340068 6.1340068,3 10,3 z"
+           id="path3942" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:53.34646225px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="134.47711"
+         y="161.81445"
+         id="text3944"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3946"
+           x="134.47711"
+           y="161.81445"
+           style="font-size:48.01182175px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold">Truetopia</tspan></text>
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3948"
+       y="107.02579"
+       x="444.85919"
+       style="font-size:24.46780205px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:22.0210228px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="107.02579"
+         x="444.85919"
+         id="tspan3950"
+         sodipodi:role="line">Cies Breijs</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3952"
+       y="123.56803"
+       x="446.28656"
+       style="font-size:13.56993008px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12.2129364px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Italic"
+         y="123.56803"
+         x="446.28656"
+         id="tspan3954"
+         sodipodi:role="line">Initiator and main developer</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3956"
+       y="141.96014"
+       x="445.79495"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="141.96014"
+         x="445.79495"
+         id="tspan3958"
+         sodipodi:role="line">initiator@truetopiaproject.org</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3960"
+       y="154.15787"
+       x="445.62833"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="154.15787"
+         x="445.62833"
+         id="tspan3962"
+         sodipodi:role="line">skype: cies010</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3964"
+       y="167.04852"
+       x="445.21375"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="167.04852"
+         x="445.21375"
+         id="tspan3966"
+         sodipodi:role="line">+91.97.8050.3352</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3968"
+       y="187.01196"
+       x="445.21375"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="187.01196"
+         x="445.21375"
+         id="tspan3970"
+         sodipodi:role="line">http://truetopiaproject.org</tspan></text>
+  </g>
+  <g
+     id="g3976"
+     transform="translate(0.2461533,572.21329)">
+    <g
+       transform="matrix(0.5587513,0,0,0.5587513,12.290636,-14.688424)"
+       id="g3978">
+      <g
+         id="g3980"
+         transform="matrix(1.7509316,0,0,1.7509316,92.793898,126.76314)">
+        <path
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+           d="M 0,0 L 0,20 L 20,20 L 20,0 L 0,0 z M 10,3 C 13.865993,3 17,6.1340068 17,10 C 17,13.865993 13.865993,17 10,17 C 6.1340068,17 3,13.865993 3,10 C 3,6.1340068 6.1340068,3 10,3 z"
+           id="path3982" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:53.34646225px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="134.47711"
+         y="161.81445"
+         id="text3984"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3986"
+           x="134.47711"
+           y="161.81445"
+           style="font-size:48.01182175px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold">Truetopia</tspan></text>
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3988"
+       y="106.89187"
+       x="110.96938"
+       style="font-size:24.46780205px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:22.0210228px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="106.89187"
+         x="110.96938"
+         id="tspan3990"
+         sodipodi:role="line">Cies Breijs</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3992"
+       y="123.43411"
+       x="112.39674"
+       style="font-size:13.56993008px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12.2129364px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Italic"
+         y="123.43411"
+         x="112.39674"
+         id="tspan3994"
+         sodipodi:role="line">Initiator and main developer</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3996"
+       y="141.82623"
+       x="111.90514"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="141.82623"
+         x="111.90514"
+         id="tspan3998"
+         sodipodi:role="line">initiator@truetopiaproject.org</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4000"
+       y="154.02394"
+       x="111.7385"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="154.02394"
+         x="111.7385"
+         id="tspan4002"
+         sodipodi:role="line">skype: cies010</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4004"
+       y="166.91461"
+       x="111.32394"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="166.91461"
+         x="111.32394"
+         id="tspan4006"
+         sodipodi:role="line">+91.97.8050.3352</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4008"
+       y="186.87805"
+       x="111.32394"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="186.87805"
+         x="111.32394"
+         id="tspan4010"
+         sodipodi:role="line">http://truetopiaproject.org</tspan></text>
+  </g>
+  <g
+     id="g4012"
+     transform="translate(0.2461533,572.21329)">
+    <g
+       transform="matrix(0.5587513,0,0,0.5587513,346.18047,-14.554499)"
+       id="g4014">
+      <g
+         id="g4016"
+         transform="matrix(1.7509316,0,0,1.7509316,92.793898,126.76314)">
+        <path
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+           d="M 0,0 L 0,20 L 20,20 L 20,0 L 0,0 z M 10,3 C 13.865993,3 17,6.1340068 17,10 C 17,13.865993 13.865993,17 10,17 C 6.1340068,17 3,13.865993 3,10 C 3,6.1340068 6.1340068,3 10,3 z"
+           id="path4018" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:53.34646225px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="134.47711"
+         y="161.81445"
+         id="text4020"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4022"
+           x="134.47711"
+           y="161.81445"
+           style="font-size:48.01182175px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold">Truetopia</tspan></text>
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4024"
+       y="107.02579"
+       x="444.85919"
+       style="font-size:24.46780205px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:22.0210228px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="107.02579"
+         x="444.85919"
+         id="tspan4026"
+         sodipodi:role="line">Cies Breijs</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4028"
+       y="123.56803"
+       x="446.28656"
+       style="font-size:13.56993008px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12.2129364px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Italic"
+         y="123.56803"
+         x="446.28656"
+         id="tspan4030"
+         sodipodi:role="line">Initiator and main developer</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4032"
+       y="141.96014"
+       x="445.79495"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="141.96014"
+         x="445.79495"
+         id="tspan4034"
+         sodipodi:role="line">initiator@truetopiaproject.org</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4036"
+       y="154.15787"
+       x="445.62833"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="154.15787"
+         x="445.62833"
+         id="tspan4038"
+         sodipodi:role="line">skype: cies010</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4040"
+       y="167.04852"
+       x="445.21375"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="167.04852"
+         x="445.21375"
+         id="tspan4042"
+         sodipodi:role="line">+91.97.8050.3352</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4044"
+       y="187.01196"
+       x="445.21375"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="187.01196"
+         x="445.21375"
+         id="tspan4046"
+         sodipodi:role="line">http://truetopiaproject.org</tspan></text>
+  </g>
+  <g
+     id="g4054"
+     transform="translate(1.4639778,751.08213)">
+    <g
+       transform="matrix(0.5587513,0,0,0.5587513,12.290636,-14.688424)"
+       id="g4056">
+      <g
+         id="g4058"
+         transform="matrix(1.7509316,0,0,1.7509316,92.793898,126.76314)">
+        <path
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+           d="M 0,0 L 0,20 L 20,20 L 20,0 L 0,0 z M 10,3 C 13.865993,3 17,6.1340068 17,10 C 17,13.865993 13.865993,17 10,17 C 6.1340068,17 3,13.865993 3,10 C 3,6.1340068 6.1340068,3 10,3 z"
+           id="path4060" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:53.34646225px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="134.47711"
+         y="161.81445"
+         id="text4062"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4064"
+           x="134.47711"
+           y="161.81445"
+           style="font-size:48.01182175px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold">Truetopia</tspan></text>
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4066"
+       y="106.89187"
+       x="110.96938"
+       style="font-size:24.46780205px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:22.0210228px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="106.89187"
+         x="110.96938"
+         id="tspan4068"
+         sodipodi:role="line">Cies Breijs</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4070"
+       y="123.43411"
+       x="112.39674"
+       style="font-size:13.56993008px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12.2129364px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Italic"
+         y="123.43411"
+         x="112.39674"
+         id="tspan4072"
+         sodipodi:role="line">Initiator and main developer</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4074"
+       y="141.82623"
+       x="111.90514"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="141.82623"
+         x="111.90514"
+         id="tspan4076"
+         sodipodi:role="line">initiator@truetopiaproject.org</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4078"
+       y="154.02394"
+       x="111.7385"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="154.02394"
+         x="111.7385"
+         id="tspan4080"
+         sodipodi:role="line">skype: cies010</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4082"
+       y="166.91461"
+       x="111.32394"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="166.91461"
+         x="111.32394"
+         id="tspan4084"
+         sodipodi:role="line">+91.97.8050.3352</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4086"
+       y="186.87805"
+       x="111.32394"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="186.87805"
+         x="111.32394"
+         id="tspan4088"
+         sodipodi:role="line">http://truetopiaproject.org</tspan></text>
+  </g>
+  <g
+     id="g4090"
+     transform="translate(1.4639778,751.08213)">
+    <g
+       transform="matrix(0.5587513,0,0,0.5587513,346.18047,-14.554499)"
+       id="g4092">
+      <g
+         id="g4094"
+         transform="matrix(1.7509316,0,0,1.7509316,92.793898,126.76314)">
+        <path
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+           d="M 0,0 L 0,20 L 20,20 L 20,0 L 0,0 z M 10,3 C 13.865993,3 17,6.1340068 17,10 C 17,13.865993 13.865993,17 10,17 C 6.1340068,17 3,13.865993 3,10 C 3,6.1340068 6.1340068,3 10,3 z"
+           id="path4096" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:53.34646225px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="134.47711"
+         y="161.81445"
+         id="text4098"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4100"
+           x="134.47711"
+           y="161.81445"
+           style="font-size:48.01182175px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold">Truetopia</tspan></text>
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4102"
+       y="107.02579"
+       x="444.85919"
+       style="font-size:24.46780205px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:22.0210228px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="107.02579"
+         x="444.85919"
+         id="tspan4104"
+         sodipodi:role="line">Cies Breijs</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4106"
+       y="123.56803"
+       x="446.28656"
+       style="font-size:13.56993008px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12.2129364px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Italic"
+         y="123.56803"
+         x="446.28656"
+         id="tspan4108"
+         sodipodi:role="line">Initiator and main developer</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4110"
+       y="141.96014"
+       x="445.79495"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="141.96014"
+         x="445.79495"
+         id="tspan4112"
+         sodipodi:role="line">initiator@truetopiaproject.org</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4114"
+       y="154.15787"
+       x="445.62833"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="154.15787"
+         x="445.62833"
+         id="tspan4116"
+         sodipodi:role="line">skype: cies010</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4118"
+       y="167.04852"
+       x="445.21375"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="167.04852"
+         x="445.21375"
+         id="tspan4120"
+         sodipodi:role="line">+91.97.8050.3352</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4122"
+       y="187.01196"
+       x="445.21375"
+       style="font-size:9.24884605px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:8.32396126px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+         y="187.01196"
+         x="445.21375"
+         id="tspan4124"
+         sodipodi:role="line">http://truetopiaproject.org</tspan></text>
+  </g>
+</svg>

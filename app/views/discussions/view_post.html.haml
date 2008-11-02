@@ -1,0 +1,18 @@
+- case params[:base]
+  - when 'project'
+    - throw_content :title, "reactie #{params[:code]} in discussie voor project #{@project.id} #{@project.project_document.current_version.title}"
+    = partial 'projects/project_header', :project => @project, :current => :discussion
+  - when 'user'
+
+.subcolumns.right_bg
+  .c75r
+    .subcr
+      = partial('discussions/post', :with => @post)
+  .c25l
+    .subcl
+      .column_menu
+        %h3
+          Acties
+        = link_to "&nbsp;&nbsp;Plaats een nieuwe reacie", url(:document_discussion_new_root_post, :document_id => @document.id)
+        %br/
+        = link_to "&nbsp;&nbsp;Terug naar document", url(:documents)

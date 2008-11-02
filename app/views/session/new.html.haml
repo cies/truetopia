@@ -1,0 +1,40 @@
+- throw_content(:title, 'Inloggen')
+
+.subcolumns
+  .c25l
+    .subcl
+      &nbsp;
+  .c50l
+    .subcl
+      %h1
+        Inloggen...
+      %br/
+      .narrow
+        = format_notification({:couldnt_log_in => '\'t wilde niet werken, probeer het nogeens..', :no_login => 'alias of emailadres mist.', :no_password => 'een paswoord is toch echt nodig om in te loggen..'})
+        = form :action => url(:login) do
+          %p
+            = form_label nil, 'login', 'alias of emailadres', 'je kunt inloggen met je alias (loginnaam) of met het emailadres waarmee je bij ons bekend bent'
+            %br/
+            = text_field :name => "login", :value => (session[:remembered_login] or '')
+          %p
+            = form_label nil, 'password', 'paswoord', 'niet doorvertellen!'
+            %br/
+            = password_field :name => "password"
+          - #%p
+          - #= form_label 'remember_me', 'automatisch inloggen', ''
+          - #= checkbox_field :name => 'remember_me'
+          %p
+            = submit '&nbsp;log in&nbsp;'
+      %br/
+      %h4
+        Nog geen account?
+      %p
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam malesuada   suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit
+        = link_to 'maak een account aan...', url(:controller => 'signup')
+      %h4
+        Paswoord vergeten?
+      %p
+        Vette peg!
+  .c25r
+    .subcr
+      &nbsp;

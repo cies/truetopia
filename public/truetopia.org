@@ -1,0 +1,82 @@
+drupal site?
+
+truetopia.org
+
+initiator@truetopia.org > cies@truetopia.org 
+
+
+Truetopia is an open source project developing a generic self governance web application. The application allows its users collaborate on finding solutions to their shared problems. Using the application shared problems are identified, understood and (in theory) solved. This is accomplisched using a [[direct-democratic]] system of online publishing, rating and voting.
+
+The application is designed so that it allows easy modifications to the system (hackable), as it is forseen that users of an installation of Truetopia want the application to change (they identify shared problems regarding the application). A default installation of Truetopia should allow its users to easily collaborate on the modifing <i>their</i> application. In fact this is the project goal of Truetopia: is to create a web application so that modifications to it can be directed entirely by its users through using the application.
+
+Wikipedia.org is a application that allows its users to collaboratively create an encyclopedia [Quote from, and link to, the Wikipedia website]. MediaWiki is open source project that develops the software that drives Wikipedia and many other wiki's. A Wiki is a online collaborative publishing apllication. In the case of Wikipedia, MediaWiki is used to create an encyclopedia, in case Wiktonairy to create an dictionary, etc. Currently there are supposed to be XYZ-thousand installations of MediaWiki alone (there are many other brands of 'Wiki' out there).
+
+Where MediaWiki focusses on collaborative publishing; Truetopia focusses on collaborative governance, or collaborative descision taking, or even more generic: collaborative problem solving. The uses of Truetopia can be numerous (like MediaWiki) and not be forseen on forehand (like MediaWiki).
+
+
+
+
+
+
+ == About the initiator ==
+
+Cies Paul Breijs (1982) started this project in 2007 while on a journey around the world that he started after graduating for his bachelor degree in business computer science at the Erasmus University Rotterdam. In 1997 he got inspired by the Free Software community and is a user ever since. He released an "educative programming environement" named KTurtle in 2003 that got awarded and included in the edutainment mondule of the KDE project.
+
+-- insert stuff from Jamil --
+
+For more information read the section on [[contributing]].
+
+
+ == Contributing ==
+
+Truetopia is a Free Software project, the product of the project is provided at no costs (released under the [[General Public License]]. As there is no income from selling the product, the project lives entirely off contributions. We distinguish 3 types of contributions: development contributions, infrastructure contributions and monitary contributions (funding).
+
+<i>Development contributions</i> are what drive the project as 'developing' a project is what the Truetopia project does. Without development no new versions of Truetopia would be released. Currently Truetopia is looking for developers with skill in Ruby (a programming language), web-designers (who know a little programming and are willing to do the [[haml and sass]] dance) and web content writers; please write an [[email]] if you want to help.
+
+<i>Infrastructure contributions</i> consist of hardware and services donated to the project. Currently there is no installation Truetopia running as Truetopia is still in development. So Truetopia only needs infrastructure for its development and its prject websites. The project website is kindly hosted by [[commuun.nl]], the other services Truetopia thankfully makes use of are [[code.google.com]], [[github]] and [[lighthouse]].
+
+<i>Monitary contributions (funding)</i>. Truetopia is currently looking for monitary contributions. Currently Cies Breijs [[the initiator]] is the only developer of the project, contributed money will therefore be used to pay him a little for his development effort. At moment of writing Cies is traveling (India) so his living is relatively cheap -- he promises to work 8 hours on the Truetopia project (putting a detailed hour declaration online) -- for 25 euro only! Is is a limited offer as his life in The Netherlands is a lot more expensive, to make a contribution please contact [[Cies]]. We are competing for [[Google's 10-to-the-100th]] competition and investigating options for further investment, if you are familiar with fund raising and willing to help out please sent an email to [[Cies]] or the [[mailing list]].
+
+
+
+ == Development ==
+
+Please don't read this section if you are not interested in the technical details.
+
+Truetopia is mainly developed in a programming language called [[Ruby]]. It uses the [[merb]] framework (not [[Ruby on Rails]], but similar) because it is very flexible, extremely hackable, and it allows for super-fast web application development. It uses [[DataMapper]] for database abstraction and ORM. Both [[merb]] and [[DataMapper]] are Ruby libaries. On the web front-end [[jQuery]] is used for all the HTML glitter and AJAX glammer. Serverside [[haml and sass]] are used to make sense of HTML and CSS respectively.
+
+The source code of Truetopia can be found on [[GitHub]], everyone is invited to have a look. If you want to contribute please create a brach on [[GitHub]] and send and email to the [[mailing list]] describing what you did.
+
+Installing Truetopia for development is not as hard as it seems. Most of the dependecies of Truetopia are shipped with the application in the <code>/lib</code> directory. You do need the following: recent installation of the [[Ruby]] interpreter, the [[gem]] package manager, [[thor]] the task runner, and a supported database (for development [[sqlite]] will do). We have not tested Truetopia on the windows platform but that should work (please report).
+
+
+
+ == Contact ==
+
+The Truetopia project can be contacted through the mailing list ate google groups:
+[[http://googlegroups.com/truetopia]]
+
+Reporting bugs you can do using the Lighthouse issue tracker:
+[[http://lighthouseapp.com/truetopia]]
+
+Alternatively you can contact Cies, the [[initiator]] of the project directly using:
+skype: <i>cies010</i>
+email: <i>initiator @ truetopiaproject . org</i> (remove the spaces)
+telephone: +919780503352 (and Indian prepaid card -- so it usually doesn't work)
+
+
+ == Truetopia's initial aim ==
+
+Truetopia's initial aim is to allow a political agenda to be created for the citizens of a country (the initiator is born in The Netherlands): users of an installation of Truetopia collaborate on creating an agenda, each agenda item is a full plan created and supported by the users. The top of the agenda contains the best supported items -- plans that users would like to see carried by the government of their country.
+
+Two notes:
+1. besides the agenda items regarding the governance of their country the agenda also contains agenda items regarding the governance of the installation of Truetopia (changes to the website itself).
+2. weather or not and how an obove mentioned system will seek to have itself represented in a democractic system is up to that community, the solution to that question shall have to be found using an agenda item.
+
+
+
+
+
+
+
+

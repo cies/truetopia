@@ -1,0 +1,98 @@
+.subcolumns
+  .c25l
+    .subcl.sidebar
+      %h1
+        Partij programma
+      %p
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam malesuada   suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin.
+        %br/
+        = link_to 'ovezicht van de projecten...', url(:projects)
+      %h1
+        Is dit een politieke partij?
+      %p
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam malesuada   suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin sed, aliquet   vel, quam. Pellentesque molestie laoreet tortor. Aenean quam. Pellentesque magna   metus.
+        %br/
+        %a{ :href => "#" } lees verder...
+      %h1
+        Wie zit hier achter?
+      %p
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam malesuada   suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin sed, aliquet   vel, quam. Pellentesque molestie laoreet tortor. Aenean quam. Pellentesque magna metus.
+        %br/
+        %a{ :href => "#" } lees verder...
+  .c50l
+    .subcr
+      = format_notification(:nothing => 'yet')
+      %center
+        %p
+          %i.content
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam malesuada suscipit pede. &mdash; Lorem I. Dolor
+          %i
+            %a{ :href => "/quotes" }
+              meer citaten...
+        / size needs to be the same the image
+        .logo_color{ :style => 'width: 200px; height: 200px;' }
+          %a.logo{ :href => url(:colorpicker), :title => "klik hier om de kleur van deze site te kiezen" }
+            %div
+              %img{ :src => "/images/logo/logo_trans_200.png" }/
+        %br/
+        %p
+          Deze website is nog al saai gekleurd, maar natuurlijk verschillen smaken..
+          = link_to "Kies daarom zelf de kleur", url(:colorpicker)
+          waar in je deze site het lieftst ziet!
+      %h2
+        Truetopia...
+      %p
+        Op deze pagina zou je meer te weten moeten komen over deze website... Maarja cies had geen zin om dat allemaal onder woorden te brengen.
+      %p
+        Ofwel: jammer...
+      %p
+        Je kunt direct
+        = link_to 'een account aanmaken', url(:signup)
+        of als je je al een accountje hebt kun je je
+        = link_to 'inloggen', url(:login)
+        \.
+  .c25r.sidebar
+    .subcr
+      %h1
+        Inloggen...
+      %form{ :action => url(:login), :method => "post" }
+        %p
+          %label{ :for => "login" } alias of email adres
+          %br/
+          %input.text{ :name => "login", :size => "25", :type => "text" }/
+          %br/
+          %label{ :for => "password" } paswoord
+          %br/
+          %input.password{ :name => "password", :size => "25", :type => "password" }/
+          %br/
+          %input.hidden{ :name => "remember_me", :type => "hidden", :value => "0" }/
+          %input.checkbox{ :name => "remember_me", :type => "checkbox", :value => "1" }/
+          %label{ :for => "remember_me" } onhoud gegevens
+          %br/
+          %button{ :type => "submit" } &nbsp;inloggen&nbsp;
+      %br/
+      %h1
+        Nog geen account?
+      %p
+        Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin sed, aliquet vel, quam. Pellentesque molestie laoreet tortor. Of gewoon
+        %a{ :href => url(:signup) } hier
+        klikken!
+.subcolumns.coolsubcol
+  .c33l
+    .subcl
+      %h3
+        Article Archive
+      %p
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam malesuada   suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra.   ...
+  .c33l
+    .subcl
+      %h3
+        Latest Comments
+      %p
+        Nullam malesuada   suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. ...
+  .c33r
+    .subcr
+      %h3
+        Monthly Archive
+      %p
+        Consectetuer adipiscing elit. Nullam malesuada   suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra.  ...

@@ -1,0 +1,30 @@
+.subcolumns
+  .c25l
+    .subcl
+      &nbsp;
+  .c50l
+    .subcr
+      = format_notification(:nothing => 'yet')
+      %center
+        / size needs to be the same the image
+        .logo_color{ :style => 'width: 200px; height: 200px;' }
+          %a.logo{ :href => "/colorpicker", :title => "klik hier om de kleur van deze site te kiezen" }
+            %div
+              %img{ :src => "/images/logo/logo_trans_200.png" }/
+        %br/
+        %h1
+          Kies zelf je kleur!
+      %p.narrow.big
+        Deze website is nog al saai gekleurd, maar natuurlijk verschillen smaken..
+        %br/
+        .narrow
+          - colors = ["309", "0c0", "393", "900", "366", "339", "930", "396", "903", "369", "960", "0c3", "933", "000", "906", "990", "30c", "963", "030", "0c6", "936", "003", "060", "33c", "909", "033", "6c0", "006", "090", "063", "036", "009", "093", "600", "066", "630", "039", "096", "603", "069", "660","633", "099", "606", "690", "00c", "663", "636", "609", "693", "03c", "06c", "666", "3c0", "639", "3c3", "c00", "300", "60c", "330", "c30", "c03", "c60", "303", "360", "333", "c33", "c06", "306", "390", "363", "336"].sort
+          - colors.each do |color|
+            %a{ :href => "#{url(:colorpicker)}?color=#{color}", :style => "background-color: transparant; color: transperant;" }
+              .float_left{ :style => "background-color: ##{color}; color: ##{color}; padding: 10px; margin: 5px;" }
+                &nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;
+
+  .c25r
+    .subcr
+      &nbsp;

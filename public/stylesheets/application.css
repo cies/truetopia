@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/* This is the main stylesheet for the truetopia app */
+/*  */
+/* import YAML css goodness: */
+@import url(/stylesheets/yaml/core/base.css);
+@import url(/stylesheets/yaml/core/print_base.css);
+@import url(/stylesheets/yaml/navigation/nav_slidingdoor.css);
+/* import screen layout and type setting */
+@import url(/stylesheets/layout.css);
+@import url(/stylesheets/content.css);

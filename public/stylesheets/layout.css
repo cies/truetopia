@@ -1,0 +1,69 @@
+@charset "UTF-8";
+@media screen, projection {
+  body {
+    background: #4d87c7 url("/images/bg.png") repeat-x top left fixed;
+    padding: 10px 0; }
+
+  /* layout centering in old IE-versions */
+  body {
+    text-align: center; }
+
+  #page_margins {
+    text-align: left;
+    margin: 0 auto; }
+
+  /* main layout: width, background, borders */
+  #page_margins {
+    min-width: 740px;
+    max-width: 90em;
+    background: #fff; }
+    #page_margins.entrance {
+      max-width: 75em; }
+
+  #page {
+    padding: 10px; }
+
+  /* formatting main layout elements */
+  #header {
+    color: #000;
+    background: #fff repeat-x top left;
+    padding: 0px; }
+
+  #breadcrums {
+    padding-left: 60px;
+    margin-top: 5px; }
+
+  #top_right {
+    text-align: right;
+    color: #888; }
+
+  #main {
+    background: #fff;
+    padding: 5 0 0 0px; }
+
+  #footer {
+    color: #666;
+    background: #f9f9f9;
+    padding: 10px 20px;
+    margin-top: 2em;
+    border-top: 5px #efefef solid;
+    text-align: center; }
+
+  /* formatting of the default column setup */
+  #col1 {
+    width: 25%; }
+
+  #col1_content {
+    padding: 10px 10px 10px 20px; }
+
+  #col2 {
+    width: 25%; }
+
+  #col2_content {
+    padding: 10px 20px 10px 10px; }
+
+  #col3 {
+    margin: 0 25%; }
+
+  #col3_content {
+    padding: 10px; } }

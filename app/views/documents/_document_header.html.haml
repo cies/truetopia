@@ -1,0 +1,26 @@
+.subcolumns.bottom_line
+  .c75r
+    .subcr
+      .float_left
+        %h1.content
+          = document.current_version.title
+      #nav_main
+        %ul
+          %li{ :id => (current == :show ? 'current' : '') }
+            =link_to 'bekijk', url(:document, :id => @document.id), :title => "bekijk document ##{@document.id}"
+          %li{ :id => (current == :edit ? 'current' : '') }
+            =link_to 'bewerk', url(:edit_document, :id => @document.id), :title => 'verbeter dit document'
+          %li{ :id => (current == :history ? 'current' : '') }
+            =link_to 'historie', url(:document_history, :id => @document.id), :title => 'oude versies van dit document'
+          %li{ :id => (current == :discussion ? 'current' : '') }
+            = link_to 'discussie', url(:document_discussion, :document_id => @document.id), :title => 'bediscussieer dit document'
+          %li{ :id => (current == :mod ? 'current' : '') }
+            =link_to 'mod', url(:new_mod, :moddable_type => 'Document', :moddable_id => @document.id), :title => 'geeft uw feedback'
+          %li.picto{ :id => (current == :watch ? 'current' : '') }
+            %a{ :href => url(:new_subscription, :subscribable_type => 'Document', :subscribable_id => @document.id), :title => 'houd een oogje op dit document' }= '&nbsp;&nbsp;'
+          %li.vote{ :id => (current == :vote ? 'current' : '') }
+            %a{ :href => url(:new_vote, :voteable_type => 'Document', :voteable_id => @document.id), :title => 'STEM' }= '&nbsp;'
+  .c25l
+    .subcl
+      %h1.content{ :align => 'right' }
+        %span.pre_title= 'document #' + document.id.to_s

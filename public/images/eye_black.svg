@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="83"
+   height="50"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.45.1"
+   sodipodi:docbase="/home/cies/truetopia/public/images"
+   sodipodi:docname="eye_black.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/home/cies/truetopia/public/images/eye_white.png"
+   inkscape:export-xdpi="21.6"
+   inkscape:export-ydpi="21.6"
+   version="1.0">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="127.67418"
+     inkscape:cy="22.728432"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:grid-points="false"
+     inkscape:window-width="833"
+     inkscape:window-height="592"
+     inkscape:window-x="241"
+     inkscape:window-y="61"
+     height="50px"
+     width="52px"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-952.36218)">
+    <path
+       sodipodi:type="arc"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:50;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path6288"
+       sodipodi:cx="-9.2857141"
+       sodipodi:cy="24.642857"
+       sodipodi:rx="35"
+       sodipodi:ry="15.357142"
+       d="M 25.714286 24.642857 A 35 15.357142 0 1 1  -44.285714,24.642857 A 35 15.357142 0 1 1  25.714286 24.642857 z"
+       transform="translate(51.571429,953.21932)" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:8.92856979;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 41.857143,957.00498 C 26.096612,957.00498 9.8885528,963.20317 3.0973118,976.78568 L 1.9854548,978.95765 L 3.5885968,980.81937 C 22.902968,1003.3527 60.81132,1003.3527 80.125689,980.81937 L 81.72883,978.95765 L 80.616975,976.78568 C 73.825732,963.20318 57.617673,957.00498 41.857143,957.00498 z M 41.857143,964.7104 C 46.383384,964.7104 49.976281,968.30329 49.976281,972.82954 C 49.976279,977.35584 46.383384,980.9487 41.857143,980.9487 C 37.330901,980.9487 33.738006,977.35584 33.738006,972.82954 C 33.738008,968.30329 37.330902,964.7104 41.857143,964.7104 z M 27.687438,966.5204 C 26.819757,968.45066 26.342868,970.58803 26.342868,972.82954 C 26.342868,981.35306 33.333665,988.34384 41.857143,988.34384 C 50.38062,988.34384 57.371418,981.35306 57.371418,972.82954 C 57.37142,970.58803 56.894529,968.45066 56.026848,966.5204 C 63.09693,968.72859 69.107514,972.60718 72.652979,977.94927 C 56.58371,994.15022 27.130578,994.15022 11.061307,977.94927 C 14.606772,972.60717 20.617356,968.72859 27.687438,966.5204 z "
+       id="path2160"
+       inkscape:export-filename="/home/cies/truetopia/public/images/eye_white.png"
+       inkscape:export-xdpi="34.504505"
+       inkscape:export-ydpi="34.504505" />
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:0.23300973;stroke:none;stroke-width:50;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4113"
+       width="3.0844171"
+       height="0"
+       x="183.96428"
+       y="977.16858"
+       inkscape:export-filename="/home/cies/truetopia/public/images/eye_white.png"
+       inkscape:export-xdpi="34.504505"
+       inkscape:export-ydpi="34.504505" />
+  </g>
+</svg>

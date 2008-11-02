@@ -1,0 +1,52 @@
+%h1
+  details
+%table.full
+  %tbody
+    %tr
+      %td.sub{ :width => '50%' }
+        gestart door
+      %td.sub
+        %strong
+          = link_to document.user.login, url(:user, :login => document.user.login)
+    %tr
+      %td
+        &nbsp;&nbsp;op
+      %td
+        = short_human_date document.created_at
+    %tr
+      %td.sub
+        hudige versie
+      %td.sub
+        %strong= document.version_count.to_s
+        &nbsp;
+        = surround '(', ')' do
+          = link_to 'historie', url(:document_history, :id => params[:id])
+    %tr
+      %td
+        &nbsp;&nbsp;door
+      %td
+        %strong
+          = link_to document.current_version.user.login, url(:user, :login => document.current_version.user.login)
+    %tr
+      %td.sub
+        &nbsp;&nbsp;op
+      %td.sub
+        = short_human_date document.created_at
+    %tr
+      %td
+        reacies
+      %td
+        %strong= document.discussion.post_count
+        &nbsp;
+        = surround '(', ')' do
+          = link_to 'discussie', url(:document_discussion, :document_id => params[:id])
+    %tr
+      %td.sub
+        &nbsp;&nbsp;in laatste week
+      %td.sub
+        %strong= document.discussion.post_from_last_week
+%h1 acties
+.sidebar_menu= link_to "&nbsp;&nbsp;&nbsp;documenten overzicht", url(:documents)
+.sidebar_menu= link_to "&nbsp;&nbsp;&nbsp;nieuw document", url(:new_document)
+.sidebar_menu= link_to "&nbsp;&nbsp;&nbsp;documenten zoeken", url(:search, :what => 'document')
+%br/

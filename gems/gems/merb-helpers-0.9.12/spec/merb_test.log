@@ -1,0 +1,9 @@
+ ~ Compiling routes...
+ ~ Params: {"format"=>"", "action"=>"tag_with_content", "id"=>"", "controller"=>"tag_helper"}
+ ~ {:after_filters_time=>1.5e-05, :action_time=>0.000921, :before_filters_time=>1.4e-05}
+ ~ Params: {"format"=>"", "action"=>"tag_with_content_in_the_block", "id"=>"", "controller"=>"tag_helper"}
+ ~ {:after_filters_time=>7.0e-06, :action_time=>0.000907, :before_filters_time=>5.0e-06}
+ ~ Params: {"format"=>"", "action"=>"tag_with_attributes", "id"=>"", "controller"=>"tag_helper"}
+ ~ {:after_filters_time=>9.0e-06, :action_time=>0.000808, :before_filters_time=>6.0e-06}
+ ~ Params: {"format"=>"", "action"=>"nested_tags", "id"=>"", "controller"=>"tag_helper"}
+ ~ {:after_filters_time=>9.0e-06, :action_time=>0.000896, :before_filters_time=>7.0e-06}
