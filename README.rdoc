@@ -1,0 +1,13 @@
+=Truetopia
+
+Truetopia is a generic self governance web application.
+
+For more general and specific information see our project website:
+[http://truetopiaproject.org]
+
+This README file is part of the source code of Truetopia.
+
+
+==License
+
+The initiator of Truetopia has decided to release it under the [General Public License version 3], an Open Source license. If any other license is need for the use of this software please contact us.
