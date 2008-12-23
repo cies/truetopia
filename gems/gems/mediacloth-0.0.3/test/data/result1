@@ -1,0 +1,48 @@
+<p>This is a simple text with <b>Bold text</b> and <i>Italic text</i> inside.
+One paragraph can be written in several lines.
+
+</p><p>Another paragraph starts after a blank line.
+</p><p><br>
+Another one.
+</p><p>This is text with <a href="/wiki/index.php?title=Internal_Link&amp;action=edit" class="new" title="Internal Link">Internal Link</a> and <a href="http://www.example.com" class="external text" title="http://www.example.com" rel="nofollow">external link</a>.
+</p><p>We can have headlines:
+</p><p><br>
+</p>
+<table id="toc" class="toc" summary="Contents"><tbody><tr><td><div id="toctitle"><h2>Contents</h2> <span class="toctoggle">[<a href="javascript:toggleToc()" class="internal" id="togglelink">hide</a>]</span></div>
+
+<ul style="display: block;">
+<li class="toclevel-1"><a href="#Headline1"><span class="tocnumber">1</span> <span class="toctext">Headline1</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Headline2"><span class="tocnumber">1.1</span> <span class="toctext">Headline2</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Headline3"><span class="tocnumber">1.1.1</span> <span class="toctext">Headline3</span></a>
+<ul>
+<li class="toclevel-4"><a href="#Headline4"><span class="tocnumber">1.1.1.1</span> <span class="toctext">Headline4</span></a></li>
+
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td></tr></tbody></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<div class="editsection" style="float: right; margin-left: 5px;">[<a href="/wiki/index.php?title=Test&amp;action=edit&amp;section=1" title="Edit section: Headline1">edit</a>]</div><a name="Headline1"></a><h1> Headline1 </h1>
+<div class="editsection" style="float: right; margin-left: 5px;">[<a href="/wiki/index.php?title=Test&amp;action=edit&amp;section=2" title="Edit section: Headline2">edit</a>]</div><a name="Headline2"></a><h2> Headline2 </h2>
+
+<div class="editsection" style="float: right; margin-left: 5px;">[<a href="/wiki/index.php?title=Test&amp;action=edit&amp;section=3" title="Edit section: Headline3">edit</a>]</div><a name="Headline3"></a><h3> Headline3 </h3>
+<div class="editsection" style="float: right; margin-left: 5px;">[<a href="/wiki/index.php?title=Test&amp;action=edit&amp;section=4" title="Edit section: Headline4">edit</a>]</div><a name="Headline4"></a><h4> Headline4 </h4>
+<div class="editsection" style="float: right; margin-left: 5px;">[<a href="/wiki/index.php?title=Test&amp;action=edit&amp;section=5" title="Edit section: Headline5">edit</a>]</div><a name="Headline5"></a><h5> Headline5 </h5>
+<div class="editsection" style="float: right; margin-left: 5px;">[<a href="/wiki/index.php?title=Test&amp;action=edit&amp;section=6" title="Edit section: Headline6">edit</a>]</div><a name="Headline6"></a><h6> Headline6 </h6>
+<div class="editsection" style="float: right; margin-left: 5px;">[<a href="/wiki/index.php?title=Test&amp;action=edit&amp;section=7" title="Edit section: = Headline7 =">edit</a>]</div><a name=".3D_Headline7_.3D"></a><h6>= Headline7 =</h6>
+<pre>This is a preformatted <b> </b> &lt;&lt; <i> </i> text
+yes
+
+
+</pre>
+<hr>
+<p>This is a text after the line.
+</p>
+<ul><li>foo
+</li><li> foo2
+</li></ul>

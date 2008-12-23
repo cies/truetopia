@@ -1,0 +1,26 @@
+PARA_STARTTEXTThis is a simple text with BOLDSTART'''TEXTBold textBOLDEND'''TEXT and ITALICSTART''TEXTItalic textITALICEND''TEXT inside.
+One paragraph can be written in several lines.PARA_END
+
+PARA_STARTTEXTAnother paragraph starts after a blank line.PARA_END
+
+PARA_STARTTEXT
+Another one.PARA_END
+
+PARA_STARTTEXTThis is text with INTLINKSTART[[TEXTInternal LinkINTLINKEND]]TEXT and LINKSTART[TEXThttp://www.example.comLINKSEPTEXTexternal linkLINKEND]TEXT.PARA_END
+
+PARA_STARTTEXTWe can have headlines:PARA_END
+
+SECTION_START=TEXT Headline1 SECTION_END=SECTION_START==TEXT Headline2 SECTION_END==SECTION_START===TEXT Headline3 SECTION_END===SECTION_START====TEXT Headline4 SECTION_END====SECTION_START=====TEXT Headline5 SECTION_END=====SECTION_START======TEXT Headline6 SECTION_END======SECTION_START=======TEXT Headline7 SECTION_END=======PARA_STARTPARA_END
+
+PARA_STARTTEXTHeadlines may have formatting:PARA_END
+
+SECTION_START=TEXT See INTLINKSTART[[TEXTInternal LinkINTLINKEND]]TEXT for more info SECTION_END=SECTION_START==TEXT This is an BOLDSTART'''TEXTimportantBOLDEND'''TEXT heading SECTION_END==PARA_STARTPARA_END
+
+PREThis is a preformatted ''' ''' << '' '' text
+PREyes
+HLINE----PARA_STARTTEXT
+This is a text after the line.PARA_END
+
+UL_STARTLI_STARTTEXTfoo
+LI_ENDLI_STARTTEXTfoo2
+LI_ENDUL_ENDfalsefalse

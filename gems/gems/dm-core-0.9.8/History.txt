@@ -1,0 +1,16 @@
+=== 0.9.8 / 2008-12-07
+
+* 3 minor enhancements:
+
+  * Updated Resource#inspect to not lazy-load unloaded attributes.
+  * Updated ManyToOne::Proxy to delegate #class to parent.  This will
+    allow the Merb resource() route helper method to use the association
+    proxy to generate the URL.
+  * Updated Resource#attributes= to respect method visibility.  This means
+    that only public mutators will set the attribute value.
+
+* 1 bug fix:
+
+  * Fixed regression where an update to a resource with a lazy property
+    could cause the record to reload when accessing the lazy property,
+    clobbering any changes made prior.

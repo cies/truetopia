@@ -1,0 +1,34 @@
+This is a simple text with '''Bold text''' and ''Italic text'' inside.
+One paragraph can be written in several lines.
+
+Another paragraph starts after a blank line.
+
+
+Another one.
+
+This is text with [[Internal Link]] and [http://www.example.com external link].
+
+We can have headlines:
+
+
+= Headline1 =
+== Headline2 ==
+=== Headline3 ===
+==== Headline4 ====
+===== Headline5 =====
+====== Headline6 ======
+======= Headline7 =======
+
+Headlines may have formatting:
+
+= See [[Internal Link]] for more info =
+== This is an '''important''' heading ==
+
+ This is a preformatted ''' ''' << '' '' text
+ yes
+
+----
+This is a text after the line.
+
+*foo
+* foo2

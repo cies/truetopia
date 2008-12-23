@@ -1,0 +1,6 @@
+<p>This is a simple text with <b>Bold text</b> and <i>Italic text</i> inside.
+One paragraph can be written in several lines.</p><p>Another paragraph starts after a blank line.</p><p>
+Another one.</p><p>This is text with <a href="javascript:void(0)">Internal Link</a> and <a href="http://www.example.com">external link</a>.</p><p>We can have headlines:</p><h1> Headline1 </h1><h2> Headline2 </h2><h3> Headline3 </h3><h4> Headline4 </h4><h5> Headline5 </h5><h6> Headline6 </h6><h7> Headline7 </h7><p>Headlines may have formatting:</p><h1> See <a href="javascript:void(0)">Internal Link</a> for more info </h1><h2> This is an <b>important</b> heading </h2><hr></hr><p>
+This is a text after the line.</p><ul><li>foo
+</li><li>foo2
+</li></ul>

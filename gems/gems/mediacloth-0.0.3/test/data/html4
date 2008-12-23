@@ -1,0 +1,11 @@
+<p>Test mixing of bold and italic formatting:</p><p><i>italic<b>bold</b>italic</i></p><p><b>bold<i>italic</i>bold</b></p><p><i><b>boldalic</b></i></p><p><i>italic<b>bold</b>italic</i><b>bold<i>italic</i>bold</b></p><p>
+Test bold and italic wrapped around inline links:</p><p><i><a href="http://example.com">http://example.com</a></i></p><p><b><a href="http://example.com">http://example.com</a></b></p><p><i><a href="http://example.com'">http://example.com'</a></i></p><p><b><a href="http://example.com'">http://example.com'</a> is good</b></p><p><i><a href="http://example.com'">http://example.com'</a> is good</i></p><p>
+Test unclosed bold and italic formatting:</p><p><i>Some italic and now </i>bold
+</p><h2>Heading</h2><p>
+Text</p><p><i>Some italic and now <b>bold
+</b></i></p><h2>Heading</h2><p>
+Text</p><p><i>Some italic and now <b>bold</b></i></p><h2>Heading</h2><p>
+Text</p><p><i>Some italic and now <b>bold
+</b></i></p><ul><li>one
+</li><li>two
+</li></ul><p><i>Some italic and now <b>bold</b></i></p><p>Text</p>

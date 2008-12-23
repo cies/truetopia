@@ -1,0 +1,8 @@
+<p>This is some text with <b>bold</b> and <i>italic</i> formating.
+The list is also here:
+</p><ul><li>List Item 1
+<ul><li>Sub list item 1
+</li><li>Sub list item 2
+</li></ul></li><li>List Item 2
+</li></ul><p>The end
+</p><hr></hr>

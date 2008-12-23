@@ -1,0 +1,37 @@
+MediaCloth is the first MediaWiki parser and html generator written in ruby. 
+It's small, fast and aims to recognize the complete MediaWiki language.
+
+= INSTALLATION
+To install the library run:
+ ruby setup.rb
+
+
+= USAGE
+The quickest way to parse your input and produce html formatted text is:
+ require 'mediacloth'
+ puts MediaCloth::wiki_to_html("'''Hello'''''World''!")
+
+Alternatively, it's possible to create and use each component of MediaCloth manually:
+ require 'mediacloth'
+
+ parser = MediaWikiParser.new
+ parser.lexer = MediaWikiLexer.new
+ ast = parser.parse("'''Hello'''''World''!")
+ walker = MediaWikiHTMLGenerator.new
+ walker.parse(ast)
+ puts walker.html
+This is useful if you want to use another generator.
+
+Both examples should produce
+ <b>Hello</b><i>World</i>!
+
+= API DOCS
+To generate API documentation run:
+ rake rdoc
+
+= DEVELOPMENT
+If you want to modify mediacloth sources you will need:
+1. Download and install RACC parser generator (http://i.loveruby.net/en/projects/racc/)
+2. Execute "rake parser" to update your parser from .y definition
+To run tests execute
+ rake test

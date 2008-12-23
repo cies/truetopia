@@ -1,0 +1,124 @@
+Some examples of tables.
+
+{|
+|}
+
+{|
+|-
+|}
+
+{|
+| a
+| b
+|}
+
+{|
+| a
+| b
+|-
+| 1
+| 2
+|}
+
+{|
+| a || b
+|-
+| 1 || 2
+|}
+
+{|
+! a
+! b
+|-
+| 1
+| 2
+|}
+
+{|
+! a || b
+|-
+| 1 || 2
+|}
+
+{|
+| a
+|-
+| 1
+| 2
+|}
+
+{|
+| a
+| b
+|-
+| 1
+|}
+
+{|
+| a
+| b
+|-
+|
+| 2
+|}
+
+{|
+| [http://example.com Example]
+| '''bold'''
+|-
+| [[example|Example]]
+| [[image:example.jpg|1|2|3]]
+|}
+
+{|
+| [http://example.com Example
+| '''bold
+|-
+| [[example|Example
+| '''bold ''italic
+|}
+
+{|
+| a
+| b
+|-
+| A list in a cell:
+* one
+* two
+|}
+
+{|
+| a
+| b
+|-
+| A table in a cell:
+{|
+| 1
+| 2
+|-
+| one
+| two
+|}
+|}
+
+
+{| border="1"
+! a
+! b
+|- align="left"
+| 1
+| 2
+|}
+
+
+Text before
+{|
+| a
+| b
+|}
+
+Text before with ''italic
+{|
+| a
+| b
+|}
