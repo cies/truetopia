@@ -1,31 +1,24 @@
-require 'digest/sha1'
-
-begin
-  require File.join(File.dirname(__FILE__), '..', '..', "lib", "authenticated_system", "authenticated_dependencies")
-rescue
-  nil
-end
-
 class User
-  include AuthenticatedSystem::Model
   include DataMapper::Resource
-  include DataMapper::Validate
 
   attr_accessor :password, :password_confirmation
 
   property :id,                         Integer, :key => true, :serial => true
   property :login,                      String, :length => 30
   property :email,                      String, :length => 255
-  property :crypted_password,           String
-  property :salt,                       String
-  property :remember_token_expires_at,  DateTime
-  property :remember_token,             String
   property :time_zone,                  String, :default => 'CET'
   property :created_at,                 DateTime
   property :updated_at,                 DateTime
   property :name,                       String, :length => 60
   property :default_formatter,          String
+  # it gets                                   
+  #   - :password and :password_confirmation accessors
+  #   - :crypted_password and :salt db columns        
+  # from the mixin.
 
+  validates_format :login, :with => /^[A-Za-z0-9_]+$/
+  validates_length :login, :min => 3
+  validates_is_unique :login
   validates_length            :login,                   :within => 3..30
   validates_is_unique         :login
   validates_present           :password

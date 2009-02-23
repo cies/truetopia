@@ -16,14 +16,6 @@ Merb::Router.prepare do |r|
 #       {:controller => "documents", :action => "show", :id => article.id}
 #     end
 #   end
-  
-#   # Admin namespace
-#   r.namespace :admin do |admin|
-#     admin.resources :dashboard
-#     admin.resources :categories
-#     admin.resources :articles
-#     admin.match("").to(:controller => "dashboard", :action => "index")
-#   end
 
 
   # this method creates routes (and their names) for a discussion.
@@ -79,12 +71,15 @@ Merb::Router.prepare do |r|
     base.match("/document/:document_id") { |base| discussion_on :document, base }  # adds discussion routes (pass on prefix?)
   end
 
-  # sessions controller
-  r.match("/login").to(:controller => "session", :action => "create").name(:login)
-  r.match("/loguit").to(:controller => "session", :action => "destroy").name(:logout)
-  r.match("/sessie/beeindigd").to(:controller => "session", :action => "finished").name(:session_finished)
-  r.match("/sessie/root").to(:controller => "session", :action => "root").name(:root_switch)
-  r.match("/sessie").to(:controller => "session", :action => "root")  # path-safety
+#   # sessions controller
+#   r.match("/login").to(:controller => "session", :action => "create").name(:login)
+#   r.match("/loguit").to(:controller => "session", :action => "destroy").name(:logout)
+#   r.match("/sessie/beeindigd").to(:controller => "session", :action => "finished").name(:session_finished)
+#   r.match("/sessie/root").to(:controller => "session", :action => "root").name(:root_switch)
+#   r.match("/sessie").to(:controller => "session", :action => "root")  # path-safety
+
+  # Adds the required routes for merb-auth using the password slice
+  slice(:merb_auth_slice_password, :name_prefix => nil, :path_prefix => "")
 
 
   # entrance controller
@@ -141,35 +136,30 @@ Merb::Router.prepare do |r|
 
   # the /my part of the website:
   r.namespace :my, :path => "mijn" do |my|
-    my.match("/start").to(:controller => "start").name(:my_start)
+    my.match("/start").to(:controller => "start").name(:start)
 
-    my.match("/profiel").to(:controller => "profile").name(:my_profile)
+    my.match("/profiel").to(:controller => "profile").name(:profile)
 
-    my.match("/mods").to(:controller => "mods").name(:my_mods)
+    my.match("/mods").to(:controller => "mods").name(:mods)
     my.match("/mods/nieuw").to(:controller => "mods", :action => 'new').name(:new_mod)
 
-    my.match("/stemmen").to(:controller => "votes").name(:my_votes)
+    my.match("/stemmen").to(:controller => "votes").name(:votes)
     my.match("/stem/nieuw").to(:controller => "votes", :action => 'new').name(:new_vote)
 
-    my.match("/oogjes").to(:controller => "subscriptions").name(:my_subscriptions)
+    my.match("/oogjes").to(:controller => "subscriptions").name(:subscriptions)
     my.match("/oogjes/nieuw").to(:controller => "subscriptions", :action => 'new').name(:new_subscription)
     # -- the rest by ?qwe=2&b=12 params..
 
-    my.match("/projecten").to(:controller => "projects").name(:my_projects)
+    my.match("/projecten").to(:controller => "projects").name(:projects)
 
-    my.match("/documenten").to(:controller => "documents").name(:my_documents)
+    my.match("/documenten").to(:controller => "documents").name(:documents)
 
-    my.match("/reacties").to(:controller => "posts").name(:my_posts)
+    my.match("/reacties").to(:controller => "posts").name(:posts)
 
-    my.match("/zoekopdrachten").to(:controller => "searches").name(:my_searches)
+    my.match("/zoekopdrachten").to(:controller => "searches").name(:searches)
 
     my.match("").to(:controller => "start", :action => 'root_redirect') # redirects to :my_start
   end
-#   r.match("/mijn/mods").to(:controller => "mods").name(:my_mods)
-#   r.match("/mijn/mods/nieuw").to(:controller => "mods", :action => 'new').name(:new_mod)
-# 
-#   r.match("/mijn/stemmen").to(:controller => "votes").name(:my_votes)
-#   r.match("/mijn/stem/nieuw").to(:controller => "votes", :action => 'new').name(:new_votes)
 
 
 
@@ -177,15 +167,10 @@ Merb::Router.prepare do |r|
 
   r.match("/zoeken").to(:controller => "search").name(:search)
 
-#   r.resources :documents
-#   # Year/month/day routes
-#   r.match("/documents/:year").to(:controller => "documents", :action => "index").name(:year)
-#   r.match("/documents/:year/:month").to(:controller => "documents", :action => "index").name(:month)
-#   r.match("/documents/:year/:month/:day").to(:controller => "documents", :action => "index").name(:day)
 
   # no default routes as we want to translate all of 'm
   # r.default_routes
-  r.match('/').to(:controller => "entrance", :action=>'root_redirect').name(:root) # redirects to :entrance
+  r.match('/').to(:controller => "entrance", :action => 'root_redirect').name(:root) # redirects to :entrance
 end
 
 # not translatable this way

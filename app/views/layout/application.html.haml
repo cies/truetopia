@@ -21,10 +21,10 @@
       #page
         #header
           #top_right.float_right
-            - if logged_in?
+            - if session.authenticated?
               je bent ingelogd als
               %b
-                = current_user.login
+                = session.user.login
               = surround '(', ')<br/>' do
                 = link_to 'uitloggen', url(:logout)
             - else

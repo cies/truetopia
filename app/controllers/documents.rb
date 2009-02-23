@@ -1,5 +1,4 @@
 class Documents < Application
-  before :login_required
 #   cache_pages :index, :show
 
   def index
@@ -15,11 +14,11 @@ class Documents < Application
   def new
     if request.env['REQUEST_METHOD'] == "POST"
       # create the document first
-      @document = Document.new(:user_id => current_user.id)
+      @document = Document.new(:user_id => session.user.id)
       raise "Couldn't save initial document: #{@document.errors}" unless @document.save
 
       @document_version = DocumentVersion.new(params[:document_version])
-      @document_version.user = current_user
+      @document_version.user = session.user
       @document_version.document = @document
       @document_version.comment = '-----'
       if @document_version.save
@@ -38,7 +37,7 @@ class Documents < Application
     @document = Document[params[:id]]
     if request.env['REQUEST_METHOD'] == "POST"
       @document_version = DocumentVersion.new(params[:document_version])
-      @document_version.user = current_user
+      @document_version.user = session.user
       @document_version.document = @document
       # saving the version update the @document.version_count
       if @document_version.save
@@ -50,7 +49,7 @@ class Documents < Application
       end
     else
       @document_version = DocumentVersion.new
-      @document_version.user = current_user
+      @document_version.user = session.user
       @document_version.document = @document
       @document_version.title = @document.current_version.title
       @document_version.content = @document.current_version.content

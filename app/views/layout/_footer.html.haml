@@ -12,19 +12,31 @@
   %br/
   = "Voor het ontwikkellen van Truetopia is dankbaar gebruik gemaakt van #{link_to 'Ruby', 'http://ruby-lang.org'}, #{link_to 'merb', 'http://merbivore.org'}, #{link_to 'DataMapper', 'http://www.datamapper.org/'}, #{link_to 'haml', 'http://google.com/?q=haml'} en #{link_to 'YaML', 'http://www.yaml.de/'}."
 
+
+
 - if Merb::Config[:environment] == 'development'
   %p
-    %a{:onclick => "document.getElementsByClassName('debug_info')[0].style.display = '';", :href => '#debug_info'}
+    %a{ :name => "debug" }/
+    %a{:onclick => "document.getElementsByClassName('debug-info')[0].style.display = '';", :href => '#debug'}
       debug info
-    .debug_info{:style => 'display: none'}
+    .debug-info{:style => 'display: none'}
       #debug
         %code
           - debug_info.each do |i|
             %p
               %a{:onclick => "document.getElementsByClassName('debug_#{i[:name]}')[0].style.display = '';", :href => "#debug_#{i[:name]}"}
-                = i[:code]
+                = i[:code] + ' =>'
               %br/
               %span{:class => "debug_#{i[:name]}", :style => 'display: none'}
-                = escape_once '=> ' + i[:string]
+                - if i[:obj].quacks_like? Hash
+                  - i[:obj].keys.map{ |x| x = [x.to_s, x] }.sort.each do |k|  # sort as strings but keep original
+                    = "#{k[1].inspect} => #{i[:obj][k[1]].inspect.to_s}"
+                    %br/
+                - elsif i[:obj].quacks_like? Array
+                  - i[:obj].map{ |x| x = x.to_s }.sort.each do |n|
+                    = n
+                    %br/
+                - else
+                  = i[:obj].inspect.to_s
+                  %br/
               %a{ :name => "debug_#{i[:name]}" }/
-      %a{ :name => "debug_info" }/

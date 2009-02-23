@@ -23,14 +23,14 @@ Merb::BootLoader.after_app_loads do
   # This will get executed after your app's classes have been loaded.
   begin
     if User.all.empty?
-      u = User.new(:login => 'admin', :password => 'password', :password_confirmation => 'password')
+      u = User.new(:login => 'user', :password => 'password', :password_confirmation => 'password', :email => 'user@domain.tld')
       if u.save
-        Merb.logger.info("The initial user 'admin' was created (password is set to 'password')...")
+        Merb.logger.info("The initial user 'user' was created (password is set to 'password')...")
       else
-        Merb.logger.info("Couldn't create the 'admin' user...")
+        Merb.logger.info("Couldn't create the initial user...")
       end
     end
   rescue
-    Merb.logger.info("Couldn't create the 'admin' user, possibly unable to access the database.")
+    Merb.logger.info("Couldn't create the initial user, possibly unable to access the database.")
   end
 end

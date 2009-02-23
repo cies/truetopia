@@ -2,14 +2,14 @@ module My
 class Subscriptions < Base
 
   def index
-    @subscriptions = Subscription.all(:user_id => current_user.id)
+    @subscriptions = Subscription.all(:user_id => session.user.id)
     render
   end
 
   def new
     if params[:subscribable_id] and params[:subscribable_type]
       # if we're making a quick subscription
-      @subscription = Subscription.new({:subscribable_id => params[:subscribable_id], :subscribable_type => params[:subscribable_id], :user_id => current_user.id})
+      @subscription = Subscription.new({:subscribable_id => params[:subscribable_id], :subscribable_type => params[:subscribable_id], :user_id => session.user.id})
       if @subscription.save
         session[:notification] = :subscription_added
         redirect url(:my_subscriptions)

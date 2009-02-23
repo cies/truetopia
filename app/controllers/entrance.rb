@@ -1,4 +1,4 @@
-class Entrance < Application
+class Entrance < Merb::Controller
   layout :entrance
 
   def index
@@ -9,7 +9,7 @@ class Entrance < Application
   def colorpicker
     if params['color']
       cookies['color'] = "##{params['color']}"
-      redirect_back_or_default '/'
+      redirect '/'
     end
     render
   end

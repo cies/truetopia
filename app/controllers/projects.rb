@@ -1,9 +1,9 @@
 class Projects < Application
-  before :login_required
 #   cache_pages :index, :show
 
   def index
-    @projects = Project.paginate(:page => params[:page], :per_page => 10, :order => [:updated_at.desc])
+    @projects = Project.all(:order => [:updated_at.desc])
+#     @projects = Project.paginate(:page => params[:page], :per_page => 10, :order => [:updated_at.desc])
     display @projects
   end
 
@@ -15,19 +15,19 @@ class Projects < Application
   def new
     if request.env['REQUEST_METHOD'] == "POST"
       # create the project and project document first
-      @project = Project.new(:user_id => current_user.id)
+      @project = Project.new(:user_id => session.user.id)
       raise "Couldn't save initial project: #{@project.errors.inspect}" unless @project.save
-      @document = ProjectDocument.new(:user_id => current_user.id, :project_id => @project.id)
+      @document = ProjectDocument.new(:user_id => session.user.id, :project_id => @project.id)
       raise "Couldn't save initial document: #{@document.errors.inspect}" unless @document.save
 
       @document_version = DocumentVersion.new(params[:document_version])
-      @document_version.user = current_user
+      @document_version.user = session.user
       @document_version.document = @document
       @document_version.comment = '-----'
       if @document_version.save
         redirect url(:project, :project_id => params[:project_id])
       else
-	@project.destroy
+        @project.destroy
         @document.destroy
         render :new
       end
@@ -42,7 +42,7 @@ class Projects < Application
     @document = @project.project_document
     if request.env['REQUEST_METHOD'] == "POST"
       @document_version = DocumentVersion.new(params[:document_version])
-      @document_version.user = current_user
+      @document_version.user = session.user
       @document_version.document = @document
       # saving the version update the @document.version_count
       if @document_version.save
@@ -54,7 +54,7 @@ class Projects < Application
       end
     else
       @document_version = DocumentVersion.new
-      @document_version.user = current_user
+      @document_version.user = session.user
       @document_version.document = @document
       @document_version.title = @document.current_version.title
       @document_version.content = @document.current_version.content

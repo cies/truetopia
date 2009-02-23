@@ -1,7 +1,6 @@
 REPLY_PREFIX = 'Re:'
 
 class Discussions < Application
-  before :login_required
 #   cache_pages :index, :show
 
   def show
@@ -23,7 +22,7 @@ class Discussions < Application
       @post = Post.new(params['post'])
       @post.parent_code = params[:parent_code]  # could be nil therefore root post
       @post.discussion_id = @discussion.id
-      @post.user = current_user
+      @post.user = session.user
       @post.set_number_and_code
       if @post.save
         redirect url("#{params[:base]}_discussion".to_sym, "#{params[:base]}_id".to_sym => params["#{params[:base]}_id".to_sym])
