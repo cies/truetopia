@@ -1,6 +1,7 @@
+# WARNING -- this class is not to be implemented in the first release
+
 class Tag
   include DataMapper::Resource
-  include DataMapper::Validate  # we make indirect use of it (auto validation)
 
   TAGGABLE_TYPES = %w{Document Project}
 

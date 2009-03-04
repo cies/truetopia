@@ -1,11 +1,12 @@
 
 #error_dialog
-  %h2= title || "Mislukt!"
+  %h2= title || "Oops..."
   %p
-    = "Het formulier dat je hebt ingestuurd kon om de volgende reden#{object.errors.size > 1 ? 'en' : ''} niet worden verwerkt;"
+    - s_or_not = (object.errors.size > 1 ? 's' : '')
+    == The form you submitted could not be processed for the following reason#{s_or_not}
     %ul
       - object.errors.each do |error|
         - error = [error] unless error.class == Array
         - error.each do |e|
-          %li= translate_notification_message object, e
-    Even nakijken en nog een keer proberen...
+          %li= e
+    == Please fix the error#{s_or_not} and try again.

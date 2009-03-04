@@ -1,5 +1,6 @@
+# WARNING -- this class is not to be implemented in the first release
+
 class Mod
-  include DataMapper::Validate
   include DataMapper::Resource
 
   MODDABLE_TYPES = %w{Document Project Post}

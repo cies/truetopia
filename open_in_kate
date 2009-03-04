@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-kate config/router.rb app/models/*.rb app/controllers/*.rb app/views/layout/application.html.haml public/stylesheets/style.css &
+kate config/router.rb app/models/*.rb app/controllers/*.rb app/controllers/my/*.rb app/helpers/glo*.rb app/views/layout/application.html.haml public/stylesheets/{content,layout}.css &

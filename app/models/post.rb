@@ -1,9 +1,8 @@
-
 class Post
   include DataMapper::Resource
-  include DataMapper::Validate
+  before :save, :set_number_and_code  # number and code are reduced from the parents code and child count, if any
 
-  property :id,            Integer, :key => true, :serial => true  # needed for Subscription
+  property :id,            Serial  # needed for Subscription
   property :discussion_id, Integer, :nullable => false
   property :code,          String,  :nullable => false, :length => 40, :writer => :private  # through :set_number_and_code
   property :number,        Integer, :nullable => false, :writer => :private  # through :set_number_and_code
@@ -20,11 +19,6 @@ class Post
 
   belongs_to :discussion
   belongs_to :user
-
-  # number and code are reduced from the parents code and child count, if any
-  before :save do
-    set_number_and_code
-  end
 
   def parent
     Post.first(:discussion_id => discussion_id, :code => parent_code)  # nil if no parent code is set
@@ -60,7 +54,7 @@ class Post
 #     generation - [self]
 #   end
 
-#   private
+  private
   def set_number_and_code
     if [nil, 0, '', ' ', '0'].include? parent_code  # check if we're making a root post
       self.parent_code = nil

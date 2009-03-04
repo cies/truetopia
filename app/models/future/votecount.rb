@@ -1,21 +1,17 @@
-# set user_id as key in Vote
-
+# WARNING -- this class is not to be implemented in the first release
 
 class VoteCount
   include DataMapper::Resource
-  include DataMapper::Validate  # we make indirect use of it (auto validation)
+  before :create do
+    set_vote_balance
+    set_platform
+  end
 
   property :voteable_id,    Integer,  :key => true
   property :voteable_type,  String,   :key => true
   property :created_at,     DateTime, :key => true
   property :vote_balance,   Integer,  :nullable => false
   property :platform,       Float,    :nullable => false
-
-  before :create do
-    set_vote_balance
-    set_platform
-  end
-  
   
   def last_count
     get_last_count

@@ -15,9 +15,9 @@
           %li{ :id => (current == :discussion ? 'current' : '') }
             = link_to 'discussie', url(:project_discussion, :project_id => @project.id), :title => 'bediscussieer dit project'
           %li{ :id => (current == :mod ? 'current' : '') }
-            =link_to 'mod', url(:new_mod, :moddable_type => 'Project', :moddable_id => @project.id), :title => 'geeft uw feedback'
+            =link_to 'mod', url(:my_new_mod, :moddable_type => 'Project', :moddable_id => @project.id), :title => 'geeft uw feedback'
           %li.picto{ :id => (current == :watch ? 'current' : '') }
-            %a{ :href => url(:new_subscription, :subscribable_type => 'Project', :subscribable_id => @project.id), :title => 'houd een oogje op dit project' }= '&nbsp;&nbsp;'
+            %a{ :href => url(:my_new_subscription, :subscribable_type => 'Project', :subscribable_id => @project.id), :title => 'houd een oogje op dit project' }= '&nbsp;&nbsp;'
   .c25l
     .subcl
       %h1.content{ :align => 'right' }

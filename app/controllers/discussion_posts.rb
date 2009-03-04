@@ -1,16 +1,20 @@
 REPLY_PREFIX = 'Re:'
 
-class Discussions < Application
+class DiscussionPosts < Application
 #   cache_pages :index, :show
 
-  def show
+  def index
     get_base
     @discussion = @document.discussion
     @root_posts = @discussion.root_posts
     display @root_posts
   end
 
-  def new_post
+  def index_redirect
+    redirect request.uri[0..(request.uri =~ /\/[^\/.,;?]+$/)]  # chomp off the last bit of the path
+  end
+
+  def new
     get_base
     @discussion = @document.discussion
     if params[:parent_code]
@@ -39,7 +43,7 @@ class Discussions < Application
     end
   end
 
-  def view_post
+  def show
     get_base
     @discussion = @document.discussion
     @post = Post.first(:discussion_id => @discussion.id, :code => params[:code])

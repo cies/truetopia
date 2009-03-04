@@ -1,22 +1,5 @@
 module Merb
   module GlobalHelpers
-    def translate_type(type_str)
-      dict = {
-        'User' => 'gebruiker',
-        'Document' => 'document',
-        'Project' => 'project',
-        'Discussion' => 'discussie',
-        'Post' => 'discussie reactie',
-        'AgendaItem' => 'agendapunt'
-      }
-      return dict[type_str] if dict[type_str]
-      if Merb::Config[:environment] == 'development'  # this just makes catching misses a lot easier
-        open 'log/translation_misses.txt', 'a' do |f|
-          f << "A resource of type '#{type_Str}' was not found in translate_type.\n"
-        end
-      end
-      type_str
-    end
 
     def render_object_title_html(obj)
       result = case obj.class
@@ -42,40 +25,6 @@ module Merb
       end
     end
 
-    def render_relative_date(date)
-      date = Date.parse(date, true) unless /Date.*/ =~ date.class.to_s
-      days = (date - Date.today).to_i
-
-      return 'vandaag' if days >= 0 and days < 1
-      return 'morgen' if days >= 1 and days < 2
-      return 'gisteren' if days >= -1 and days < 0
-
-      return "over #{days} dagen" if days.abs < 60 and days > 0
-      return "#{days.abs} dagen geleden" if days.abs < 60 and days < 0
-
-      return short_human_date(date) # if days.abs < 182
-      #return date.strftime('%A, %B %e, %Y')
-    end
-
-    def short_human_date(date)
-      date = Date.parse(date, true) unless /Date.*/ =~ date.class.to_s
-      return "#{date.day} #{%w{0 Jan Feb Mar Apr Mei Jun Jul Aug Sep Okt Nov Dec}[date.month]} '#{date.year.to_s[2..3]}"
-    end
-
-    def format_notification(dictionary)
-      if session[:notification]
-        msg = ''
-        if dictionary[session[:notification]]
-          msg = dictionary[session[:notification]]
-        else
-          msg = 'Onvertaalde foutmelding: <strong>' + session[:notification].to_s + '</strong>'
-        end
-        session[:notification] = nil  # reset in the session
-        return '<div class="notification">' + msg + '</div>'
-      else
-        return ''
-      end
-    end
 
 
     def form_label(for_object, for_col, title, body='', error_msg='')
@@ -89,36 +38,15 @@ module Merb
       CGI.escape(url)
     end
 
-    def translate_error_message(obj, msg_sym)
-      dict = {
-        'User' => {
-        },
-        'Document' => {
-        },
-      }
-      return (dict[obj.class.to_s][msg_sym] or msg_sym.to_s) if dict[obj.class.to_s]
-      if Merb::Config[:environment] == 'development'  # this just makes catching misses a lot easier
-        open 'log/translation_misses.txt', 'a' do |f|
-          f << "Symbol '#{msg_sym}', by #{obj.class.to_s}, was not found in translate_error_message.\n"
-        end
-      end
-      msg_sym.to_s
-    end
 
-    def translate_notification_message(obj, msg_sym)
-      dict = {
-        'User' => {
-        },
-        'Document' => {
-        },
-      }
-      return (dict[obj.class.to_s][msg_sym] or msg_sym.to_s) if dict[obj.class.to_s]
-      if Merb::Config[:environment] == 'development'  # this just makes catching misses a lot easier
-        open 'log/translation_misses.txt', 'a' do |f|
-          f << "Symbol '#{msg_sym}', by #{obj.class.to_s}, was not found in translate_notification_message.\n"
-        end
+    def breadcrums
+      html, link_url = '', ''
+      separator_html = '<span class="crum_separator">/</span>'
+      request.path.split('/')[1..-1].each do |part|
+        crum_html = "<span class=\"crum\"><a href=\"#{link_url << '/' + part}\">#{part}</a>"
+        html << separator_html + crum_html
       end
-      msg_sym.to_s
+      html
     end
 
     def debug_info

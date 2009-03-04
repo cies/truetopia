@@ -24,7 +24,7 @@
       - if @projects.any?
         %h3
           Recent gewijzigde projecten
-        = @projects.each do |project|
+        - @projects.each do |project|
           .subpage
             .subpage_header
               %span.title
@@ -49,9 +49,7 @@
               %strong
                 = link_to 'lees verder...', url(:project, :project_id => project.id)
 
-        #pagination
-          //= merb_paginate @projects   - no pagination for now.. needs to become translatable and is design sensitive
-          //= page_entries_info @projects
+
       - else
         Eerst ff
         = link_to 'eentje',  url(:new_project)

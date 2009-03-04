@@ -2,7 +2,7 @@ class Projects < Application
 #   cache_pages :index, :show
 
   def index
-    @projects = Project.all(:order => [:updated_at.desc])
+    @projects = Project.all
 #     @projects = Project.paginate(:page => params[:page], :per_page => 10, :order => [:updated_at.desc])
     display @projects
   end
@@ -25,7 +25,7 @@ class Projects < Application
       @document_version.document = @document
       @document_version.comment = '-----'
       if @document_version.save
-        redirect url(:project, :project_id => params[:project_id])
+        redirect url(:project, :project_id => @project.id)
       else
         @project.destroy
         @document.destroy

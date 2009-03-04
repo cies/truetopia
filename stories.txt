@@ -1,0 +1,57 @@
+stories
+
+* new user arrives
+* learns about what Tt is
+* procedes to sign up for an account
+* is welcomed on first login to his fresh account (welcome page remains for a few 'first' logins)
+
+
+
+projects steps discussions plans: belong to everyone
+documents posts votes mods priorities: belong to users
+documents posts: moddable
+project documents posts users plans discussions: subscribable
+documents: have votes
+priorities: belong to plans
+projects steps documents plans: have discussions (consist of posts)
+
+
+projects/
+users/
+agenda/
+my/  %w[documents mods posts priorities profile projects searches start subscriptions votes]
+
+
+
+project has no discription, clicking a title will reveal an overview of what the project is planning. basically step1 brings good descriptions to a project.
+users are allowed to give a working title to a project, the most picked becomes the default title.
+
+colabotating on a plan in 3 steps:
+step 1: describing  # the 3 d's
+step 2: drawing
+step 3: detailing
+
+by creating a project you have to create a document for it's first step (thereby giving it an initial description)
+documents and their versions are owned by the user that created them
+users are allowed to comment on documents, fork documents, or create new.
+not-forking is an offence -- auto fork check, or even automated fork references based on symilarity of docs
+
+subscribing and tagging are powerful tools (therefor maybe need a better name)
+by subscribing a user can tag his subscriptions, by tagging he organizes his subscriptions, yet he also adds the tag to the object which allows others to find it. (tagging is a sort of decentralized/ad-hoc categorization, perfect for Tt)
+tagging might need a way to clean things up a bit (investigate semantic tagging projects)
+
+
+
+M1: user login, project creation, documents in steps
+M2: voting, producing plans
+M3: priorities + agenda
+Mx: events and subscriptions
+Mx: tagging
+Mx: modding
+Mx: ...
+
+
+
+
+
+

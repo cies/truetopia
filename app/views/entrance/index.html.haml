@@ -2,87 +2,95 @@
   .c25l
     .subcl.sidebar
       %h1
-        Partij programma
+        Community priotities
       %p
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam malesuada   suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin.
         %br/
-        = link_to 'ovezicht van de projecten...', url(:projects)
+        = link_to 'projecten overview...', url(:projects)
       %h1
-        Is dit een politieke partij?
+        Is this a political party?
       %p
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam malesuada   suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin sed, aliquet   vel, quam. Pellentesque molestie laoreet tortor. Aenean quam. Pellentesque magna   metus.
         %br/
-        %a{ :href => "#" } lees verder...
+        %a{ :href => "#" } read more...
       %h1
-        Wie zit hier achter?
+        Who is making Truetopia?
       %p
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam malesuada   suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin sed, aliquet   vel, quam. Pellentesque molestie laoreet tortor. Aenean quam. Pellentesque magna metus.
         %br/
-        %a{ :href => "#" } lees verder...
+        %a{ :href => "#" } read more...
   .c50l
     .subcr
-      = format_notification(:nothing => 'yet')
       %center
         %p
           %i.content
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam malesuada suscipit pede. &mdash; Lorem I. Dolor
           %i
             %a{ :href => "/quotes" }
-              meer citaten...
+              more quotes...
         / size needs to be the same the image
         .logo_color{ :style => 'width: 200px; height: 200px;' }
-          %a.logo{ :href => url(:colorpicker), :title => "klik hier om de kleur van deze site te kiezen" }
+          %a.logo{ :href => url(:colorpicker), :title => "click here to pick your prefered color" }
             %div
               %img{ :src => "/images/logo/logo_trans_200.png" }/
         %br/
         %p
-          Deze website is nog al saai gekleurd, maar natuurlijk verschillen smaken..
-          = link_to "Kies daarom zelf de kleur", url(:colorpicker)
-          waar in je deze site het lieftst ziet!
+          This website does not pick a color for you, so 
+          = link_to "go ahead and pick the color", url(:colorpicker)
+          that you like looking at!
       %h2
         Truetopia...
       %p
-        Op deze pagina zou je meer te weten moeten komen over deze website... Maarja cies had geen zin om dat allemaal onder woorden te brengen.
+        Truetopia is an open source project developing a <i>generic self-governance web application</i>. The application allows its users collaborate on finding solutions to their shared problems. Using the application shared problems are identified, understood and (in theory) solved.
       %p
-        Ofwel: jammer...
+        For more information see our project website:
+        %a{ :href => 'http://truetopiaproject.org' }
       %p
-        Je kunt direct
-        = link_to 'een account aanmaken', url(:signup)
-        of als je je al een accountje hebt kun je je
-        = link_to 'inloggen', url(:login)
+        Please consider
+        = link_to 'signing up for an account', url(:signup)
+        or in case you're already signed-up you ba proceed by
+        = link_to 'logging in', url(:login)
         \.
   .c25r.sidebar
     .subcr
-      %h1
-        Inloggen...
+      - unless session.authenticated?
+        %h1
+          Logging in
         - @login_param = Merb::Authentication::Strategies::Basic::Base.login_param
         - @password_param = Merb::Authentication::Strategies::Basic::Base.password_param
         %form{ :action => url(:login), :method => "POST", "accept-charset" => "utf-8" }
           %input{ :name => "_method", :type => "hidden", :value => "PUT" }/
           // TODO: replace this with a form helper function
-          %table.form{ :cellspacing => "0", :border => "0", :cellpadding => "3", :width => "100%", :style => "margin-bottom: 0px" }
-            %tr
-              %td{ :align => "right", :style => "padding-right: 0px;" }
-                Login:
-              %td{ :width => "75%" }
-                %input{ :name => @login_param.to_s, :type => "text", :size => 25 }/
-            %tr
-              %td{ :align => "right", :style => "padding-right: 0px;" }
-                Password:
-              %td
-                %input{ :name => @password_param.to_s, :type => "password", :size => 25 }/
-            %tr
-              %td
-                \&nbsp;
-              %td
-                %input{ :type => "submit", :value => "&nbsp;inloggen&nbsp;", :style => "margin-bottom: 5px" }/
-      %br/
-      %h1
-        Nog geen account?
-      %p
-        Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin sed, aliquet vel, quam. Pellentesque molestie laoreet tortor. Of gewoon
-        %a{ :href => url(:signup) } hier
-        klikken!
+
+          %p
+            %label{ :for => "login" } login name or email adres
+            %br/
+            %input.text{ :name => "login", :size => "15", :type => "text" }/
+            %br/
+            %label{ :for => "password" } password
+            %br/
+            %input.password{ :name => "password", :size => "15", :type => "password" }/
+            %br/
+            %br/
+            %input{ :type => "submit", :value => "&nbsp;log in&nbsp;" }
+        %br/
+        %h1
+          Not signed up yet?
+        %p
+          Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin sed, aliquet vel, quam. Pellentesque molestie laoreet tortor. Of gewoon
+          %a{ :href => url(:signup) } Sign up now!
+      - else
+        %h1
+          Logged in...
+        %p
+          You are logged in as
+          %b
+            = session.user.login
+          = surround '(', ').' do
+            = link_to 'log out', url(:logout)
+        %p
+          == #{link_to 'my start page', url(:my_start)}
+
 .subcolumns.coolsubcol
   .c33l
     .subcl

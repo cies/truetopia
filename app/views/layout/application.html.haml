@@ -22,20 +22,19 @@
         #header
           #top_right.float_right
             - if session.authenticated?
-              je bent ingelogd als
+              logged in as
               %b
                 = session.user.login
-              = surround '(', ')<br/>' do
-                = link_to 'uitloggen', url(:logout)
+              = surround '(', ')' do
+                = link_to 'log out', url(:logout)
             - else
-              = link_to 'login', url(:login)
-              of
-              = link_to 'maak een account<br/>', url(:signup)
-            %form.search
-              %input/
-              %button{ :type => "submit" }
-                = surround '&nbsp;' do
-                  zoek
+              = link_to 'log in', url(:login)
+              or
+              = link_to 'sign up for an account', url(:signup)
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            %form.search{ :style => 'display: inline;' }
+              %input{ :size => 20 }
+              %input{ :type => 'submit', :value => '&nbsp;search&nbsp;' }
 
           / size needs to be the same the image
           .logo_color.float_left{ :style => 'width: 50px; height: 50px;' }
@@ -45,23 +44,17 @@
           %span.title
             Truetopia
           %span.subtitle
-            \...doe gewoon lekker mee!
+            \...communities everywhere!
 
         #breadcrums
-          // breadcrums, generated from the request.uri, cannot use haml's pretty whitespacing
-          / sorry no indentation, that would add whitespace to the url
-          - html = ""
-          - link_url = ""
-          - separator_html = capture_haml do
-            %span.crum_separator= '/'
-          - request.uri.split('?').first.split('#').first.split('/')[1..-1].each do |part|
-            - crum_html = capture_haml(part) do |part|
-              %span.crum= ('<a href="' + (link_url << '/' + part) + '">' + part + '</a>')
-            - html << separator_html.strip + crum_html.strip
-          - puts html
+          = breadcrums
 
         #main
-          = format_notification({})
+          - if message
+            #flash-messages.span-14.prefix-5.suffix-5.last
+              - message.each do |key, value|
+                .flash{ :class => key.to_s }
+                  %p= value
           = catch_content :for_layout
 
         #footer
