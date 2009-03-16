@@ -1,3 +1,6 @@
+brad armitage
+
+
 stories
 
 * new user arrives
@@ -48,10 +51,12 @@ M3: priorities + agenda
 Mx: events and subscriptions
 Mx: tagging
 Mx: modding
+Mx: make a fully capable user model/profile (guest/pending/email_confirmed/verified)
 Mx: ...
 
 
 
-
+ = starting a new project =
+user creates a project with status :pending, he names the project (by subscribing to it)
 
 

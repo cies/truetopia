@@ -4,49 +4,51 @@
   %tbody
     %tr
       %td.sub{ :width => '50%' }
-        gestart door
+        started by
       %td.sub
         %strong
           = link_to document.user.login, url(:user, :login => document.user.login)
     %tr
       %td
-        &nbsp;&nbsp;op
+        &nbsp;&nbsp;when
       %td
-        = short_human_date document.created_at
+        = relative_date document.created_at
     %tr
       %td.sub
-        hudige versie
+        current version
       %td.sub
         %strong= document.version_count.to_s
         &nbsp;
         = surround '(', ')' do
-          = link_to 'historie', url(:document_history, :id => params[:id])
+          = link_to 'history', document_url(:action => 'history')
     %tr
       %td
-        &nbsp;&nbsp;door
+        &nbsp;&nbsp;by
       %td
         %strong
           = link_to document.current_version.user.login, url(:user, :login => document.current_version.user.login)
     %tr
       %td.sub
-        &nbsp;&nbsp;op
+        &nbsp;&nbsp;when
       %td.sub
-        = short_human_date document.created_at
+        = relative_date document.created_at
     %tr
       %td
-        reacies
+        discussion posts
       %td
-        %strong= document.discussion.post_count
+        %strong= document.discussion.posts.count
         &nbsp;
         = surround '(', ')' do
-          = link_to 'discussie', url(:document_discussion, :document_id => params[:id])
+          = link_to 'discussion', discussion_url
     %tr
       %td.sub
-        &nbsp;&nbsp;in laatste week
+        &nbsp;&nbsp;in last week
       %td.sub
-        %strong= document.discussion.post_from_last_week
+        %strong= document.discussion.posts.count(:created_at.gt => 1.week.ago)
 %h1 acties
-.sidebar_menu= link_to "&nbsp;&nbsp;&nbsp;documenten overzicht", url(:documents)
-.sidebar_menu= link_to "&nbsp;&nbsp;&nbsp;nieuw document", url(:new_document)
-.sidebar_menu= link_to "&nbsp;&nbsp;&nbsp;documenten zoeken", url(:search, :what => 'document')
+.sidebar_menu= link_to "document overview", document_url
+.sidebar_menu= link_to "new document", document_url(:action => 'new')
+.sidebar_menu= link_to "search", ''
+.sidebar_menu= link_to "subscribe", url(:my_subscriptions, :action => 'new', :subscribable_type => 'Document', :subscribable_id => @document.id)
+.sidebar_menu= link_to "vote", url(:my_votes, :action => 'new', :voteable_type => 'Document', :voteable_id => @document.id), :title => 'vote for (or against) this document'
 %br/

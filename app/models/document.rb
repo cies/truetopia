@@ -12,11 +12,12 @@ class Document
 
   belongs_to :user
   has n, :versions, :class_name => 'DocumentVersion'
+  has 1, :discussion, :class_name => 'DocumentDiscussion', :child_key => [:document_id]
   # has one discussion through a polymorphic, non-datamapper, relation
 
-  def discussion
-    DocumentDiscussion.first(:document_id => id)
-  end
+#   def discussion
+#     DocumentDiscussion.first(:document_id => id)
+#   end
 
   def version_count
     DocumentVersion.count(:document_id => id)
@@ -35,7 +36,7 @@ class Document
   def get_current_version
     # make sure this gets only pulled once from the db
     return @current_version if @current_version
-    @current_version = DocumentVersion.first(:document_id => self.id, :number => self.version_count)
+    @current_version = DocumentVersion.first(:document_id => self.id, :order => [:number.desc])
     raise "No current version for document ##{self.id}." unless @current_version
     return @current_version
   end

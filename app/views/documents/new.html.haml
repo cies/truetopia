@@ -1,15 +1,14 @@
-- throw_content :title, 'Nieuw Document'
+- throw_content :title, 'New Document'
 
 .subcolumns
   .c75r
     .subcr
       %h1
-        Nieuw document starten
+        Creating a new document
       %p
-        Je gaat een nieuw document maken..
-      - if @document_version.errors and not @document_version.errors.empty?
-        = partial 'shared/error_dialog', :object => @document_version, :title => 'Opslaan mislukt!'
-      = form_for :document_version, :action => url(:new_document) do
+        You are about to make a new document for
+      = error_messages_for @document_version
+      = form_for :document_version, :action => request.uri do
         %p
           = form_label @document_version, 'title', 'titel', 'kies iets dat het document goed beschrijft, maar pieker er niet te lang over want de titel is altijd te wijzigen in een nieuwe versie van het document. in het document zelf kun je ook nog een hoofdstuk structuur aanbrengen met titels.'
           = text_field :title, :size=> 60
@@ -24,7 +23,7 @@
   .c25l
     .subcl.sidebar
       %h1
-        Opmaak codes
+        Further reading
       %p
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam malesuada   suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin sed.
 

@@ -20,7 +20,7 @@ dependency "merb-exceptions", merb_gems_version
 dependency "merb_datamapper", merb_gems_version
 
 dependency "mediacloth"
- 
+# dependency "diff-lcs" 
 
 dependency "data_objects", do_gems_version
 dependency "do_sqlite3", do_gems_version  # most development

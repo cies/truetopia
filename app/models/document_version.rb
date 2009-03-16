@@ -1,9 +1,10 @@
 class DocumentVersion
   include DataMapper::Resource
-  before :save, :render_content_html
+  before :valid?, :set_version_number
+  before :save,   :render_content_html
 
-  property :document_id,   Integer, :key => true, :writer => :private  # through document=
-  property :number,        Integer, :key => true, :writer => :private  # through document=
+  property :document_id,   Integer, :key => true
+  property :number,        Integer, :key => true
   property :user_id,       Integer, :nullable => false
   property :title,         String,  :nullable => false, :length => 255
   property :content,       Text,    :nullable => false
@@ -12,10 +13,10 @@ class DocumentVersion
   property :created_at,    DateTime
   property :comment,       Text  # nullable, but has to be valid
 
-  validates_with_method :content, :method =>  :check_for_duplication
+  validates_with_method :content, :method => :check_for_duplication
+  validates_with_method :comment, :method => :comment_present_for_all_but_number_one
   validates_present     :title
   validates_present     :content
-  validates_present     :comment
   validates_length      :title,   :min => 5
   validates_length      :title,   :max => 200
   validates_length      :content, :min => 20
@@ -23,14 +24,6 @@ class DocumentVersion
   belongs_to :document
   belongs_to :user
 
-  # the inferred validations should be enough
-  
-
-  alias :old_document_setter :document=
-  def document= (obj)
-    old_document_setter obj
-    self.number = DocumentVersion.count(:document_id => obj.id) + 1
-  end
 
   private
 
@@ -43,12 +36,18 @@ class DocumentVersion
     self.content_html = '<p>'+Haml::Helpers.html_escape(content).gsub("\n", '<br/>')+'</p>'
   end
 
+  def set_version_number
+    self.number = document.versions.count + 1
+  end
+
   def check_for_duplication
-    previous = DocumentVersion.first(:document_id => self.document_id, :order => [:created_at.desc])
+    previous = DocumentVersion.first(:document_id => document_id, :order => [:created_at.desc])
     return true if not previous
-    if previous.title == self.title and previous.content == self.content
-      return [false, :duplication]
-    end
+    return [false, :nothing_has_changed] if previous.title == title and previous.content == content
+    return true
+  end
+  def comment_present_for_all_but_number_one
+    return [false, :please_add_comment] if comment.blank? and number > 1
     return true
   end
 end

@@ -1,4 +1,4 @@
-- throw_content :title, 'account maken, stap 1'
+- throw_content :title, 'Signup for an account, step 2'
 
 .subcolumns
   .c25l
@@ -9,31 +9,29 @@
       %br/
       %h1
         Stap 2
-      - unless @user.errors.empty?
-        .notification
-          Er is iets nog niet helemaal in order in het onderstaande formulier..
-      = form_for @user, :action => url(:signup_step2) do
+      = error_messages_for @user
+      = form_for @user, :action => url(:signup, 'step2') do
         %p
-          = form_label nil, 'login', 'alias', 'deze naam wordt je gebruikersnaam of alias op deze website. je kunt ter aller tijden kiezen of je onder je echte naam of onder je alias wilt uiten'
+          = form_label nil, 'login', 'alias', 'this is your user name or nick name on the website'
           %br/
           = text_field :login, :size => 25
         %p
-          = form_label nil, 'email', 'email adres', 'vul hier een geldig email adres in, bijvoorkeur een adres dar je regelmatig leest &mdash veel functies van deze website werken via email'
+          = form_label nil, 'email', 'email address', 'a confirmation will be sent ot this addess (not yet)'
           %br/
           = text_field :email, :size => 25
         %p
-          = form_label nil, 'password', 'paswoord', 'maak \'m niet te makkelijk!'
+          = form_label nil, 'password', 'password', 'do not make it too easy!'
           %br/
           = password_field :password, :size => 25
         %p
-          = form_label nil, 'password_confirmation', 'paswoord bevestiging'
+          = form_label nil, 'password_confirmation', 'password confirmation'
           %br/
           = password_field :password_confirmation, :size => 25
         .narrow
           %p
-            = form_label 'submit', 'kijk nog een keer goed alles na', 'en lees de <a href="/voorwaarden">gebruikers voorwaarden</a>, door een account aan te maken gaat u ermee accord'
+            = form_label 'nil', 'everything filled out properly?', 'have a look at the <a href="/agreement">agreement</a> (that is not yet in place), as by creating an account you implicitly agreeing'
             %br/
-            = submit "&nbsp;account maken&nbsp;", {:name => 'submit'}
+            = submit "&nbsp;create account&nbsp;", {:name => 'submit'}
 
   .c25r
     .subcr

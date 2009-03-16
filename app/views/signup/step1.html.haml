@@ -1,4 +1,4 @@
-- throw_content :title, 'account maken, stap 1'
+- throw_content :title, 'Signup for an account, step 1'
 
 .subcolumns
   .c25l
@@ -11,9 +11,10 @@
         Stap 1
       .narrow
         %p.big
-          Je kunt gelijk doorgaan met
-          = link_to 'stap2', url(:signup_step2)
-          , vooralsnog besparen we je de moralizerende introcutie, de gebruikers overeenkomst en de disclaimers...
+          == Please procede directly to #{link_to 'step 2', url(:signup, 'step2')}, as for now we will not bother you with a moralizing introduction, user agreements and disclaimers.
+        %p.big
+          = link_to 'Please procede...', url(:signup, 'step2')
+
   .c25r
     .subcr
       &nbsp;

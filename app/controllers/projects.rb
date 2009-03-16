@@ -12,28 +12,20 @@ class Projects < Application
     display @project
   end
 
-  def new
-    if request.env['REQUEST_METHOD'] == "POST"
-      # create the project and project document first
+  def new(project_subscription = nil, step1_document = nil)
+    if project_subscription  # after submitting the 1st form
       @project = Project.new(:user_id => session.user.id)
       raise "Couldn't save initial project: #{@project.errors.inspect}" unless @project.save
-      @document = ProjectDocument.new(:user_id => session.user.id, :project_id => @project.id)
-      raise "Couldn't save initial document: #{@document.errors.inspect}" unless @document.save
-
-      @document_version = DocumentVersion.new(params[:document_version])
-      @document_version.user = session.user
-      @document_version.document = @document
-      @document_version.comment = '-----'
-      if @document_version.save
-        redirect url(:project, :project_id => @project.id)
+      @project_subscription = ProjectSubscription.new(:subscribable_id => @project.id, :user_id => session.user.id)
+      @project_subscription.name = project_subscription[:name]
+      if @project_subscription.save
+        render :new_finished
       else
-        @project.destroy
-        @document.destroy
-        render :new
+        render
       end
-    else
-      @document_version = DocumentVersion.new
-      display @document_version
+    else  # showing the 1st form
+      @project_subscription = ProjectSubscription.new
+      render
     end
   end
   

@@ -28,11 +28,19 @@ class DocumentDiscussion < Discussion
   validates_present :document
 end
 
-class ProjectDiscussion < Discussion
+class StepDiscussion < Discussion
+  property :step, Integer
   belongs_to :project
-  validates_present :project
+  validates_present :project, :step
 end
-class StepDiscussion < ProjectDiscussion
-  belongs_to :step
-  validates_present :step
-end
+
+## no project discussion for now, use step discussions to have your say
+# class ProjectDiscussion < Discussion
+#   belongs_to :project
+#   validates_present :project
+# end
+# class StepDiscussion < ProjectDiscussion
+#   property :step, Integer
+#   validates_present :step
+#   
+# end

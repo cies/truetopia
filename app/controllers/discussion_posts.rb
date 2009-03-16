@@ -4,10 +4,9 @@ class DiscussionPosts < Application
 #   cache_pages :index, :show
 
   def index
-    get_base
-    @discussion = @document.discussion
+    get_context
     @root_posts = @discussion.root_posts
-    display @root_posts
+    render
   end
 
   def index_redirect
@@ -15,8 +14,7 @@ class DiscussionPosts < Application
   end
 
   def new
-    get_base
-    @discussion = @document.discussion
+    get_context
     if params[:parent_code]
       @parent_post = Post.first(:discussion_id => @discussion.id, :code => params[:parent_code])
     else
@@ -44,25 +42,31 @@ class DiscussionPosts < Application
   end
 
   def show
-    get_base
+    get_context
     @discussion = @document.discussion
     @post = Post.first(:discussion_id => @discussion.id, :code => params[:code])
-    display @post
+    render
   end
 
   private
-  def get_base
-    case params[:base]
-      when 'project'
-        @project = Project[params[:project_id]]
-        @document = @project.project_document
-      when 'user'
-        
+  def get_context
+    case params[:parent]
+      when 'Step'
+        @project = Project.get(params[:project_id]) or raise NotFound
+        @step = @project.step(params[:step]) or raise NotFound
+        @discussion = @step.discussion or raise NotFound
+      when 'StepDocument'
+        @project = Project.get(params[:project_id]) or raise NotFound
+        @step = @project.step(params[:step]) or raise NotFound
+        @document = Document.get(params[:document_id]) or raise NotFound
+        @discussion = @document.discussion or raise NotFound
+      else
+        raise "No context to be loaded for #{params[:parent]}"
     end
   end
 
-  def reply_prefix (str)
-    return str if str[0..(REPLY_PREFIX.length-1)] == REPLY_PREFIX
+  def reply_prefix(str)
+    return str if str[0..(REPLY_PREFIX.length-1)] == REPLY_PREFIX  # don't add blindly "Re: Re: Re: subject"
     return "#{REPLY_PREFIX} #{str}"
   end
 end

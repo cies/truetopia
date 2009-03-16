@@ -1,29 +1,30 @@
-- throw_content :title, "document ##{params[:id]} -- bewerken"
+- throw_content :title, "Edit document ##{@document.id}"
 = partial 'documents/document_header', :document => @document, :current => :edit
 .subcolumns.right_bg
   .c75r
     .subcr
-      %h1 Document bewerken
+      %h1 Edit Document
       %p
-        = "Via onderstaand fomulier kun je document ##{params[:id]} #{@document_version.title} bewerken. Onder aan deze pagina kun je de text van dit document nogmaals nalezen."
+        == Using the form below you can edit document ##{@document.id}, entitled: <i>#{@document_version.title}</i>.
+        Below the form you find a copy of the current version of the document you are about to edit.
       - if @document_version.errors and not @document_version.errors.empty?
-        = partial 'shared/error_dialog', :object => @document_version, :title => 'Bewerking opslaan mislukt!'
+        = error_messages_for @document_version
       .narrow
-        = form_for :document_version, :action => url(:edit_document, :id => params[:id]) do
+        = form_for :document_version, :action => document_url(:document_id => @document.id, :action => 'edit') do
           %p
-            = form_label @document_version, :title, 'titel', 'kies iets dat het document goed beschrijft, maar pieker er niet te lang over want de titel is altijd te wijzigen in een nieuwe versie van het document. in het document zelf kun je ook nog een hoofdstuk structuur aanbrengen met titels.', 'dit veld moet ingevuld worden'
+            = form_label @document_version, :title, 'title', ''
             = text_field :title, :size=> 60
           %p
             = form_label @document_version, :content, 'content', "de content van het document, deze content mag met #{link_to('wiki codes', '#wiki_formatting')} opgemaakt worden"
             = text_area :content, :rows => 20, :cols => 80
           %p
-            = form_label @document_version, :comment, 'commentaar', "een beschrijving van de gemaakte wijzigingen"
+            = form_label @document_version, :comment, 'comment', 'please describe the (nature of) the changes you made to the document'
             = text_area :comment, :rows => 5, :cols => 80
           .narrow
             %p
-              = form_label @document_version, :submit, 'oplaan', 'alles goed nagelezen?'
+              = form_label @document_version, :submit, 'save your changes', ''
               %br/
-              = submit '&nbsp;wijzigingen opslaan&nbsp;', :name => 'submit'
+              = submit '&nbsp;save&nbsp;', :name => 'submit'
       %br/
       %br/
       %br/
@@ -36,14 +37,14 @@
               = @document.current_version.title
             %h1= title_html
           .meta
-            = render_relative_date @document.created_at
+            = relative_date @document.created_at
             gestart door
             = link_to @document.user.login, url(:user, :login => @document.user.login)
             %br/
             huidige versie
             = @document.version_count
             verscheen
-            = render_relative_date @document.current_version.created_at
+            = relative_date @document.current_version.created_at
             door
             = link_to @document.current_version.user.login, url(:user, :login => @document.current_version.user.login)
           .content

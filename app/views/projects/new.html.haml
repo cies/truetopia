@@ -1,26 +1,25 @@
-- throw_content :title, 'Nieuw Document'
+- throw_content :title, 'Start new project'
 
 .subcolumns
   .c75r
     .subcr
       %h1
-        Nieuw project starten
+        Starting a new project
       %p
-        Je gaat een nieuw project starten. Bla die bla.. Boo boo boo.
-      - if @document_version.errors and not @document_version.errors.empty?
-        = partial 'shared/error_dialog', :object => @document_version, :title => 'Opslaan mislukt!'
-      = form_for :document_version, :action => url(:new_project) do
+        You are about to start a new project. Because you create the project you automatically subscribe to it. Subscriptions work in two ways: through subscriptions you keep track of projects and through subscriptions you also name a project.
+      %p
+        Below you enter the name that you give to your project. Go ahead be creative, yet understand that a descriptive name is important for other people to understand what this project is about. You can always change the name you give to this project later, and other users can give this project any name they like.
+
+      = error_messages_for @project_subscription
+      = form_for @project_subscription, :action => url(:projects, 'new') do
         %p
-          = form_label @document_version, :title, 'titel', 'kies iets dat het project goed beschrijft, maar pieker er niet te lang over want de titel is altijd te wijzigen.'
-          = text_field :title, :size=> 60
-        %p
-          = form_label @document_version, :content, 'beschrijving', "de beschrijving van je project, deze content mag met #{link_to('wiki codes', '#wiki_formatting')} opgemaakt worden. je kunt de beschrijving altijd aanpassen."
-          = text_area :content, :rows => 20, :cols => 80
+          = form_label @project_subscription, :name, 'name', 'the name to you pick to describe this project'
+          = text_field :name, :size=> 60
         .narrow
           %p
-            = form_label nil, 'submit', 'oplaan', 'alles goed nagelezen?'
+            = form_label nil, 'submit', 'procede', 'move on'
             %br/
-            = submit '&nbsp;document opslaan&nbsp;', :name => 'submit'
+            = submit '&nbsp;procede&nbsp;', :name => 'procede'
   .c25l
     .subcl.sidebar
       %h1

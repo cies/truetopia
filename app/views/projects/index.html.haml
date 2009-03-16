@@ -1,4 +1,4 @@
-- throw_content(:title, 'projecten, Overzicht')
+- throw_content(:title, 'projects, Index')
 
 .subcolumns
   .c25l
@@ -6,24 +6,24 @@
       %h4
         Acties
       .column_menu
-        = link_to "&nbsp;&nbsp;Maak een nieuw project&nbsp;", url(:new_project)
+        = link_to "&nbsp;&nbsp;Create a new project&nbsp;", url(:project, 'new')
         %br/
-        = link_to "&nbsp;&nbsp;Zoek een project&nbsp;", url(:search)
+        = link_to "&nbsp;&nbsp;Search projects&nbsp;", url(:search)
         %br/
-        = link_to "&nbsp;&nbsp;Recente wijzigingen&nbsp;", '/recent'
+        = link_to "&nbsp;&nbsp;Active projects&nbsp;", '/recent'
         %br/
       %br/
       %h4
-        Projecten
+        Projects
       %p
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam malesuada   suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin sed.
   .c75r
     .subcr
       %h1
-        Overzicht van projecten
+        All projects
       - if @projects.any?
         %h3
-          Recent gewijzigde projecten
+          Recently modified projects
         - @projects.each do |project|
           .subpage
             .subpage_header
@@ -37,20 +37,20 @@
                 gestart door
                 = link_to project.user.login, url(:user, :login => project.user.login)
                 %br/
-                huidige versie
+                current version
                 = project.project_document.version_count
-                verscheen
+                published at
                 = render_relative_date project.project_document.current_version.created_at
-                door
+                by
                 = link_to project.project_document.current_version.user.login, url(:user, :login => project.project_document.current_version.user.login)
             .subpage_content
               = (html_escape project.project_document.current_version.content).gsub("\n", '<br/>')[1..200].strip + '...'
             .subpage_footer
               %strong
-                = link_to 'lees verder...', url(:project, :project_id => project.id)
+                = link_to 'read more...', url(:project, :project_id => project.id)
 
 
       - else
-        Eerst ff
-        = link_to 'eentje',  url(:new_project)
-        maken goofie..
+        First
+        = link_to 'create a project',  url(:project, 'new')
+        before we can list it..

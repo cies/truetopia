@@ -1,6 +1,6 @@
 module My
   class Projects < Base
-   def index
-   end
+    def index
+    end
   end
 end

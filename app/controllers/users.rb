@@ -1,12 +1,12 @@
 class Users < Application
-  def index
-    @users = User.paginate(:page => params[:page], :per_page => 10, :order => [:updated_at.desc])
-    display @users
+  def real_index
+    @users = User.all #.paginate(:page => params[:page], :per_page => 10, :order => [:updated_at.desc])
+    render :index
   end
 
-  def show
+  def index  # actually more like show
     @user = User.first(:login => params[:login])
-    display @user
+    render :show
   end
 
   def search

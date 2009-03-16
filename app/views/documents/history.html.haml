@@ -1,11 +1,12 @@
-- throw_content :title, "document ##{@document.id} -- historie"
+- throw_content :title, "History of document ##{@document.id}"
 = partial 'documents/document_header', :document => @document, :current => :history
 .subcolumns.right_bg
   .c75r
     .subcr
-      Gestart door:
-      = link_to @document.user.login, url(:user, :id => @document.user.login)
-      = @document.created_at.strftime("on %b %d, %y")
+      Created by:
+      = link_to @document.user.login, url(:user, :login => @document.user.login)
+      on
+      = relative_date @document.created_at
       %p
         %table.full
           %thead
@@ -29,9 +30,9 @@
                 %td.sub
                   = version.user.login
                 %td
-                  = link_to version.comment, url(:document_version, :id => @document.id, :version => version.number)
+                  = link_to version.comment, document_url(:document_id => @document.id, :action => 'version', :version => version.number)
                 %td.sub
-                  = link_to 'bekijken', url(:document_version, :id => @document.id, :version => version.number)
+                  = link_to 'bekijken', document_url(:document_id => @document.id, :action => 'version', :version => version.number)
                   = link_to 'terug zetten'
   .c25l
     .subcl.sidebar
