@@ -1,0 +1,27 @@
+- throw_content :title, 'Project created'
+
+.subcolumns
+  .c75r
+    .subcr
+      %h1
+        A project has been created
+      %p
+        == Project number #{@project.id} has been created, and you have a subscription to this project named '#{@project_subscription.name}'.
+      %p
+        Your freshly created project is currently in step 1. In this step you, and all users that care to contribute, are invited to describe the project properly. Describing a project is done by creating documents. Published description documents can receive votes from users. When a document in step 1 (a document describing the project) has been voted for by enough users to reach the 'platform treshold', it will serve as the basis to step 2 documents.
+      %p
+        == For more information about the workings of projects on Truetopia, please read the #{link_to 'manual page on Projects', ''}.
+
+      %h2 Procede by adding a desciption to the project
+      %p
+        The project you just created has no description yet. Infact, as mentioned above, describing the project is a collaborative effort. As you have created the project, you probably have some idea about what a project description should consist of.
+      %p
+        == Please procede by #{link_to "creating a document describing project number #{@project.id}", url(:step_documents, @project.id, 1, 'new')} (step 1).
+
+  .c25l
+    .subcl.sidebar
+      %h1
+        Further reading
+      %p
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam malesuada   suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin sed.
+
