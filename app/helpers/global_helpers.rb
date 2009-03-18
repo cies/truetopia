@@ -38,18 +38,21 @@ module Merb
 
     def discussion_url(*options)
       options, aggr = (options[0] or {}), (options[0] ? params.dup.merge(options[0]) : params)
+      suffix = ''
+      if options[:action]
+        suffix = '_posts'  # the general 'action' route
+      elsif options[:code]
+        suffix = '_post'   # the route for showing an individual post
+      end
       return case aggr[:parent]
-        when 'Step' then options[:code] ?
-          url(:step_discussion_post, aggr[:project_id], aggr[:step], options) :
-          url(:step_discussion, aggr[:project_id], aggr[:step], options)
-        when 'StepDocument' then options[:code] ?
-          url(:step_document_discussion_post, aggr[:project_id], aggr[:step], aggr[:document_id], options) :
-          url(:step_document_discussion, aggr[:project_id], aggr[:step], aggr[:document_id], options)
-        when 'UserDocument' then options[:code] ?
-          url(:user_document_discussion_post, aggr[:login], aggr[:document_id], options) :
-          url(:user_document_discussion, aggr[:login], aggr[:document_id], options)
-      else
-        raise "no discussion_url for #{aggr[:parent].inspect}"
+        when 'Step' then
+          url("step_discussion#{suffix}".to_sym, aggr[:project_id], aggr[:step], options)
+        when 'StepDocument' then
+          url("step_document_discussion#{suffix}".to_sym, aggr[:project_id], aggr[:step], aggr[:document_id], options)
+        when 'UserDocument' then
+          url("user_document_discussion#{suffix}".to_sym, aggr[:login], aggr[:document_id], options)
+        else
+          raise "no discussion_url for #{aggr[:parent].inspect}"
       end
     end
 

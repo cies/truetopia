@@ -20,11 +20,11 @@ dependency "merb-exceptions", merb_gems_version
 dependency "merb_datamapper", merb_gems_version
 
 dependency "mediacloth"
-# dependency "diff-lcs" 
+dependency "diff-lcs", :require_as => 'diff/lcs' 
 
 dependency "data_objects", do_gems_version
 dependency "do_sqlite3", do_gems_version  # most development
-# dependency "do_mysql", do_gems_version    # most production
+dependency "do_mysql", do_gems_version    # most production
 
 
 dependency "dm-core", dm_gems_version         
@@ -33,6 +33,6 @@ dependency "dm-migrations", dm_gems_version
 dependency "dm-timestamps", dm_gems_version   
 dependency "dm-types", dm_gems_version        
 dependency "dm-validations", dm_gems_version
-# dependency "dm-is-list", dm_gems_version 
+dependency "dm-is-list", dm_gems_version 
 
 dependency "dm-paperclip" 

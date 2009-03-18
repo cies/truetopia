@@ -1,6 +1,6 @@
 class Post
   include DataMapper::Resource
-  before :save, :set_number_and_code  # number and code are reduced from the parents code and child count, if any
+  before :valid?, :set_number_and_code  # number and code are reduced from the parents code and child count, if any
 
   property :id,            Serial  # needed for Subscription
   property :discussion_id, Integer, :nullable => false
@@ -56,14 +56,17 @@ class Post
 
   private
   def set_number_and_code
-    if [nil, 0, '', ' ', '0'].include? parent_code  # check if we're making a root post
+    p '1233333333333333333333333333333333333' unless new_record?
+    if parent_code.blank? or parent_code.to_s == '0'  # check if we're making a root post
+    p '123333333333333333333333333333333333---'
       self.parent_code = nil
-      self.number = discussion.root_post_count + 1
-      self.code = number.to_s
+      self.number      = discussion.root_post_count + 1
+      self.code        = number.to_s
     else
-      @parent = Post.first(:discussion_id => discussion_id, :code => parent_code)
+    p '1233333333333333333333333333333333333---------------'
+      @parent     = Post.first(:discussion_id => discussion_id, :code => parent_code)
       self.number = @parent.children_count + 1
-      self.code = "#{parent_code}.#{number.to_s}"
+      self.code   = "#{parent_code}.#{number.to_s}"
     end
   end
 end

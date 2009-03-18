@@ -1,19 +1,18 @@
 .subpage
   .subpage_header
     .links.float_right
-      %a{ :href => url(:document, :id => @document.id) }
-        %img{ :src => '/images/eye_black.png', :height => 13 }
-      = link_to '&nbsp;bekijk&nbsp;', url("#{params[:base]}_discussion_post".to_sym, "#{params[:base]}_id".to_sym => params["#{params[:base]}_id".to_sym], :code => post.code)
-      = link_to '&nbsp;reageer&nbsp;', url("#{params[:base]}_discussion_new_post".to_sym, "#{params[:base]}_id".to_sym => params["#{params[:base]}_id".to_sym], :parent_code => post.code)
+      = link_to '&nbsp;bekijk&nbsp;', discussion_url(:code => post.code)
+      = link_to '&nbsp;reageer&nbsp;', discussion_url(:action => 'new', :parent_code => post.code)
       = link_to '&nbsp;mod&nbsp;'
+      = link_to '&nbsp;subscribe&nbsp;'
     %span.title
       - title_html= capture_haml do
         %span.number= post.code
         = post.title
-      = link_to title_html, url("#{params[:base]}_discussion_post".to_sym, "#{params[:base]}_id".to_sym => params["#{params[:base]}_id".to_sym], :code => post.code)
+      = link_to title_html, discussion_url(:code => post.code)
     %br/
     %span.meta
-      = render_relative_date post.created_at
+      = relative_date post.created_at
       gestart door
       = link_to post.user.login, url(:user, :login => post.user.login)
   .subpage_content
@@ -21,4 +20,4 @@
   .subpage_footer
   .subpage_children
     - post.children.each do |post|
-      = partial('discussions/post', :with => post)
+      = partial('discussion_posts/post', :post => post)

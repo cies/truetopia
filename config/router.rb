@@ -7,6 +7,11 @@ Merb.logger.info("Compiling routes...")
 #    - routes should be pretty.
 #    - i dont understand RESTfullness enough, nor do i see direct benefit for using it and im afraid it compromises on translatability -- so, there is no RESTfullness that im aware of..
 
+
+
+
+## TODO: consider a different parent for document and discussion... easier for making document_url etc.
+
 Merb::Router.prepare do
 
   # this method creates routes (and their names) for a discussion.
@@ -18,12 +23,15 @@ Merb::Router.prepare do
     base.match("/discussion").
       to(:parent => parent, :controller => "discussion_posts", :action => 'index').
       name("#{prefix}_discussion".to_sym)
-    base.match("/discussion/posts").to(:controller => "discussion_posts", :action => 'index_redirect')  # path safety
+    base.match("/discussion/posts").
+      to(:parent => parent, :controller => "discussion_posts", :action => 'index_redirect')  # path safety
     base.match("/discussion/posts(/:action)").
       to(:parent => parent, :controller => "discussion_posts").
       name("#{prefix}_discussion_posts".to_sym)
-    base.match("/discussion/post").to(:controller => "discussion_posts", :action => 'index_redirect')  # path-safety
-    base.match("/discussion/post/:code", :code => /(\d+\.)*\d+/).
+    base.match("/discussion/post").
+      to(:parent => parent, :controller => "discussion_posts", :action => 'index_redirect')  # path-safety
+    # :code as a regexp as it has dots. and i'd rather use /(\d+\.)*\d+/, but submatch errors out
+    base.match("/discussion/post/:code", :code => /[0-9\.]+/).
       to(:parent => parent, :controller => "discussion_posts", :action => 'show').
       name("#{prefix}_discussion_post".to_sym)  # cannot catch the :code, but regexp-routes cannot be named
   end
@@ -35,6 +43,7 @@ Merb::Router.prepare do
     prefix = prefix.to_s
     base.match("/document/:document_id") do |base2|  # add the discussion to the document
       discussion_on("#{prefix}_document".to_sym, base2, "#{parent}Document")
+    end
     base.match("/documents").to(:parent => parent.to_s, :controller => "documents", :action => 'real_index')
     base.match("/documents(/:action)").
       to(:parent => parent, :controller => "documents").
@@ -42,7 +51,6 @@ Merb::Router.prepare do
     base.match("/document/:document_id(/:action(/:version))").
       to(:parent => parent, :controller => "documents").
       name("#{prefix}_document".to_sym)  # *_document
-    end
   end
 
   # Adds the required routes for merb-auth using the password slice

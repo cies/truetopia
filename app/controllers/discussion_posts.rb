@@ -1,7 +1,6 @@
 REPLY_PREFIX = 'Re:'
 
 class DiscussionPosts < Application
-#   cache_pages :index, :show
 
   def index
     get_context
@@ -10,41 +9,32 @@ class DiscussionPosts < Application
   end
 
   def index_redirect
-    redirect request.uri[0..(request.uri =~ /\/[^\/.,;?]+$/)]  # chomp off the last bit of the path
+   redirect discussion_url
   end
 
-  def new
+  def new(post = nil)
     get_context
-    if params[:parent_code]
-      @parent_post = Post.first(:discussion_id => @discussion.id, :code => params[:parent_code])
-    else
-      @parent_post = nil
-    end
-    if request.env['REQUEST_METHOD'] == "POST"
-      @post = Post.new(params['post'])
-      @post.parent_code = params[:parent_code]  # could be nil therefore root post
+    @parent_post = Post.first(:discussion_id => @discussion.id, :code => params[:parent_code]) if params[:parent_code]
+    if post
+      @post = Post.new(post)  # parent_code is set through a hidden value
       @post.discussion_id = @discussion.id
       @post.user = session.user
-      @post.set_number_and_code
       if @post.save
-        redirect url("#{params[:base]}_discussion".to_sym, "#{params[:base]}_id".to_sym => params["#{params[:base]}_id".to_sym])
+        redirect discussion_url
       else
-        display @post
+        render
       end
     else
-      if @parent_post
-        @post = Post.new(:title => reply_prefix(@parent_post.title))
-      else
+      @parent_post ?
+        @post = Post.new(:title => reply_prefix(@parent_post.title)) :
         @post = Post.new
-      end
-      display @post
+      render
     end
   end
 
-  def show
+  def show(code)
     get_context
-    @discussion = @document.discussion
-    @post = Post.first(:discussion_id => @discussion.id, :code => params[:code])
+    @post = Post.first(:discussion_id => @discussion.id, :code => code) or raise NotFound
     render
   end
 
