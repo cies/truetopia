@@ -1,0 +1,35 @@
+- case params[:base]
+  - when 'project'
+    - throw_content :title, "Nieuwe reactie op project ##{params[:project_id]}"
+    = partial 'projects/project_header', :project => @project, :current => :discussion
+  - when 'user'
+
+.subcolumns.right_bg
+  .c75r
+    .subcr
+      %h1
+        Nieuwe reactie
+      - if @parent_post
+        = "Je staat op het punt een reactie te plaatsen in de discussie bij ##{@document.id} <i>#{@document.current_version.title}</i>. Je reageert niet direct op het document, maar op reactie #{@parent_post.code} #{@parent_post.title}. Onderaan deze pagina kun je het document en het voor jou relevante reacties nog eens lezen."
+      - else
+        = "Je staat op het punt een reactie, direct op document ##{@document.id} <i>#{@document.current_version.title}</i>, te plaatsen. Onderaan deze pagina kun je het document nog eens lezen."
+
+      = error_messages_for @post
+      = form_for @post, :action => discussion_url(:action => 'new') do
+        - if @parent_post
+          = hidden_field(:parent_code, :value => @parent_post.code)
+        %p
+          = form_label @post, :title, 'titel', 'stukje text dat een ander, meestal groter, stukje text beschrijft'
+          = text_field :title, :size=> 60
+        %p
+          = form_label @post, :content, 'text', "geen vieze woorden a.j.b."
+          = text_area :content, :rows => 20, :cols => 80
+        .narrow
+          %p
+            = form_label @post, :submit, 'oplaan', 'alles goed nagelezen?'
+            %br/
+            = submit '&nbsp;reactie opslaan&nbsp;', :name => 'submit'
+  .c25l
+    .subcl
+      .column_menu
+        = link_to "Terug naar de discussie", discussion_url
