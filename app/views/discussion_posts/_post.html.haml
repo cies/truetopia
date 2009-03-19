@@ -1,8 +1,8 @@
 .subpage
   .subpage_header
     .links.float_right
-      = link_to '&nbsp;bekijk&nbsp;', discussion_url(:code => post.code)
-      = link_to '&nbsp;reageer&nbsp;', discussion_url(:action => 'new', :parent_code => post.code)
+      = link_to '&nbsp;view&nbsp;', discussion_url(:code => post.code)
+      = link_to '&nbsp;reply&nbsp;', discussion_url(:action => 'new', :parent_code => post.code)
       = link_to '&nbsp;mod&nbsp;'
       = link_to '&nbsp;subscribe&nbsp;'
     %span.title
@@ -12,9 +12,10 @@
       = link_to title_html, discussion_url(:code => post.code)
     %br/
     %span.meta
+      started by
+      %b= link_to post.user.login, url(:user, :login => post.user.login)
+      on
       = relative_date post.created_at
-      gestart door
-      = link_to post.user.login, url(:user, :login => post.user.login)
   .subpage_content
     = post.content
   .subpage_footer

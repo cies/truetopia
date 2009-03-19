@@ -17,39 +17,33 @@ Merb::Router.prepare do
   # this method creates routes (and their names) for a discussion.
   # names are prefixd by 'prefix' [Symbol], the prefix of the route is stored in
   # param[:context] for further use in the controller
-  def discussion_on(prefix, base, parent)
-    prefix = prefix.to_s
+  def discussion_on(prefix, base, parent, defaults = {})
+    defaults = defaults.merge(:discussion_parent => parent, :controller => 'discussion_posts')  # dupes the defaults
     # discussion is singulare because its always only one, so no need for an :id, and never created by users direct actions
-    base.match("/discussion").
-      to(:parent => parent, :controller => "discussion_posts", :action => 'index').
+    base.match("").to(defaults.merge(:action => 'index')).
       name("#{prefix}_discussion".to_sym)
-    base.match("/discussion/posts").
-      to(:parent => parent, :controller => "discussion_posts", :action => 'index_redirect')  # path safety
-    base.match("/discussion/posts(/:action)").
-      to(:parent => parent, :controller => "discussion_posts").
+    base.match("/posts").to(defaults.merge(:action => 'index_redirect'))  # path safety
+    base.match("/posts(/:action)").to(defaults).
       name("#{prefix}_discussion_posts".to_sym)
-    base.match("/discussion/post").
-      to(:parent => parent, :controller => "discussion_posts", :action => 'index_redirect')  # path-safety
+    base.match("/post").to(defaults.merge(:action => 'index_redirect'))  # path safety
     # :code as a regexp as it has dots. and i'd rather use /(\d+\.)*\d+/, but submatch errors out
-    base.match("/discussion/post/:code", :code => /[0-9\.]+/).
-      to(:parent => parent, :controller => "discussion_posts", :action => 'show').
-      name("#{prefix}_discussion_post".to_sym)  # cannot catch the :code, but regexp-routes cannot be named
+    base.match("/post/:code", :code => /[0-9\.]+/).to(defaults.merge(:action => 'show')).
+      name("#{prefix}_discussion_post".to_sym)
   end
 
   # this method creates routes (and their names) for a document.
   # names are prefixd by 'prefix' [Symbol], the prefix of the route is stored in
   # param[:context] for further use in the controller
-  def documents_for(prefix, base, parent)
-    prefix = prefix.to_s
-    base.match("/document/:document_id") do |base2|  # add the discussion to the document
-      discussion_on("#{prefix}_document".to_sym, base2, "#{parent}Document")
-    end
-    base.match("/documents").to(:parent => parent.to_s, :controller => "documents", :action => 'real_index')
-    base.match("/documents(/:action)").
-      to(:parent => parent, :controller => "documents").
+  def documents_for(prefix, base, parent, defaults = {})
+    defaults = defaults.merge(:document_parent => parent, :controller => 'documents')  # dupes the defaults
+    base.match("/documents").to(defaults.merge(:action => 'real_index'))  # actual index is more like show
+    base.match("/documents(/:action)").to(defaults).# routes to index, needed otherwise the discussion is prefered
       name("#{prefix}_documents".to_sym)  # *_documents
-    base.match("/document/:document_id(/:action(/:version))").
-      to(:parent => parent, :controller => "documents").
+    base.match("/document/:document_id").to(defaults.merge(:action => 'index'))
+    base.match("/document/:document_id/discussion") do |new_base|  # add the discussion to the document
+      discussion_on("#{prefix}_document".to_sym, new_base, "#{parent}Document", defaults)
+    end
+    base.match("/document/:document_id(/:action(/:version))").to(defaults).
       name("#{prefix}_document".to_sym)  # *_document
   end
 
@@ -71,12 +65,12 @@ Merb::Router.prepare do
 
   # projects (are not individually owned, so do not live in /my namespace)
   match("/projects(/:action)").to(:controller => "projects").name(:projects)
-  match("/project").to(:controller => "projects", :action => 'redirect_index')  # path safety
+  match("/project").to(:controller => "projects", :action => 'index_redirect')  # path safety
   match("/project/:project_id").to(:controller => "projects", :action => 'show')
 #   match("/projects/:project_id") { |base| discussion_on :project, base, Project }  # NO PROJECT DISCUSSIONS YET
-  match("/project/:project_id/step").to(:controller => "projects", :action => 'show')  # path-safety
+  match("/project/:project_id/step").to(:controller => "projects", :action => 'show_redirect')  # path-safety
   match("/project/:project_id/step/:step").to(:controller => "projects", :action => 'step').name(:project_step)
-  match("/project/:project_id/step/:step") { |base| discussion_on(:step, base, 'Step') }  # adds discussion routes
+  match("/project/:project_id/step/:step/discussion") { |base| discussion_on(:step, base, 'Step') }
   match("/project/:project_id/step/:step") { |base| documents_for(:step, base, 'Step') }  # adds document routes
   match("/project/:project_id(/:action)").to(:controller => "projects").name(:project)
 

@@ -27,12 +27,12 @@ module Merb
 
     def document_url(*options)
       options, aggr = (options[0] or {}), (options[0] ? params.dup.merge(options[0]) : params)
-      return case aggr[:parent]
+      return case aggr[:document_parent]
         when 'Step' then options[:document_id] ?
           url(:step_document, aggr[:project_id], aggr[:step], options) :
           url(:step_documents, aggr[:project_id], aggr[:step], options)
       else
-        raise "no document_url for #{aggr[:parent].inspect}"
+        raise "no document_url for #{aggr[:document_parent].inspect}"
       end
     end
 
@@ -44,7 +44,7 @@ module Merb
       elsif options[:code]
         suffix = '_post'   # the route for showing an individual post
       end
-      return case aggr[:parent]
+      return case aggr[:discussion_parent]
         when 'Step' then
           url("step_discussion#{suffix}".to_sym, aggr[:project_id], aggr[:step], options)
         when 'StepDocument' then
@@ -52,7 +52,7 @@ module Merb
         when 'UserDocument' then
           url("user_document_discussion#{suffix}".to_sym, aggr[:login], aggr[:document_id], options)
         else
-          raise "no discussion_url for #{aggr[:parent].inspect}"
+          raise "no discussion_url for #{aggr[:discussion_parent].inspect}"
       end
     end
 

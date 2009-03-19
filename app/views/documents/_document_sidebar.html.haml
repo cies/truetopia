@@ -39,7 +39,7 @@
         %strong= document.discussion.posts.count
         &nbsp;
         = surround '(', ')' do
-          = link_to 'discussion', discussion_url
+          = link_to 'discussion', discussion_url(:discussion_parent => "#{params[:document_parent]}Document")
     %tr
       %td.sub
         &nbsp;&nbsp;in last week

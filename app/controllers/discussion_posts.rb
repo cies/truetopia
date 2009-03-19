@@ -8,7 +8,7 @@ class DiscussionPosts < Application
     render
   end
 
-  def index_redirect
+  def index_redirect  # for path safety
    redirect discussion_url
   end
 
@@ -40,7 +40,7 @@ class DiscussionPosts < Application
 
   private
   def get_context
-    case params[:parent]
+    case params[:discussion_parent]
       when 'Step'
         @project = Project.get(params[:project_id]) or raise NotFound
         @step = @project.step(params[:step]) or raise NotFound

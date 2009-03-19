@@ -13,7 +13,7 @@
           %li{ :id => (current == :history ? 'current' : '') }
             = link_to 'history', document_url(:document_id => @document.id, :action => 'history'), :title => 'view the change history'
           %li{ :id => (current == :discussion ? 'current' : '') }
-            = link_to 'discussion', discussion_url(:parent => 'StepDocument'), :title => 'discuss this document'
+            = link_to 'discussion', discussion_url(:discussion_parent => "#{params[:document_parent]}Document"), :title => 'discuss this document'
   .c25l
     .subcl
       %h1.content{ :align => 'right' }

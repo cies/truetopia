@@ -1,6 +1,6 @@
 - case params[:base]
   - when 'project'
-    - throw_content :title, "project ##{@project.id} -- discussie"
+    - throw_content :title, "discussion"
     = partial 'projects/project_header', :project => @project, :current => :discussion
   - when 'user'
 
@@ -10,9 +10,9 @@
       - if @root_posts.empty?
         %br/
         %p
-          Er zijn nog geen reacties op dit document...
+          There are no posts yet in this discussion...
         %p
-          \...misschien heb jij wat te melden?
+          \...go ahead and be the first!
       - else
         - @root_posts.each do |post|
           = partial('discussion_posts/post', :post => post)
@@ -20,8 +20,8 @@
     .subcl
       .column_menu
         %h3
-          Acties
-        = link_to "&nbsp;&nbsp;Plaats een nieuwe reacie", discussion_url(:action => 'new')
+          Actions
+        = link_to "Create new discussion post", discussion_url(:action => 'new')
         %br/
 
 

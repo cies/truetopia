@@ -8,7 +8,7 @@
     .subcl
       .column_menu
         %h3
-          Acties
-        = link_to "&nbsp;&nbsp;Plaats een nieuwe reacie", discussion_url(:action => 'new', :parent_code => @post.code)
+          Actions
+        = link_to "Create new post", discussion_url(:action => 'new', :parent_code => @post.code)
         %br/
-        = link_to "&nbsp;&nbsp;Terug naar document", document_url
+        = link_to "Back to the document", document_url

@@ -26,7 +26,7 @@ class Documents < Application
       @document_version.user = session.user
       @document_version.document = @document
       if @document_version.save
-        p to_url = url(:step_document, params[:project_id], params[:step], @document.id)
+        to_url = url(:step_document, params[:project_id], params[:step], @document.id)
         redirect to_url, :message => "Changes have been saved as version #{@document_version.number}"
       else
         @document.destroy  # i see no other way than to destroy @document here (only with initial versions)
