@@ -20,14 +20,14 @@ Merb::Router.prepare do
   def discussion_on(prefix, base, parent, defaults = {})
     defaults = defaults.merge(:discussion_parent => parent, :controller => 'discussion_posts')  # dupes the defaults
     # discussion is singulare because its always only one, so no need for an :id, and never created by users direct actions
-    base.match("").to(defaults.merge(:action => 'index')).
+    base.match("/discussion").to(defaults).
       name("#{prefix}_discussion".to_sym)
-    base.match("/posts").to(defaults.merge(:action => 'index_redirect'))  # path safety
-    base.match("/posts(/:action)").to(defaults).
+    base.match("/discussion/posts").to(defaults.merge(:action => 'index_redirect'))  # path safety
+    base.match("/discussion/posts(/:action)").to(defaults).
       name("#{prefix}_discussion_posts".to_sym)
-    base.match("/post").to(defaults.merge(:action => 'index_redirect'))  # path safety
+    base.match("/discussion/post").to(defaults.merge(:action => 'index_redirect'))  # path safety
     # :code as a regexp as it has dots. and i'd rather use /(\d+\.)*\d+/, but submatch errors out
-    base.match("/post/:code", :code => /[0-9\.]+/).to(defaults.merge(:action => 'show')).
+    base.match("/discussion/post/:code", :code => /[0-9\.]+/).to(defaults.merge(:action => 'show')).
       name("#{prefix}_discussion_post".to_sym)
   end
 
@@ -39,8 +39,7 @@ Merb::Router.prepare do
     base.match("/documents").to(defaults.merge(:action => 'real_index'))  # actual index is more like show
     base.match("/documents(/:action)").to(defaults).# routes to index, needed otherwise the discussion is prefered
       name("#{prefix}_documents".to_sym)  # *_documents
-    base.match("/document/:document_id").to(defaults.merge(:action => 'index'))
-    base.match("/document/:document_id/discussion") do |new_base|  # add the discussion to the document
+    base.match("/document/:document_id") do |new_base|  # add the discussion to the document
       discussion_on("#{prefix}_document".to_sym, new_base, "#{parent}Document", defaults)
     end
     base.match("/document/:document_id(/:action(/:version))").to(defaults).
@@ -70,7 +69,7 @@ Merb::Router.prepare do
 #   match("/projects/:project_id") { |base| discussion_on :project, base, Project }  # NO PROJECT DISCUSSIONS YET
   match("/project/:project_id/step").to(:controller => "projects", :action => 'show_redirect')  # path-safety
   match("/project/:project_id/step/:step").to(:controller => "projects", :action => 'step').name(:project_step)
-  match("/project/:project_id/step/:step/discussion") { |base| discussion_on(:step, base, 'Step') }
+  match("/project/:project_id/step/:step") { |base| discussion_on(:step, base, 'Step') }
   match("/project/:project_id/step/:step") { |base| documents_for(:step, base, 'Step') }  # adds document routes
   match("/project/:project_id(/:action)").to(:controller => "projects").name(:project)
 
