@@ -9,6 +9,10 @@ class Users < Application
     render :show
   end
 
+  def real_index_redirect
+    redirect url(:users)
+  end
+
   def search
   end
 end

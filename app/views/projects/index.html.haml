@@ -2,19 +2,11 @@
 
 .subcolumns
   .c25l
-    .subcl
-      %h4
-        Acties
-      .column_menu
-        = link_to "&nbsp;&nbsp;Create a new project&nbsp;", url(:project, 'new')
-        %br/
-        = link_to "&nbsp;&nbsp;Search projects&nbsp;", url(:search)
-        %br/
-        = link_to "&nbsp;&nbsp;Active projects&nbsp;", '/recent'
-        %br/
+    .subcl.sidebar
+      = partial 'actions'
       %br/
-      %h4
-        Projects
+      %h1
+        what are projects?
       %p
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam malesuada   suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin sed.
   .c75r
@@ -30,27 +22,21 @@
               %span.title
                 - title_html= capture_haml do
                   %span.number= '#' + project.id.to_s
-                  = project.project_document.current_version.title
+                  = project.default_name[0]
                 = link_to title_html, url(:project, :project_id => project.id)
               .meta
-                = render_relative_date project.created_at
-                gestart door
+                = relative_date project.created_at
+                started by
                 = link_to project.user.login, url(:user, :login => project.user.login)
                 %br/
-                current version
-                = project.project_document.version_count
-                published at
-                = render_relative_date project.project_document.current_version.created_at
-                by
-                = link_to project.project_document.current_version.user.login, url(:user, :login => project.project_document.current_version.user.login)
+                current step
+                %b= project.in_step
             .subpage_content
-              = (html_escape project.project_document.current_version.content).gsub("\n", '<br/>')[1..200].strip + '...'
+              some event flow items could be listed here...
             .subpage_footer
               %strong
-                = link_to 'read more...', url(:project, :project_id => project.id)
+                = link_to 'view project...', url(:project, :project_id => project.id)
 
 
       - else
-        First
-        = link_to 'create a project',  url(:project, 'new')
-        before we can list it..
+        == First #{link_to 'create a project',  url(:project, 'new')}, we'll list it here. Promise.

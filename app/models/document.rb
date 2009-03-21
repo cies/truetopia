@@ -11,7 +11,7 @@ class Document
   property :discriminator, Discriminator  # because this model is subclassed
 
   belongs_to :user
-  has n, :versions, :class_name => 'DocumentVersion'
+  has n, :versions, :class_name => 'DocumentVersion', :order => [:number.desc]
   has 1, :discussion, :class_name => 'DocumentDiscussion', :child_key => [:document_id]
   # has one discussion through a polymorphic, non-datamapper, relation
 
@@ -29,6 +29,13 @@ class Document
 
   def version(number)
     DocumentVersion.first(:document_id => id, :number => number)
+  end
+
+  def diff(from_version, to_version, property = :content_html)
+    line_separator = {:content_html => /<br\s*[\/]{0,1}\s*>/}[property] or /\r*\n/
+    from_arr = (from_version.send(property) or '').split(line_separator)
+    to_arr   = (to_version.send(property) or '').split(line_separator)
+    sdiff = Diff::LCS.sdiff(from_arr, to_arr)
   end
 
   private

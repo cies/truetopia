@@ -6,6 +6,10 @@ class Documents < Application
     render :index
   end
 
+  def real_index_redirect  # actually more like show
+    redirect document_url
+  end
+
   def index  # actually more like show
     @document = Document.get(params[:document_id])
     render :show
@@ -60,8 +64,15 @@ class Documents < Application
 
   def history(document_id)
     @document = Document.get(document_id) or raise NotFound
-    @document_versions = @document.versions
-    render
+    if params[:from] and params[:to]
+      @from_version = @document.version(params[:from]) or raise NotFound
+      @to_version   = @document.version(params[:to])   or raise NotFound
+      @diff = @document.diff(@from_version, @to_version, :content)
+      render :history_diff
+    else
+      @document_versions = @document.versions
+      render
+    end
   end
 
   def version

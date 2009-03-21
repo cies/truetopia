@@ -20,6 +20,12 @@ class Projects < Application
    redirect url(:project, project_id)
   end
 
+  def step(project_id, step)
+    @project = Project.get(project_id)
+    @step = @project.step(step) or NotFound
+    render
+  end
+
   def new(project_subscription = nil, step1_document = nil)
     if project_subscription  # after submitting the 1st form
       @project = Project.new(:user_id => session.user.id)

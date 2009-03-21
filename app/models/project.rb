@@ -23,12 +23,13 @@ class Project
        WHERE discriminator = 'ProjectSubscription' GROUP BY name ORDER BY count DESC}).map{ |x| x = x.to_a }
   end
 
-  # this is the most given name (oldest is preferred when more than one name is given most)
+  # this is the most given name (oldest is preferred when more than one name is given most) and
+  # the times this name was picked in an array.
   def default_name
     result = repository.adapter.query(%q{
       SELECT name, COUNT(*) AS count FROM subscriptions  -- Project.name
        WHERE discriminator = 'ProjectSubscription' GROUP BY name ORDER BY created_at LIMIT 1})
-    return result.blank? ? nil : result[0][0]
+    return result.blank? ? nil : result[0]
   end
 
   private

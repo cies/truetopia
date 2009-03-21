@@ -1,12 +1,12 @@
-- throw_content :title, "project ##{@project.id} #{@project.project_document.current_version.title}"
-= partial 'projects/project_header', :project => @project, :current => :show
+- throw_content :title, "project ##{@project.id}"
+= partial 'header', :project => @project, :current => :show
 .subcolumns.right_bg
   .c75r
     .subcr
-      = format_notification(:nothing => 'yet')
-      .content
-        = @project.project_document.current_version.content_html
-      .footer
+      %p== Project names are given through subscriptions. The current name (#{@project.default_name[0]} is chosen by #{@project.default_name[1]} users when they subscribed to this project. Please consider #{link_to 'subscribing to this project', url(:my_subscriptions, 'new', :project => @project.id)}, when you subscribe choose how you like to refer to this project.
+      %p This project is currently in step 1: definition. Please help defining this project by creating, discussing or voting for documents in step 1.
   .c25l
     .subcl.sidebar
-      = partial 'project_sidebar', :project => @project
+      = partial 'details', :project => @project
+      %br/
+      = partial 'actions', :project => @project

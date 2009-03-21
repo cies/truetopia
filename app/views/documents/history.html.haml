@@ -8,32 +8,44 @@
       on
       = relative_date @document.created_at
       %p
-        %table.full
-          %thead
-            %tr
-              %th
-                nr
-              %th
-                datum
-              %th
-                auteur
-              %th
-                comment
-              %td/
-          %tbody
-            - @document_versions.each do |version|
+        = form(:action => document_url(:document_id => @document.id, :action => 'history')) do
+          %table.full
+            %thead
               %tr
-                %td.sub
-                  = version.number
-                %td
-                  = version.created_at.strftime("on %b %d, %y")
-                %td.sub
-                  = version.user.login
-                %td
-                  = link_to version.comment, document_url(:document_id => @document.id, :action => 'version', :version => version.number)
-                %td.sub
-                  = link_to 'bekijken', document_url(:document_id => @document.id, :action => 'version', :version => version.number)
-                  = link_to 'terug zetten'
+                %th
+                  diff
+                %th
+                  version
+                %th
+                  created on
+                %th
+                  by
+                %th
+                  modification comment
+                %td/
+            %tbody
+              - @document_versions.each_with_index do |version, index|
+                %tr
+                  %td
+                    %div{:style => 'width: 20px; float: left;'}
+                      = (index != 0) ? radio_button(:name => 'from', :value => version.number, :checked => index == 1) : '&nbsp;'
+                    %div{:style => 'width: 20px; float: left;'}
+                      - unless index == @document_versions.length - 1
+                        = radio_button(:name => 'to',   :value => version.number, :checked => index == 0)
+                  %td.sub
+                    = version.number
+                  %td
+                    = relative_date version.created_at
+                  %td.sub
+                    = version.user.login
+                  %td
+                    = link_to version.comment, document_url(:document_id => @document.id, :action => 'version', :version => version.number)
+                  %td.sub
+                    = link_to 'view', document_url(:document_id => @document.id, :action => 'version', :version => version.number)
+                    - unless version.number == @document.version_count
+                      &nbsp;&nbsp;|&nbsp;&nbsp;
+                      = link_to 'revert'
+          = submit 'show diff'
   .c25l
     .subcl.sidebar
       = partial 'document_sidebar', :document => @document

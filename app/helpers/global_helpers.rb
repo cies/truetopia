@@ -67,6 +67,39 @@ module Merb
       CGI.escape(url)
     end
 
+    def view_diff(diff)
+      new_hunk = /^@@ -(\d+),*\d* \+(\d+),*\d* @@/
+      change = /^\-(.*)$\n\+/
+      addition = /^\+(.*)/
+      deletion = /^-(.*)/
+      render  = ""
+      render_add = ""
+      render_del = ""
+      unless diff.nil?
+        diff.split("\n").each do |line|
+          next if line.empty?
+          if line =~ new_hunk
+            render += fill_render_add(render_add)
+            render += fill_render_del(render_del)
+            render += fill_type_diff(Regexp.last_match(1))
+            render_add = ""
+            render_del = ""
+            next
+          end
+          if line =~ addition
+            render_add += "#{Regexp.last_match(1)} \n"
+            next
+          end
+          if line =~ deletion
+            render_del += "#{Regexp.last_match(1)} \n"
+            next
+          end
+        end
+        render += fill_render_add(render_add)
+        render += fill_render_del(render_del)
+      end
+      render
+    end
 
     def breadcrums
       html, link_url = '', ''

@@ -9,9 +9,6 @@ Merb.logger.info("Compiling routes...")
 
 
 
-
-## TODO: consider a different parent for document and discussion... easier for making document_url etc.
-
 Merb::Router.prepare do
 
   # this method creates routes (and their names) for a discussion.
@@ -39,6 +36,7 @@ Merb::Router.prepare do
     base.match("/documents").to(defaults.merge(:action => 'real_index'))  # actual index is more like show
     base.match("/documents(/:action)").to(defaults).# routes to index, needed otherwise the discussion is prefered
       name("#{prefix}_documents".to_sym)  # *_documents
+    base.match("/document").to(defaults.merge(:action => 'real_index_redirect'))  # path safety
     base.match("/document/:document_id") do |new_base|  # add the discussion to the document
       discussion_on("#{prefix}_document".to_sym, new_base, "#{parent}Document", defaults)
     end
@@ -55,7 +53,7 @@ Merb::Router.prepare do
 
   # users controller -- they way to see other users (/my/* is for your own stuff)
   match("/users").to(:controller => "users", :action => 'real_index').name(:users)
-  match("/user").to(:controller => "users", :action => 'redirect_real_index')  # path safety
+  match("/user").to(:controller => "users", :action => 'real_index_redirect')  # path safety
   match("/user/:login(/:action)").to(:controller => "users").name(:user)
   match("/user/:login") { |base| documents_for(:user, base, 'User') }  # adds document routes
 

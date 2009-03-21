@@ -14,6 +14,12 @@ class Discussion
 #     Post.count(:discussion_id => self.id, :created_at.gt => Time.now - 7.days)
 #   end
 
+  def posts_hash  # one approch to pulling a discussion in with one query (UNSUSED SO FAR)
+    result = {}
+    posts.each { |x| result[x.code] = x }
+    result
+  end
+
   def root_posts
     Post.all(:discussion_id => self.id, :parent_code => nil)
   end

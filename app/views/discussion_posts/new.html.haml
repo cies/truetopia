@@ -23,7 +23,7 @@
           = text_field :title, :size=> 60
         %p
           = form_label @post, :content, 'content', 'please mind your words :)'
-          = text_area :content, :rows => 20, :cols => 80
+          ~ text_area :content, :rows => 20, :cols => 80
         .narrow
           %p
             = form_label @post, :submit, 'save', 'checked your post? (you cannot edit it later)'

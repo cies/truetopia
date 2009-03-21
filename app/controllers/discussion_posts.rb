@@ -2,7 +2,7 @@ REPLY_PREFIX = 'Re:'
 
 class DiscussionPosts < Application
 
-  def index
+  def index  # all posts
     get_context
     @root_posts = @discussion.root_posts
     render
@@ -12,7 +12,7 @@ class DiscussionPosts < Application
    redirect discussion_url
   end
 
-  def new(post = nil)
+  def new(post = nil)  # new post
     get_context
     @parent_post = Post.first(:discussion_id => @discussion.id, :code => params[:parent_code]) if params[:parent_code]
     if post
@@ -32,7 +32,7 @@ class DiscussionPosts < Application
     end
   end
 
-  def show(code)
+  def show(code)  # show post
     get_context
     @post = Post.first(:discussion_id => @discussion.id, :code => code) or raise NotFound
     render

@@ -1,0 +1,6 @@
+%h1 actions
+- if project
+  .sidebar_menu= link_to "project overview", url(:projects)
+.sidebar_menu= link_to "create new project", url(:projects, :action => 'new')
+.sidebar_menu= link_to "search projects", url(:search, :what => 'projects')
+.sidebar_menu= link_to "my subscribed projects", url(:my_subscriptions, :action => 'projects')

@@ -14,7 +14,7 @@
           = text_field :title, :size=> 60
         %p
           = form_label @document_version, 'content', 'content', "de content van het document, deze content mag met #{link_to('wiki codes', '#wiki_formatting')} opgemaakt worden"
-          = text_area :content, :rows => 20, :cols => 80
+          ~ text_area :content, :rows => 20, :cols => 80
         .narrow
           %p
             = form_label nil, 'submit', 'oplaan', 'alles goed nagelezen?'

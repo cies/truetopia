@@ -1,7 +1,7 @@
-- case params[:base]
-  - when 'project'
+- case params[:discussion_parent]
+  - when 'StepDocument'
     - throw_content :title, "discussion"
-    = partial 'projects/project_header', :project => @project, :current => :discussion
+    = partial 'documents/document_header', :document => @document, :current => :discussion
   - when 'user'
 
 .subcolumns.right_bg

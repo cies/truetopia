@@ -1,0 +1,22 @@
+- throw_content :title, "History of document ##{@document.id}, diff from #{@from_version.number} to #{@to_version.number}"
+= partial 'documents/document_header', :document => @document, :current => :history
+.subcolumns.right_bg
+  .c75r
+    .subcr
+      %table.full
+        %thead
+          %tr
+            %th{:colspan => 2, :style => 'text-align: center;'}== from version number #{@from_version.number}
+            %td
+            %th{:colspan => 2, :style => 'text-align: center;'}== to version number #{@to_version.number}
+        - @diff.each do |c|
+          %tr
+            %td= c.old_position
+            %td= c.old_element
+            %td{:style => 'text-align: center;'}= c.action
+            %td= c.new_position
+            %td= c.new_element
+
+  .c25l
+    .subcl.sidebar
+      = partial 'document_sidebar', :document => @document

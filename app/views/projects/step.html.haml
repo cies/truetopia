@@ -1,0 +1,15 @@
+- throw_content :title, "step #{params[:step]} of project ##{@project.id}"
+= partial 'header', :project => @project, :current => "step#{params[:step]}".to_sym
+.subcolumns.right_bg
+  .c75r
+    .subcr
+      - if @step
+        %p== You are looking at step #{params[:step]} of project ##{@project.id}, in this step we try to descibe the project. Currently there are #{@project.step(params[:step]).documents.count} documents in this step trying to descibe it, so for none of the documents has been accepted by voting.
+        %p Steps consist of a collection of documents and a step discussion, see here an overview of these:
+      - else
+        This step is not yet open. Step 2 and 3 only open after at least one document in the previous step has been accepted by voting. Please help out in the previous step by creating, discussing or voting for documents.
+  .c25l
+    .subcl.sidebar
+      = partial 'details', :project => @project
+      %br/
+      = partial 'actions', :project => @project

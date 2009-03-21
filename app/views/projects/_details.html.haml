@@ -1,0 +1,19 @@
+%h1 project details
+%table.full
+  %tbody
+    %tr
+      %td.sub{ :width => '50%' }
+        started by
+      %td.sub
+        %strong
+          = link_to project.user.login, url(:user, :login => project.user.login)
+    %tr
+      %td
+        &nbsp;&nbsp;on
+      %td
+        = relative_date project.created_at
+    %tr
+      %td.sub
+        current step
+      %td.sub
+        %strong= project.in_step
