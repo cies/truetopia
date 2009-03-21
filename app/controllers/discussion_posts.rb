@@ -51,7 +51,7 @@ class DiscussionPosts < Application
         @document = Document.get(params[:document_id]) or raise NotFound
         @discussion = @document.discussion or raise NotFound
       else
-        raise "No context to be loaded for #{params[:parent]}"
+        raise "No context to be loaded for #{params[:discussion_parent]}"
     end
   end
 

@@ -1,0 +1,12 @@
+- throw_content :title, "plans of project ##{@project.id}"
+= partial 'header', :project => @project, :current => :plans
+.subcolumns.right_bg
+  .c75r
+    .subcr
+      %p This project has not yet managed to create plans.
+      %p Plans consist of 3 step documents. Each document must have been accepted by voting.
+  .c25l
+    .subcl.sidebar
+      = partial 'details', :project => @project
+      %br/
+      = partial 'actions', :project => @project

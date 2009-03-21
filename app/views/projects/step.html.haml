@@ -6,10 +6,30 @@
       - if @step
         %p== You are looking at step #{params[:step]} of project ##{@project.id}, in this step we try to descibe the project. Currently there are #{@project.step(params[:step]).documents.count} documents in this step trying to descibe it, so for none of the documents has been accepted by voting.
         %p Steps consist of a collection of documents and a step discussion, see here an overview of these:
+        .subcolumns
+          .c50l
+            .subcl
+              %h4 documents
+              = partial 'documents/list'
+          .c50r
+            .subcr
+              %h4 discussion
+              not yet implemented
       - else
         This step is not yet open. Step 2 and 3 only open after at least one document in the previous step has been accepted by voting. Please help out in the previous step by creating, discussing or voting for documents.
   .c25l
     .subcl.sidebar
-      = partial 'details', :project => @project
-      %br/
+      %h1== step #{params[:step]}
+      - case params[:step]
+        - when '1'
+          %p In step 1 the project is described by documents that state <i>problem</i> and <i>when the problem is succesfully solved</i> (not how to solve it, that is for step 2 and 3).
+          %p== Please read the #{link_to 'guidelines'} for documents in this step.
+      - case params[:step]
+        - when '2'
+          %p== Step 2 documents are drawing the solution the project. Please read the #{link_to 'guidelines'} for documents in this step.
+      - case params[:step]
+        - when '3'
+          %p== Step 4 documents are describing the project. Please read the #{link_to 'guidelines'} for documents in this step.
       = partial 'actions', :project => @project
+      %br/
+      = partial 'details', :project => @project

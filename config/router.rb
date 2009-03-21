@@ -66,7 +66,7 @@ Merb::Router.prepare do
   match("/project/:project_id").to(:controller => "projects", :action => 'show')
 #   match("/projects/:project_id") { |base| discussion_on :project, base, Project }  # NO PROJECT DISCUSSIONS YET
   match("/project/:project_id/step").to(:controller => "projects", :action => 'show_redirect')  # path-safety
-  match("/project/:project_id/step/:step").to(:controller => "projects", :action => 'step').name(:project_step)
+  match("/project/:project_id/step/:step").to(:controller => "projects", :action => 'step', :document_parent => 'Step').name(:project_step)
   match("/project/:project_id/step/:step") { |base| discussion_on(:step, base, 'Step') }
   match("/project/:project_id/step/:step") { |base| documents_for(:step, base, 'Step') }  # adds document routes
   match("/project/:project_id(/:action)").to(:controller => "projects").name(:project)

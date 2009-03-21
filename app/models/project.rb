@@ -10,6 +10,7 @@ class Project
   belongs_to :user
 
   has 3, :steps
+  has n, :plans, :order => [:created_at.desc]
   has n, :subscriptions, :child_key => [:subscribable_id], :class_name => 'ProjectSubscription'
 
   def step(n)

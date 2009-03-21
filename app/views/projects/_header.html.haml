@@ -14,6 +14,8 @@
             = link_to 'step 2', url(:project_step, :project_id => @project.id, :step => 2), :title => "view step 2 of project ##{@project.id}"
           %li{ :id => (current == :step3 ? 'current' : '') }
             = link_to 'step 3', url(:project_step, :project_id => @project.id, :step => 3), :title => "view step 3 of project ##{@project.id}"
+          %li{ :id => (current == :plans ? 'current' : '') }
+            = link_to 'plans', url(:project, :project_id => @project.id, :action => 'plans'), :title => "view the plans of project ##{@project.id}"
   .c25l
     .subcl
       %h1.content{ :align => 'right' }

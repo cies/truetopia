@@ -22,7 +22,17 @@ class Projects < Application
 
   def step(project_id, step)
     @project = Project.get(project_id)
-    @step = @project.step(step) or NotFound
+    @step = @project.step(step)
+    if @step
+      @documents  = @step.documents
+      @discussion = @step.discussion
+    end
+    render
+  end
+
+  def plans(project_id)
+    @project = Project.get(project_id)
+    @plans = @project.plans
     render
   end
 

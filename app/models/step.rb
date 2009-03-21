@@ -11,6 +11,9 @@ class Step
 
   belongs_to :project
 
+  def documents  # the dm associations messes it up, therefor reimplmented
+    StepDocument.all(:project_id => project_id, :discriminator => "Step#{number}Document")
+  end
 
   private
   def create_discussion
