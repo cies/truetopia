@@ -82,7 +82,7 @@ Merb::Router.prepare do
 
   # the /my part of the website:
   namespace :my, :path => "my" do
-    %w[documents mods posts priorities profile projects searches start subscriptions votes].each do |name|
+    %w[account documents mods posts priorities profile projects searches start subscriptions votes].each do |name|
       match("/#{name}(/:action)").to(:controller => name).name(name.to_sym)
     end
     match("").to(:controller => "start", :action => 'root_redirect')  # redirects to :my_start

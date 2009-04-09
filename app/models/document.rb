@@ -13,7 +13,6 @@ class Document
   belongs_to :user
   has n, :versions, :class_name => 'DocumentVersion', :order => [:number.desc]
   has 1, :discussion, :class_name => 'DocumentDiscussion', :child_key => [:document_id]
-  # has one discussion through a polymorphic, non-datamapper, relation
 
 #   def discussion
 #     DocumentDiscussion.first(:document_id => id)
@@ -62,8 +61,9 @@ end
 
 
 class StepDocument < Document
+  property :number, Integer
   belongs_to :project
-  validates_present :project
+  validates_present :number, :project
 
   def votes
     StepDocumentVotes.all(:step_document_id => id)

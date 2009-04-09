@@ -14,4 +14,5 @@ class Plan
   belongs_to :step3_document
 
   validates_present :project, :step1_document, :step2_document, :step3_document
+  # has_unique_documents?
 end

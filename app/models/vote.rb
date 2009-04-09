@@ -1,5 +1,3 @@
-# WARNING -- this class is not to be implemented in the first release
-
 class Vote
   include DataMapper::Resource
 
@@ -11,10 +9,10 @@ class Vote
   property :discriminator,    Discriminator  # because this model is subclassed
 
   belongs_to :user
-end
+  belongs_to :step_document
 
-class StepDocumentVote < Vote
-  belongs_to :step_document, :class_name => 'StepDocument'
-  validates_present :step_document
+  def last_touched
+    updated_at or created_at
+  end
 end
   
