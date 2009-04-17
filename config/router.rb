@@ -23,8 +23,8 @@ Merb::Router.prepare do
     base.match("/discussion/posts(/:action)").to(defaults).
       name("#{prefix}_discussion_posts".to_sym)
     base.match("/discussion/post").to(defaults.merge(:action => 'index_redirect'))  # path safety
-    # :code as a regexp as it has dots. and i'd rather use /(\d+\.)*\d+/, but submatch errors out
-    base.match("/discussion/post/:code", :code => /[0-9\.]+/).to(defaults.merge(:action => 'show')).
+    # :code as a regexp as it has dots. and i'd rather use /(\d+\.)*\d+/, but submatch '()' errors out
+    base.match("/discussion/post::code", :code => /^[0-9\.]+$/).to(defaults.merge(:action => 'show')).
       name("#{prefix}_discussion_post".to_sym)
   end
 
@@ -34,13 +34,14 @@ Merb::Router.prepare do
   def documents_for(prefix, base, parent, defaults = {})
     defaults = defaults.merge(:document_parent => parent, :controller => 'documents')  # dupes the defaults
     base.match("/documents").to(defaults.merge(:action => 'real_index'))  # actual index is more like show
-    base.match("/documents(/:action)").to(defaults).# routes to index, needed otherwise the discussion is prefered
+    base.match("/documents(/:action)").to(defaults).  # routes to index, needed otherwise the discussion is prefered
       name("#{prefix}_documents".to_sym)  # *_documents
     base.match("/document").to(defaults.merge(:action => 'real_index_redirect'))  # path safety
-    base.match("/document/:document_id") do |new_base|  # add the discussion to the document
+    base.match("/document::number(.:version)", :number => /^\d+$/, :version => /^\d+$/) do |new_base|
+      # add the discussion to the document
       discussion_on("#{prefix}_document".to_sym, new_base, "#{parent}Document", defaults)
     end
-    base.match("/document/:document_id(/:action(/:version))").to(defaults).
+    base.match("/document::number(.:version)(/:action)", :number => /^\d+$/, :version => /^\d+$/).to(defaults).
       name("#{prefix}_document".to_sym)  # *_document
   end
 
@@ -54,8 +55,8 @@ Merb::Router.prepare do
   # users controller -- they way to see other users (/my/* is for your own stuff)
   match("/users").to(:controller => "users", :action => 'real_index').name(:users)
   match("/user").to(:controller => "users", :action => 'real_index_redirect')  # path safety
-  match("/user/:login(/:action)").to(:controller => "users").name(:user)
-  match("/user/:login") { |base| documents_for(:user, base, 'User') }  # adds document routes
+  match("/user::login(/:action)").to(:controller => "users").name(:user)
+  match("/user::login") { |base| documents_for(:user, base, 'User') }  # adds document routes
 
   # signup controller
   match("/signup(/:action)").to(:controller => "signup").name(:signup)
@@ -63,13 +64,15 @@ Merb::Router.prepare do
   # projects (are not individually owned, so do not live in /my namespace)
   match("/projects(/:action)").to(:controller => "projects").name(:projects)
   match("/project").to(:controller => "projects", :action => 'index_redirect')  # path safety
-  match("/project/:project_id").to(:controller => "projects", :action => 'show')
+  match("/project::project_id").to(:controller => "projects", :action => 'show')
 #   match("/projects/:project_id") { |base| discussion_on :project, base, Project }  # NO PROJECT DISCUSSIONS YET
-  match("/project/:project_id/step").to(:controller => "projects", :action => 'show_redirect')  # path-safety
-  match("/project/:project_id/step/:step").to(:controller => "projects", :action => 'step', :document_parent => 'Step').name(:project_step)
-  match("/project/:project_id/step/:step") { |base| discussion_on(:step, base, 'Step') }
-  match("/project/:project_id/step/:step") { |base| documents_for(:step, base, 'Step') }  # adds document routes
-  match("/project/:project_id(/:action)").to(:controller => "projects").name(:project)
+  match("/project::project_id/plan").to(:controller => "projects", :action => 'path_redirect')  # path-safety
+  match("/project::project_id/plan::number").to(:controller => "projects", :action => 'plan').name(:project_plan)
+  match("/project::project_id/step").to(:controller => "projects", :action => 'show_redirect')  # path-safety
+  match("/project::project_id/step::step").to(:controller => "projects", :action => 'step', :document_parent => 'Step').name(:project_step)
+  match("/project::project_id/step::step") { |base| discussion_on(:step, base, 'Step') }
+  match("/project::project_id/step::step") { |base| documents_for(:step, base, 'Step') }  # adds document routes
+  match("/project::project_id(/:action)").to(:controller => "projects").name(:project)
 
   # not yet implemented
   match("/agenda").to(:controller => "priorities").name(:priorities)

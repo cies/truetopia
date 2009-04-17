@@ -9,9 +9,9 @@ class Plan
   property :step3_document_version, Integer, :nullable => false
 
   belongs_to :project
-  belongs_to :step1_document
-  belongs_to :step2_document
-  belongs_to :step3_document
+  belongs_to :step1_document, :class_name => 'StepDocument'
+  belongs_to :step2_document, :class_name => 'StepDocument'
+  belongs_to :step3_document, :class_name => 'StepDocument'
 
   validates_present :project, :step1_document, :step2_document, :step3_document
   # has_unique_documents?

@@ -5,6 +5,13 @@
     .subcr
       %p== Project names are given through subscriptions. The current name (#{@project.default_name[0]} is chosen by #{@project.default_name[1]} users when they subscribed to this project. Please consider #{link_to 'subscribing to this project', url(:my_subscriptions, 'new', :project => @project.id)}, when you subscribe choose how you like to refer to this project.
       %p This project is currently in step 1: definition. Please help defining this project by creating, discussing or voting for documents in step 1.
+
+      %p Some links:
+      %p= link_to 'view', url(:project, :project_id => @project.id), :title => "view project ##{@project.id}"
+      %p= link_to 'step 1', url(:project_step, :project_id => @project.id, :step => 1), :title => "view step 1 of project ##{@project.id}"
+      %p= link_to 'step 2', url(:project_step, :project_id => @project.id, :step => 2), :title => "view step 2 of project ##{@project.id}"
+      %p= link_to 'step 3', url(:project_step, :project_id => @project.id, :step => 3), :title => "view step 3 of project ##{@project.id}"
+      %p= link_to 'plans', url(:project, :project_id => @project.id, :action => 'plans'), :title => "view the plans of project ##{@project.id}"
   .c25l
     .subcl.sidebar
       = partial 'details', :project => @project

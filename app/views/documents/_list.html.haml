@@ -6,7 +6,7 @@
           - title_html= capture_haml do
             %span.number= '#' + document.id.to_s
             = document.current_version.title
-          = link_to title_html, document_url(:document_id => document.id)
+          = link_to title_html, document_url(document)
         .meta
           created on
           = relative_date document.created_at
@@ -14,14 +14,14 @@
           %b= link_to document.user.login, url(:user, :login => document.user.login)
           %br/
           last published version
-          == <b>#{document.version_count}</b>, published on #{relative_date document.current_version.created_at}
+          == <b>#{document.versions.count}</b>, published on #{relative_date document.current_version.created_at}
           by
           %b= link_to document.current_version.user.login, url(:user, :login => document.current_version.user.login)
       .subpage_content
         = (html_escape document.current_version.content).gsub("\n", '<br/>')[1..200].strip + '...'
       .subpage_footer
         %strong
-          = link_to 'read more...', document_url(:document_id => document.id)
+          = link_to 'read more...', document_url(document)
 
   #pagination
     //= merb_paginate @documents   - no pagination for now.. needs to become translatable and is design sensitive

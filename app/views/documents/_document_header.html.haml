@@ -1,3 +1,5 @@
+= partial 'projects/header', :project => @project
+= partial 'projects/step_header'
 .subcolumns.bottom_line
   .c75r
     .subcr
@@ -7,14 +9,14 @@
       #nav_main
         %ul
           %li{ :id => (current == :show ? 'current' : '') }
-            = link_to 'view', document_url(:document_id => @document.id), :title => "view document ##{@document.id}"
+            = link_to 'view', document_url(@document), :title => "view document ##{@document.id}"
           %li{ :id => (current == :edit ? 'current' : '') }
-            = link_to 'edit', document_url(:document_id => @document.id, :action => 'edit'), :title => 'edit this document'
+            = link_to 'edit', document_url(@document, :action => 'edit'), :title => 'edit this document'
           %li{ :id => (current == :history ? 'current' : '') }
-            = link_to 'history', document_url(:document_id => @document.id, :action => 'history'), :title => 'view the change history'
+            = link_to "history (#{document.versions.count})", document_url(@document, :action => 'history'), :title => 'view the change history'
           %li{ :id => (current == :discussion ? 'current' : '') }
-            = link_to 'discussion', discussion_url(:discussion_parent => "#{params[:document_parent]}Document"), :title => 'discuss this document'
+            = link_to "discussion (#{document.discussion.posts.count})", discussion_url(:discussion_parent => "#{params[:document_parent]}Document"), :title => 'discuss this document'
   .c25l
     .subcl
       %h1.content{ :align => 'right' }
-        %span.pre_title= 'document #' + document.id.to_s
+        %span.pre_title== document:#{document.number}.#{document.current_version.number}

@@ -2,6 +2,15 @@
 - project ||= nil
 - if project
   .sidebar_menu= link_to "project overview", url(:projects)
+
+.sidebar_menu
+  %a{ :href => url(:projects, :action => 'new') }
+    %img{ :src => '/images/button_vote.png' }/
+    vote this project
+.sidebar_menu
+  %a{ :href => url(:projects, :action => 'new') }
+    %img{ :src => '/images/button_subscribe.png' }/
+    subscribe to this project
 .sidebar_menu= link_to "create new project", url(:projects, :action => 'new')
 .sidebar_menu= link_to "search projects", url(:search, :what => 'projects')
 .sidebar_menu= link_to "my subscribed projects", url(:my_subscriptions, :action => 'projects')

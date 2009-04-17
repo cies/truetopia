@@ -10,7 +10,7 @@
       - if @document_version.errors and not @document_version.errors.empty?
         = error_messages_for @document_version
       .narrow
-        = form_for :document_version, :action => document_url(:document_id => @document.id, :action => 'edit') do
+        = form_for :document_version, :action => document_url(@document, :action => 'edit') do
           %p
             = form_label @document_version, :title, 'title', ''
             = text_field :title, :size=> 60
@@ -42,7 +42,7 @@
             = link_to @document.user.login, url(:user, :login => @document.user.login)
             %br/
             huidige versie
-            = @document.version_count
+            = @document.versions.count
             verscheen
             = relative_date @document.current_version.created_at
             door

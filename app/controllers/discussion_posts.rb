@@ -48,7 +48,8 @@ class DiscussionPosts < Application
       when 'StepDocument'
         @project = Project.get(params[:project_id]) or raise NotFound
         @step = @project.step(params[:step]) or raise NotFound
-        @document = Document.get(params[:document_id]) or raise NotFound
+        @document = @step.document(params[:number]) or raise NotFound
+#         @document_version = @document.version(params[:version]) or raise NotFound
         @discussion = @document.discussion or raise NotFound
       else
         raise "No context to be loaded for #{params[:discussion_parent]}"

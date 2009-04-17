@@ -1,0 +1,21 @@
+- throw_content(:title, 'My Votes, new vote')
+
+.subcolumns
+  .c25l
+    .subcl
+      %h4 actions
+      = link_to 'search my votes', url(:search, :q => 'my_votes')
+      %br/
+      = partial 'my/my_menu'
+      %br/
+  .c75r
+    .subcr
+      %h1
+        New vote
+      %p
+        You are about to vote for the following document:
+        = partial 'documents/document', :document => Document.get
+      - unless vote.vector == 0
+        This vote is currently set to 
+      = form_for @vote, :action => url(:my_votes, 'new', :voteable_id => params[:voteable_id], :voteable_type => params[:voteable_type]) do
+        bla bla bla

@@ -6,12 +6,13 @@ class Votes < Base
   end
 
   def new(vote = nil)
-    if vote.nil? or vote[:vector].nil?  # initial page
-      @vote = Vote.new(vote)
+    @document = StepDocument.get()
+    if vote.nil?  # initial page
+      @vote = Vote.new
       render
     else  # form submitted
       @vote = Vote.new(vote)
-      @vote.update_attributes(:voteable_id => voteable_id, :voteable_type => voteable_type)
+      @vote.update_attributes(:step_document_id => step_document_id)
       if @vote.save
         redirect url(:my_votes), :message => 'Vote has been saved'
       else

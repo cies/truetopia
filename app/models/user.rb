@@ -2,8 +2,8 @@ class User
   include DataMapper::Resource
 
   property :id,                         Serial
-  property :login,                      String, :length => 30
-  property :email,                      String, :length => 255
+  property :login,                      String, :unique_index => true, :length => 30
+  property :email,                      String, :unique_index => true, :length => 255
   property :time_zone,                  String, :default => 'CET'
   property :created_at,                 DateTime
   property :updated_at,                 DateTime
@@ -16,8 +16,6 @@ class User
 
   validates_format    :login, :with => /^[A-Za-z0-9_]+$/
   validates_length    :login, :min => 3
-  validates_is_unique :login
   validates_present   :email
   validates_format    :email, :as => :email_address
-  validates_is_unique :email
 end

@@ -1,15 +1,16 @@
 - throw_content(:title, 'Documents overview')
-
+= partial 'projects/header', :project => @project
+= partial 'projects/step_header'
 .subcolumns
   .c25l
     .subcl
       %h4
-        Actions
+        actions
       .column_menu
 
       %br/
       %h4
-        Documents
+        documents
       %p
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam malesuada   suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin sed.
   .c75r

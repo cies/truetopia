@@ -1,5 +1,6 @@
 - throw_content :title, "step #{params[:step]} of project ##{@project.id}"
-= partial 'header', :project => @project, :current => "step#{params[:step]}".to_sym
+= partial 'header', :project => @project
+= partial 'step_header'
 .subcolumns.right_bg
   .c75r
     .subcr

@@ -17,7 +17,7 @@
       %td.sub
         current version
       %td.sub
-        %strong= document.version_count.to_s
+        %strong= document.versions.count
         &nbsp;
         = surround '(', ')' do
           = link_to 'history', document_url(:action => 'history')

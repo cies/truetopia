@@ -25,14 +25,19 @@ module Merb
       end
     end
 
-    def document_url(*options)
-      options, aggr = (options[0] or {}), (options[0] ? params.dup.merge(options[0]) : params)
+    # either:
+    #   document_url(@document, :action => 'edit', :option1 => 1, :option2 => 2)  -- on a document
+    #   document_url(:action => 'new', :option1 => 1)  -- on the */documents/:action path
+    #   document_url  -- the index, obvioulsy
+    def document_url(*args)
+      obj, options =  args[0].is_a?(Hash)  ?  [nil, args[0]]  :  [args[0], (args[1] or {})]
+      aggr = params.dup.merge(options)
       return case aggr[:document_parent]
-        when 'Step' then options[:document_id] ?
-          url(:step_document, aggr[:project_id], aggr[:step], options) :
+        when 'Step' then obj ?
+          url(:step_document, aggr[:project_id], aggr[:step], obj.number, obj.current_version.number, options) :
           url(:step_documents, aggr[:project_id], aggr[:step], options)
-      else
-        raise "no document_url for #{aggr[:document_parent].inspect}"
+        else
+          raise "no document_url for #{aggr[:document_parent].inspect}"
       end
     end
 
@@ -48,9 +53,11 @@ module Merb
         when 'Step' then
           url("step_discussion#{suffix}".to_sym, aggr[:project_id], aggr[:step], options)
         when 'StepDocument' then
-          url("step_document_discussion#{suffix}".to_sym, aggr[:project_id], aggr[:step], aggr[:document_id], options)
+          url("step_document_discussion#{suffix}".to_sym,
+            aggr[:project_id], aggr[:step], aggr[:number], aggr[:version], options)
         when 'UserDocument' then
-          url("user_document_discussion#{suffix}".to_sym, aggr[:login], aggr[:document_id], options)
+          url("user_document_discussion#{suffix}".to_sym,
+            aggr[:login], aggr[:number], aggr[:version], options)
         else
           raise "no discussion_url for #{aggr[:discussion_parent].inspect}"
       end

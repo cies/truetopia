@@ -29,15 +29,24 @@ class Discussion
   end
 end
 
+
 class DocumentDiscussion < Discussion
-  belongs_to :document
+  property :document_id, Integer, :unique_index => true
+  belongs_to :document, :child_key => [:document_id]
   validates_present :document
 end
 
 class StepDiscussion < Discussion
-  property :step, Integer
+  property :project_id,  Integer, :unique_index => :step_discussion_handle
+  property :step_number, Integer, :unique_index => :step_discussion_handle, :length => 10
+  validates_present :project, :step_number
+
   belongs_to :project
-  validates_present :project, :step
+  belongs_to :step, :child_key => [:project_id, :step_number]
+
+#   def step
+#     Step.get(project_id, step)
+#   end
 end
 
 ## no project discussion for now, use step discussions to have your say

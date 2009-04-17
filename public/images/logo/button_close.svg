@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) and manually edited by Cies Breijs -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="20"
+   height="20"
+   id="svg2"
+   version="1.0"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="button_close.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs2561">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 10 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="20 : 10 : 1"
+       inkscape:persp3d-origin="10 : 6.6666667 : 1"
+       id="perspective2563" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-height="779"
+     inkscape:window-width="1234"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showgrid="true"
+     inkscape:snap-global="true"
+     inkscape:zoom="18.73833"
+     inkscape:cx="10"
+     inkscape:cy="7.865338"
+     inkscape:window-x="42"
+     inkscape:window-y="-4"
+     inkscape:current-layer="svg2">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2565" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Cies Breijs</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Notice" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Attribution" />
+        <cc:prohibits
+           rdf:resource="http://web.resource.org/cc/CommercialUse" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <path
+     style="fill:#000000;fill-opacity:1;stroke:none"
+     d="M 0 0 L 0 20 L 20 20 L 20 0 L 0 0 z M 3.84375 2.53125 C 4.2856922 2.4875583 4.7232891 2.6487782 5.03125 2.96875 L 10 7.9375 L 14.96875 2.96875 C 15.232384 2.6982456 15.591159 2.5412812 15.96875 2.53125 C 16.573064 2.5047189 17.138402 2.8495453 17.375 3.40625 C 17.6116 3.9629546 17.469756 4.6145825 17.03125 5.03125 L 12.0625 10 L 17.03125 14.96875 C 17.600794 15.538294 17.600794 16.461706 17.03125 17.03125 C 16.461706 17.600794 15.538294 17.600794 14.96875 17.03125 L 10 12.0625 L 5.03125 17.03125 C 4.4617064 17.600794 3.5382936 17.600794 2.96875 17.03125 C 2.3992064 16.461706 2.3992064 15.538294 2.96875 14.96875 L 7.9375 10 L 2.96875 5.03125 C 2.552414 4.6384891 2.4046703 4.0402276 2.59375 3.5 C 2.7828296 2.9597726 3.2733558 2.5786554 3.84375 2.53125 z "
+     id="black_rectange_with_a_hole_in_it" />
+</svg>

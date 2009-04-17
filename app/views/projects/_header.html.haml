@@ -1,22 +1,10 @@
-.subcolumns.bottom_line
+.subcolumns
   .c75r
     .subcr
       .float_left
         %h1.content
           = project.default_name[0]
-      #nav_main
-        %ul
-          %li{ :id => (current == :show ? 'current' : '') }
-            = link_to 'view', url(:project, :project_id => @project.id), :title => "view project ##{@project.id}"
-          %li{ :id => (current == :step1 ? 'current' : '') }
-            = link_to 'step 1', url(:project_step, :project_id => @project.id, :step => 1), :title => "view step 1 of project ##{@project.id}"
-          %li{ :id => (current == :step2 ? 'current' : '') }
-            = link_to 'step 2', url(:project_step, :project_id => @project.id, :step => 2), :title => "view step 2 of project ##{@project.id}"
-          %li{ :id => (current == :step3 ? 'current' : '') }
-            = link_to 'step 3', url(:project_step, :project_id => @project.id, :step => 3), :title => "view step 3 of project ##{@project.id}"
-          %li{ :id => (current == :plans ? 'current' : '') }
-            = link_to 'plans', url(:project, :project_id => @project.id, :action => 'plans'), :title => "view the plans of project ##{@project.id}"
   .c25l
     .subcl
       %h1.content{ :align => 'right' }
-        %span.pre_title= 'project #' + project.id.to_s
+        %span.pre_title== project:#{project.id.to_s}

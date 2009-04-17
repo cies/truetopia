@@ -5,9 +5,9 @@ class Documents < Application
     get_context
     @documents = case params[:document_parent]
       when 'Step'
-        StepDocument.all(:project_id => @project.id, :discriminator => "Step#{params[:step]}Document")
+        StepDocument.all(:discriminator => "StepDocument", :project_id => @project.id, :step_number => params[:step])
       when 'User'
-        UserDocument.all(:user_id => @user.id, :discriminator => "UserDocument")
+        UserDocument.all(:discriminator => "UserDocument", :user_id => @user.id)
       else
         raise "Unknown parent for document: #{params[:document_parent].inspect}"
     end
@@ -18,10 +18,15 @@ class Documents < Application
     redirect document_url
   end
 
-  def index  # actually more like show
-    get_context
-    @document = Document.get(params[:document_id])
-    render :show
+  def index(number, version = nil)  # actually more like show
+    get_context; get_document
+    if version
+      @document.current_version_number = version
+      render :show
+    else
+      redirect document_url(:number => number, :version => @document.versions.count),
+        :message => "You have been redireted to the latest version of document ##{number}"
+    end
   end
 
   def new(document_version = nil)
@@ -30,9 +35,9 @@ class Documents < Application
       # create the document first
       @document = case params[:document_parent]
         when 'Step'
-          StepDocument.new(:user => session.user, :project => @project, :discriminator => "Step#{params[:step]}Document")
+          StepDocument.new(:user => session.user, :project => @project, :step => @project.step(params[:step]))
         when 'User'
-          UserDocument.new(:user => session.user, :user => @user, :discriminator => "UserDocument")
+          UserDocument.new(:user => session.user)
         else
           raise "Unknown parent for document: #{params[:document_parent].inspect}"
       end
@@ -42,8 +47,8 @@ class Documents < Application
       @document_version.user = session.user
       @document_version.document = @document
       if @document_version.save
-        to_url = url(:step_document, params[:project_id], params[:step], @document.id)
-        redirect to_url, :message => "Changes have been saved as version #{@document_version.number}"
+        @document.current_version_number = @document_version.number 
+        redirect document_url(@document), :message => "Changes have been saved as version #{@document_version.number}"
       else
         @document.destroy  # i see no other way than to destroy @document here (only with initial versions)
         render
@@ -54,16 +59,16 @@ class Documents < Application
     end
   end
   
-  def edit(document_id, document_version = nil)
-    get_context
-    @document = Document.get(document_id) or raise NotFound
+  def edit(document_version = nil)
+    get_context; get_document
+    @document.current_version_number = params[:version]
     if document_version  # form submitted
       @document_version = DocumentVersion.new(document_version)
       @document_version.user = session.user
       @document_version.document = @document
-      # saving the version update the @document.version_count
       if @document_version.save
-        redirect document_url(:document_id => @document.id), :message => 'Document edited'
+        @document.current_version_number = @document_version.number 
+        redirect document_url(@document), :message => 'Document edited'
       else
         render
       end
@@ -75,9 +80,8 @@ class Documents < Application
     end
   end
 
-  def history(document_id)
-    get_context
-    @document = Document.get(document_id) or raise NotFound
+  def history
+    get_context; get_document
     if params[:from] and params[:to]
       @from_version = @document.version(params[:from]) or raise NotFound
       @to_version   = @document.version(params[:to])   or raise NotFound
@@ -89,13 +93,13 @@ class Documents < Application
     end
   end
 
-  def version
-    get_context
-    @document_version = DocumentVersion.first(:document_id => params[:document_id], :number => params[:version])
-    @document = @document_version.document
-    session[:notification] = :not_implemented_yet if params['revert'] == 'true'
-    render :show_version
-  end
+#   def version
+#     get_context
+#     @document_version = DocumentVersion.first(:document_id => params[:document_id], :number => params[:version])
+#     @document = @document_version.document
+#     session[:notification] = :not_implemented_yet if params['revert'] == 'true'
+#     render :show_version
+#   end
 
   private
   def get_context
@@ -104,10 +108,21 @@ class Documents < Application
         @project = Project.get(params[:project_id]) or raise NotFound
         @step = @project.step(params[:step]) or raise NotFound
       when 'User'
-        @project = Project.get(params[:project_id]) or raise NotFound
-        @step = @project.step(params[:step]) or raise NotFound
+        @user = User.first(:login => params[:login]) or raise NotFound
       else
-        raise "No context to be loaded for #{params[:parent]}"
+        raise "No context to be loaded for #{params[:document_parent]}"
+    end
+  end
+
+  def get_document
+    @document = case params[:document_parent]
+      when 'Step'
+        StepDocument.first(:project_id => @project.id, :step_number => params[:step],
+          :step_document_number => params[:number]) or raise NotFound
+      when 'User'
+        UserDocument.first(:user_id => @user.login, :user_document_number => params[:number]) or raise NotFound
+      else
+        raise "No document to be loaded for #{params[:document_parent]}"
     end
   end
 end

@@ -42,7 +42,7 @@
                     = link_to version.comment, document_url(:document_id => @document.id, :action => 'version', :version => version.number)
                   %td.sub
                     = link_to 'view', document_url(:document_id => @document.id, :action => 'version', :version => version.number)
-                    - unless version.number == @document.version_count
+                    - unless version.number == @document.versions.count
                       &nbsp;&nbsp;|&nbsp;&nbsp;
                       = link_to 'revert'
           = submit 'show diff'

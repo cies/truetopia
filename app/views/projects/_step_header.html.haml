@@ -1,0 +1,11 @@
+.subcolumns
+  .c75r
+    .subcr
+      .float_left
+        %h1
+          = ['describing', 'drawing', 'detailing'][params[:step].to_i - 1]
+            
+  .c25l
+    .subcl
+      %h1.content{ :align => 'right' }
+        %span.pre_title== step:#{params[:step]}

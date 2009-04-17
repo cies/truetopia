@@ -16,7 +16,7 @@
       = link_to document.user.login, url(:user, :login => document.user.login)
       %br/
       huidige versie
-      = document.version_count
+      = document.versions.count
       verscheen
       = render_relative_date document.version_created_at
       door

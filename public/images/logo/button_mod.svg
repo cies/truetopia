@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) and manually edited by Cies Breijs -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="20"
+   height="20"
+   id="svg2"
+   version="1.0"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="button_mod.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs2561">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 10 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="20 : 10 : 1"
+       inkscape:persp3d-origin="10 : 6.6666667 : 1"
+       id="perspective2563" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-height="779"
+     inkscape:window-width="1234"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showgrid="true"
+     inkscape:snap-global="true"
+     inkscape:zoom="13.25"
+     inkscape:cx="10.837143"
+     inkscape:cy="11.496561"
+     inkscape:window-x="42"
+     inkscape:window-y="-4"
+     inkscape:current-layer="svg2">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2565" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Cies Breijs</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Notice" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Attribution" />
+        <cc:prohibits
+           rdf:resource="http://web.resource.org/cc/CommercialUse" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <path
+     style="fill:#000000;fill-opacity:1;stroke:none"
+     d="M 0 0 L 0 20 L 20 20 L 20 0 L 0 0 z M 9.875 1.96875 C 10.047866 1.9346075 10.225943 1.9939663 10.34375 2.125 L 16.34375 8.03125 C 16.478863 8.1737441 16.51159 8.3806457 16.4375 8.5625 C 16.363412 8.7443539 16.196223 8.8674947 16 8.875 L 4 8.875 C 3.8037765 8.8674947 3.6365886 8.7443536 3.5625 8.5625 C 3.4884113 8.380646 3.5211374 8.1737441 3.65625 8.03125 L 9.65625 2.125 C 9.7135375 2.0539259 9.789188 1.9998898 9.875 1.96875 z M 3.90625 11.125 C 3.937431 11.122064 3.968819 11.122064 4 11.125 L 16 11.125 C 16.196223 11.132505 16.363413 11.255646 16.4375 11.4375 C 16.511589 11.619354 16.478863 11.826256 16.34375 11.96875 L 10.34375 17.875 C 10.150925 18.057519 9.8490752 18.057519 9.65625 17.875 L 3.65625 11.96875 C 3.5260274 11.83911 3.4790484 11.64493 3.53125 11.46875 C 3.5834516 11.292569 3.7264232 11.162774 3.90625 11.125 z "
+     id="black_rectange_with_a_hole_in_it"
+     inkscape:export-filename="/home/cies/truetopia/public/images/button_mod.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+</svg>

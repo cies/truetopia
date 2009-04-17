@@ -35,10 +35,12 @@ class Project
 
   private
   def create_initial_step
-    raise "This is not the initial step, but step numer #{in_step}" if [1,2,3].include? in_step  # only for 0
+    return unless in_step == 0  # only for 0
     self.in_step = 1
-    unless Step.new(:project_id => id, :number => in_step).save
-      raise "Couldn't create step for project ##{id}, this shouldn't happen" 
+    if Step.new(:project_id => id, :number => in_step).save
+      save  # in_step is 1 now...
+    else
+      raise "Couldn't create step for project ##{id}"
     end
   end
 end
