@@ -6,24 +6,52 @@ class Subscriptions < Base
     render
   end
 
-  def new
-    if params[:subscribable_id] and params[:subscribable_type]
-      # if we're making a quick subscription
-      @subscription = Subscription.new({:subscribable_id => params[:subscribable_id], :subscribable_type => params[:subscribable_id], :user_id => session.user.id})
-      if @subscription.save
-        session[:notification] = :subscription_added
-        redirect url(:my_subscriptions)
-      else
-        if @subscription.errors[:general].include? :subscription_allready_exists
-          session[:notification] = :subscription_allready_exists
-          redirect url(:my_subscriptions)
+  def dialog
+    only_provides :js
+    # since we can get *_subscription as key in the params we first pick the right param:
+    subscription = params.collect{ |k,v| k =~ /subscription/i ? v : nil }.compact.first
+    if subscription  # after submitting the selection form (or coming in by ajax call)
+      klass = nil
+      begin
+        klass = Kernel.const_get subscription[:discriminator]
+      rescue NameError
+        raise NotFound  # if no valid discriminator is specified
+      end
+      if @subscription = klass.get(subscription[:subscribable_id], subscription[:discriminator], session.user.id)
+        
+      else @subscription = klass.new(subscription.merge(:user_id => session.user.id))
+        if @subscription.save
+          render :new_finished
+        else
+          render :confirm_new
         end
       end
     else
-      @subscription = Subscription.new
-      display @subscription
+      raise NotFound
     end
   end
+
+#   def new
+#     provides :js  # this method gets ajax calls
+# #     if params[:id] and params[:type]
+#     subscription = params.collect{ |k,v| k =~ /subscription/i ? v : nil }.compact.first
+#     if subscription  # after submitting the selection form (or coming in by ajax call)
+#       klass = nil
+#       begin
+#         klass = Kernel.const_get subscription[:discriminator]
+#       rescue NameError
+#         raise NotFound  # if no valid discriminator is specified
+#       end
+#       @subscription = klass.new(subscription.merge(:user_id => session.user.id))
+#       if @subscription.save
+#         render :new_finished
+#       else
+#         render :confirm_new
+#       end
+#     else  # showing the selection form -- TODO should be something like a search
+#       render
+#     end
+#   end
 
 end
 end  # My

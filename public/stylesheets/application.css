@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* This is the main stylesheet for the truetopia app */
 /*  */
+/* JQuery's CSS */
+@import url(jquery-ui-1.7.1.custom.css);
 /* import YAML css goodness: */
 @import url(/stylesheets/yaml/core/base.css);
 @import url(/stylesheets/yaml/core/print_base.css);

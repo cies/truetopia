@@ -3,14 +3,21 @@
 - if project
   .sidebar_menu= link_to "project overview", url(:projects)
 
+= partial 'shared/ajax_dialog', :id => 'vote-dialog', :url => url(:my_votes, 'new', :format => 'js')
 .sidebar_menu
-  %a{ :href => url(:projects, :action => 'new') }
+  %a#vote-dialog-link{ :href => '#' }
     %img{ :src => '/images/button_vote.png' }/
-    vote this project
+    vote
+%div#vote-dialog{ :title => "Vote for #{@project.id}" }
+
+= partial 'shared/ajax_dialog', :id => 'subscription-dialog', :url => url(:my_subscriptions, 'new', :format => 'js', :subscription => {:subscribable_id => @project.id, :discriminator => 'ProjectSubscription'})
+
 .sidebar_menu
-  %a{ :href => url(:projects, :action => 'new') }
+  %a#subscription-dialog-link{ :href => '#' }
     %img{ :src => '/images/button_subscribe.png' }/
     subscribe to this project
+%div#subscription-dialog{ :title => "Subscription to project:#{@project.id}" }
+
 .sidebar_menu= link_to "create new project", url(:projects, :action => 'new')
 .sidebar_menu= link_to "search projects", url(:search, :what => 'projects')
 .sidebar_menu= link_to "my subscribed projects", url(:my_subscriptions, :action => 'projects')

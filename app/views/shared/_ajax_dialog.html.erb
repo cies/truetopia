@@ -1,0 +1,21 @@
+<script type='text/javascript'>  <!-- ajax dialog setup -->
+$(document).ready(function() {
+  $('#<%= id -%>-link').click(
+    function() {
+      $('#<%= id -%>').dialog('open');
+      return false;
+  });
+  $('#<%= id -%>').dialog({
+    autoOpen: false,
+    modal: true,
+    position: ['center', 45],
+    hide: 'fadeOut',
+    width: 600,
+    open: function() {
+      $.get('<%= url -%>', function(data){
+        $('#<%= id -%>').html(data);
+      })
+    },
+  });
+});
+</script>

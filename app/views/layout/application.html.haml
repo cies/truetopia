@@ -5,7 +5,8 @@
       = 'Truetopia' + (catch_content(:title) ? ": #{catch_content(:title)}" : '')
     %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type" }/
     = css_include_tag :application
-
+    = js_include_tag 'jquery-1.3.2.min'
+    = js_include_tag 'jquery-ui-1.7.1.custom.min'
     / this is a dirty hack to implement very basic colorpicking
     %style{ :type => 'text/css', :media => 'all' }
       = partial 'layout/colorpatch', :color => cookies['color']
@@ -15,6 +16,7 @@
       [if lte IE 7]>
       <link href="/stylesheets/patches/patch_grids.css" rel="stylesheet" type="text/css" />
       <![endif]
+
 
   %body
     #page_margins

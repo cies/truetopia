@@ -7,7 +7,7 @@ Merb.logger.info("Compiling routes...")
 #    - routes should be pretty.
 #    - i dont understand RESTfullness enough, nor do i see direct benefit for using it and im afraid it compromises on translatability -- so, there is no RESTfullness that im aware of..
 
-
+# some routes end in (.:format) as their controllers provide more than just html (the default)
 
 Merb::Router.prepare do
 
@@ -86,13 +86,13 @@ Merb::Router.prepare do
   # the /my part of the website:
   namespace :my, :path => "my" do
     %w[account documents mods posts priorities profile projects searches start subscriptions votes].each do |name|
-      match("/#{name}(/:action)").to(:controller => name).name(name.to_sym)
+      match("/#{name}(/:action)(.:format)").to(:controller => name).name(name.to_sym)
     end
     match("").to(:controller => "start", :action => 'root_redirect')  # redirects to :my_start
   end
 
   # no default routes as we want to be able to translate all of 'm
-  # default_routes
+#   default_routes
 
   match('/').to(:controller => "entrance", :action => 'root_redirect').name(:root)  # redirects to :entrance
 end
